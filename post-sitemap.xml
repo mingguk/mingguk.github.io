@@ -9,7 +9,15 @@
 
     <url>
         <loc>http://mingguk.github.io/2019/01/29/post-jsWeird1/</loc>
-        <lastmod>2019-01-28T18:16:32.636Z</lastmod>
+        <lastmod>2019-01-28T18:39:11.143Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/01/29/ec-and-le/</loc>
+        <lastmod>2019-01-28T18:26:25.492Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
