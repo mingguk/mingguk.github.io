@@ -8,13 +8,6 @@
     </url>
 
     <url>
-        <loc>http://mingguk.github.io/categories/Front/html-css/</loc>
-        <lastmod>2019-01-28T07:21:42.322Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://mingguk.github.io/categories/Back/</loc>
         <lastmod>2019-01-28T08:00:41.792Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -22,29 +15,43 @@
     </url>
 
     <url>
-        <loc>http://mingguk.github.io/categories/Review/Bootcamp/</loc>
-        <lastmod>2019-01-28T08:26:05.903Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/categories/Review/</loc>
-        <lastmod>2019-01-28T09:14:48.483Z</lastmod>
+        <loc>http://mingguk.github.io/categories/Front/html-css/</loc>
+        <lastmod>2019-01-29T08:04:01.264Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://mingguk.github.io/categories/Front/</loc>
-        <lastmod>2019-01-28T18:39:11.143Z</lastmod>
+        <lastmod>2019-01-29T08:04:31.106Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://mingguk.github.io/categories/Front/Javascript/</loc>
-        <lastmod>2019-01-28T18:39:11.143Z</lastmod>
+        <lastmod>2019-01-29T08:04:31.106Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/categories/Review/</loc>
+        <lastmod>2019-01-29T08:08:12.393Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/categories/Review/Bootcamp/</loc>
+        <lastmod>2019-01-29T08:08:12.393Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/categories/post/</loc>
+        <lastmod>2019-01-29T08:20:29.648Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
