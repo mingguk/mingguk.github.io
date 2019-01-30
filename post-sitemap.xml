@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>http://mingguk.github.io/2019/01/29/webDev-plan/</loc>
+        <lastmod>2019-01-30T17:34:46.906Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://mingguk.github.io/2019/01/29/jsw%20main/</loc>
         <lastmod>2019-01-30T17:29:13.202Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -74,14 +82,6 @@
     <url>
         <loc>http://mingguk.github.io/2019/01/29/review/</loc>
         <lastmod>2019-01-30T13:51:04.047Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/01/29/webDev-plan/</loc>
-        <lastmod>2019-01-30T13:50:51.632Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
