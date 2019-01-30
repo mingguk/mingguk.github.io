@@ -8,8 +8,24 @@
     </url>
 
     <url>
-        <loc>http://mingguk.github.io/2019/01/29/ec-and-le/</loc>
-        <lastmod>2019-01-30T04:25:04.637Z</lastmod>
+        <loc>http://mingguk.github.io/2019/01/30/type-operator/</loc>
+        <lastmod>2019-01-30T07:30:49.780Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/01/29/jsw%20context%20lex/</loc>
+        <lastmod>2019-01-30T07:30:11.313Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/01/29/post-jsWeird1/</loc>
+        <lastmod>2019-01-30T04:30:09.068Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -50,14 +66,6 @@
     <url>
         <loc>http://mingguk.github.io/2019/01/28/third-post/</loc>
         <lastmod>2019-01-29T08:04:01.264Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/01/29/post-jsWeird1/</loc>
-        <lastmod>2019-01-29T07:48:30.791Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
