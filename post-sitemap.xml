@@ -8,6 +8,54 @@
     </url>
 
     <url>
+        <loc>http://mingguk.github.io/2019/01/31/jsw%20this/</loc>
+        <lastmod>2019-01-30T17:11:06.896Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/01/31/jsw%20Functions/</loc>
+        <lastmod>2019-01-30T17:08:07.128Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/01/31/jsw%20Object/</loc>
+        <lastmod>2019-01-30T17:07:00.029Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/01/30/jsw%20type%26operator/</loc>
+        <lastmod>2019-01-30T17:05:16.886Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/01/29/jsw%20context%20%26ex/</loc>
+        <lastmod>2019-01-30T17:03:40.968Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/01/31/jsw%20call-by/</loc>
+        <lastmod>2019-01-30T16:58:20.698Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://mingguk.github.io/2019/01/29/back/</loc>
         <lastmod>2019-01-30T13:51:14.386Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -26,14 +74,6 @@
     <url>
         <loc>http://mingguk.github.io/2019/01/29/webDev-plan/</loc>
         <lastmod>2019-01-30T13:50:51.632Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/01/31/jsw%20Object/</loc>
-        <lastmod>2019-01-30T13:50:37.121Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -66,30 +106,6 @@
     <url>
         <loc>http://mingguk.github.io/2019/01/28/first-post/</loc>
         <lastmod>2019-01-30T13:49:35.522Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/01/31/jsw%20Functions/</loc>
-        <lastmod>2019-01-30T13:47:53.791Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/01/30/jsw%20type%26operator/</loc>
-        <lastmod>2019-01-30T12:45:43.615Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/01/29/jsw%20context%20%26ex/</loc>
-        <lastmod>2019-01-30T11:29:00.531Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
