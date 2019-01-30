@@ -6,25 +6,25 @@
     
 
     
-    <title>&lt;Udemy&gt; Javascript weird parts 시작하기 | Mingguk</title>
+    <title>Object | Mingguk</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="javascript,weirdparts">
     
-    <meta name="description" content="자바스크립트 개념정리를 위해 이러저리 자료를 찾던중 발견한 보석같은 강의 (feat. 연쇄할인마)  단순 문법이나 기초 예제 복기가 아닌 이면에 자바스크립트가 어떻게 동작하는지 그 원리를(weird parts) 이해하는 것을 목표로 하고 있다. 굳이 왜 작동원리까지..? 라고 생각 할 수 있겠지만 원리에 대한 이해를 바탕으로 더 나은 코드를 작성할 수">
+    <meta name="description" content="Object in javascript 자바스크립트에서 객체는 a collection of key value pairs  이다. 객체의 요소로 변수, 함수(메소드), 심지어 다른 객체 까지 가질 수 있고 각각의 요소에 대한 reference(메모리 어디에 저장되어있는지, 주소) 를 가지고 있다 12345678910111213141516171819202122">
 <meta name="keywords" content="javascript,weirdparts">
 <meta property="og:type" content="article">
-<meta property="og:title" content="&lt;Udemy&gt; Javascript weird parts 시작하기">
-<meta property="og:url" content="http://mingguk.github.io/2019/01/29/post-jsWeird1/index.html">
+<meta property="og:title" content="Object">
+<meta property="og:url" content="http://mingguk.github.io/2019/01/31/jsw Object/index.html">
 <meta property="og:site_name" content="Mingguk">
-<meta property="og:description" content="자바스크립트 개념정리를 위해 이러저리 자료를 찾던중 발견한 보석같은 강의 (feat. 연쇄할인마)  단순 문법이나 기초 예제 복기가 아닌 이면에 자바스크립트가 어떻게 동작하는지 그 원리를(weird parts) 이해하는 것을 목표로 하고 있다. 굳이 왜 작동원리까지..? 라고 생각 할 수 있겠지만 원리에 대한 이해를 바탕으로 더 나은 코드를 작성할 수">
+<meta property="og:description" content="Object in javascript 자바스크립트에서 객체는 a collection of key value pairs  이다. 객체의 요소로 변수, 함수(메소드), 심지어 다른 객체 까지 가질 수 있고 각각의 요소에 대한 reference(메모리 어디에 저장되어있는지, 주소) 를 가지고 있다 12345678910111213141516171819202122">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://mingguk.github.io/images/jswThum.png">
-<meta property="og:updated_time" content="2019-01-30T04:30:09.068Z">
+<meta property="og:updated_time" content="2019-01-30T13:50:37.121Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="&lt;Udemy&gt; Javascript weird parts 시작하기">
-<meta name="twitter:description" content="자바스크립트 개념정리를 위해 이러저리 자료를 찾던중 발견한 보석같은 강의 (feat. 연쇄할인마)  단순 문법이나 기초 예제 복기가 아닌 이면에 자바스크립트가 어떻게 동작하는지 그 원리를(weird parts) 이해하는 것을 목표로 하고 있다. 굳이 왜 작동원리까지..? 라고 생각 할 수 있겠지만 원리에 대한 이해를 바탕으로 더 나은 코드를 작성할 수">
+<meta name="twitter:title" content="Object">
+<meta name="twitter:description" content="Object in javascript 자바스크립트에서 객체는 a collection of key value pairs  이다. 객체의 요소로 변수, 함수(메소드), 심지어 다른 객체 까지 가질 수 있고 각각의 요소에 대한 reference(메모리 어디에 저장되어있는지, 주소) 를 가지고 있다 12345678910111213141516171819202122">
 <meta name="twitter:image" content="http://mingguk.github.io/images/jswThum.png">
     
 
@@ -147,14 +147,14 @@ ga('send', 'pageview');
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-post-jsWeird1" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-jsw Object" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        &lt;Udemy&gt; Javascript weird parts 시작하기
+        Object
         </h1>
     
 
@@ -164,8 +164,8 @@ ga('send', 'pageview');
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/01/29/post-jsWeird1/" class="article-date">
-            <time datetime="2019-01-29T02:15:51.000Z" itemprop="datePublished">2019-01-29</time>
+        <a href="/2019/01/31/jsw Object/" class="article-date">
+            <time datetime="2019-01-30T16:34:53.000Z" itemprop="datePublished">2019-01-30</time>
         </a>
     </div>
 
@@ -181,17 +181,22 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/images/jswUnderstand.png" alt=""> </p>
-<p>자바스크립트 개념정리를 위해 이러저리 자료를 찾던중 발견한 보석같은 강의 (feat. 연쇄할인마) </p>
-<p>단순 문법이나 기초 예제 복기가 아닌 이면에 자바스크립트가 어떻게 동작하는지 그 원리를(weird parts) 이해하는 것을 목표로 하고 있다. 굳이 왜 작동원리까지..? 라고 생각 할 수 있겠지만 <strong>원리에 대한 이해</strong>를 바탕으로 더 나은 코드를 작성할 수 있다는 주장이다.</p>
-<p><br></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(&apos;Hello World&apos;);   //Hello World</span><br></pre></td></tr></table></figure>
-<p>예를들어 Hello world 를 출력하기 위한 이 간단한 코드 이면에, 이를 실행하기 위해 자바스크립트엔진이 어떻게 동작하여 브라우저를 통해 화면에 글자를 출력하게 되는지 같은.. </p>
-<p>사실 codestates pre 과정에서 처음하는 javascript임에도 큰 혼란을 겪지않았던건  먼저 이 강의를 수강하고 간 덕분인것 같다. </p>
-<p><img src="/images/jswLibraries.png" alt=""></p>
-<p>프론트엔드 개발에 흔히 쓰이는 프레임워크, 라이브러리들도 결국 자바스크립트 코드일뿐 이라는 것,                    프론트엔드 개발을 잘하고 싶다, 코드 퀄리티를 높히고 싶다면? 결국 모든것의 기반이 되는 자바스크립트를 깊게 파고 공부하는 것이 최선의 방법</p>
-<p>pre course 공부한 내용이랑 자바스크립트 개념 정리를 위해서 시리즈로 블로그에 정리 포스팅을 연재 할 계획이다 그다음은 오래전 결제하고 조금보다 방치한 <a href="https://www.udemy.com/the-web-developer-bootcamp/" target="_blank" rel="noopener">web bootcamp</a> 랑 <a href="https://www.udemy.com/the-complete-javascript-course/" target="_blank" rel="noopener">javascript real projects</a> 를 완강하고..</p>
-<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/29/ec-and-le/">JSW context &amp; scope</a></p>
+            <p><img src="/images/jswOF.png" alt=""></p>
+<h3 id="Object-in-javascript"><a href="#Object-in-javascript" class="headerlink" title="Object in javascript"></a>Object in javascript</h3><p><img src="/images/jswObject.png" alt=""></p>
+<p>자바스크립트에서 객체는 <strong>a collection of key value pairs</strong>  이다.</p>
+<p>객체의 요소로 변수, 함수(메소드), 심지어 다른 객체 까지 가질 수 있고 각각의 요소에 대한 reference(메모리 어디에 저장되어있는지, 주소) 를 가지고 있다</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">var person = new Object();</span><br><span class="line"></span><br><span class="line">// [] 는 연산자, 해당 객체의 name 주소로 가서 value 를 반환하는</span><br><span class="line">person[&apos;firstname&apos;] = &apos;minkuk&apos;;  // name value pair</span><br><span class="line"></span><br><span class="line">// firstname 의 reference를 객체 person에게 부여</span><br><span class="line">person[&apos;lastname&apos;] = &apos;Seo&apos;;</span><br><span class="line"></span><br><span class="line">var firstNameProperty = &apos;firstname&apos;;</span><br><span class="line"></span><br><span class="line">console.log(person); //Object</span><br><span class="line">console.log(person[firstNameProperty]); //Tony</span><br><span class="line"></span><br><span class="line">// . 또한 연산자  a.name --&gt; a 객체의 name 의 value에 접근가능</span><br><span class="line">console.log(person.firstname); //Tony</span><br><span class="line"></span><br><span class="line">//객체 내 요소 추가하기</span><br><span class="line">person.address = new Object();</span><br><span class="line">person.address.street = &apos;111 Main St.&apos;;</span><br><span class="line">person.address.city = &apos;New York&apos;;</span><br><span class="line">person.address.state = &apos;NY&apos;;</span><br><span class="line"></span><br><span class="line">//. 연산자로 객체의 요소들에 접근, 참조가능</span><br><span class="line"></span><br><span class="line">console.log(person.address.street) // 111 Main St.</span><br><span class="line">console.log(person.address.city) // New York</span><br><span class="line">console.log(person[&apos;address&apos;][&apos;state&apos;]) // NY</span><br></pre></td></tr></table></figure>
+<h3 id="Object-literals"><a href="#Object-literals" class="headerlink" title="Object literals"></a>Object literals</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;&#125;; // 객체 생성 </span><br><span class="line">var person = &#123;</span><br><span class="line">	firstname: &apos;minkuk&apos;,</span><br><span class="line">    lastname: &apos;Seo&apos;</span><br><span class="line">    </span><br><span class="line">   	//다른 객체도 객체의 요소로 생성가능</span><br><span class="line">   	address: &#123;</span><br><span class="line">        street: &apos;111 Main St.&apos;,</span><br><span class="line">        city: &apos;New York&apos;,</span><br><span class="line">        state: &apos;NY&apos;</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;;</span><br><span class="line"> </span><br><span class="line">//객체는 함수의 인자로도 전달이 가능하다</span><br><span class="line">function greet(person) &#123;</span><br><span class="line">    console.log(&apos;Hi &apos; + person.firstname);</span><br><span class="line">&#125;</span><br><span class="line">greet(Tony); // Hi Tony</span><br><span class="line"></span><br><span class="line">// 이런식으로 객체생성과 동시에 인자로 넘기기도 가능</span><br><span class="line">greet(&#123;</span><br><span class="line">    firstname: &apos;Mary&apos;,</span><br><span class="line">    lastname: Doe</span><br><span class="line">&#125;); // Hi Mary Doe</span><br></pre></td></tr></table></figure>
+<h3 id="NameSpace"><a href="#NameSpace" class="headerlink" title="NameSpace"></a>NameSpace</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var greet = &apos;Hello!&apos;;</span><br><span class="line">var greet = &apos;Hola!&apos;;</span><br><span class="line"></span><br><span class="line">console.log(greet); </span><br><span class="line">// Hola!</span><br></pre></td></tr></table></figure>
+<p>자바스크립트는 순차적으로 코드를 실행하기 때문에 위의 결과를 예측하기는 쉽다.</p>
+<p>하지만 만약에 각 변수가 다른 자바스크립트에 저장되어 있거나, 외부에서 라이브러리로 가져다 쓰는거라면? 의도치 않게 같은 변수명으로 인해 충돌 가능성이 있다.</p>
+<p><img src="/images/jswNameSpace.png" alt=""></p>
+<p>이러한 충돌을 방지하기 위해 Namespace 개념이 발생했다. 자바스크립트에서는 객체를 이 네임스페이스로 활용 할 수 있다</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var english = &#123;greet: &apos;Hello!&apos;&#125;;</span><br><span class="line">var spanish = &#123;greet: &apos;Hola!&apos;&#125;;</span><br><span class="line"></span><br><span class="line">console.log(english.greet); //Hello!</span><br><span class="line">console.log(spanish.greet); //Hola!</span><br></pre></td></tr></table></figure>
+<p><strong>객체 요소 추가 시 주의사항</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">english.greeting.greet = &apos;Hi!&apos;;  //이런 식은 error 발생</span><br><span class="line">//. 연산자의 우선순위에 따라 (연관 left-to-right)</span><br><span class="line">//english.greeting은 undefined가 이기 때문에</span><br><span class="line"></span><br><span class="line">// 객체 내 새로운 요소를 생성할 때는 [] 연산자를 사용하거나</span><br><span class="line">english[greeting][greet] = &apos;Hi!&apos;;</span><br><span class="line"></span><br><span class="line">// 객체 생성과 동시에 요소를 추가하는 것을 추천</span><br><span class="line">english = &#123;greeting: &#123;greet:&apos;Hi!&apos;&#125;&#125;;</span><br><span class="line"></span><br><span class="line">console.log(english.greeting.greet); // Hi!</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/30/jsw type&amp;operator/">Type &amp; Operator</a></p>
 
         </div>
         <footer class="article-footer">
@@ -199,7 +204,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://mingguk.github.io/2019/01/29/post-jsWeird1/" data-id="cjrivh0i700052w9ngok7y50s" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://mingguk.github.io/2019/01/31/jsw Object/" data-id="cjrj960qm0005de9nwssmr74f" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -269,18 +274,20 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "minkuk Seo"
         },
-        "headline": "&lt;Udemy&gt; Javascript weird parts 시작하기",
+        "headline": "Object",
         "image": "http://mingguk.github.io/images/jswThum.png",
         "keywords": "javascript weirdparts",
         "genre": "Front Javascript",
-        "datePublished": "2019-01-29",
-        "dateCreated": "2019-01-29",
+        "datePublished": "2019-01-30",
+        "dateCreated": "2019-01-30",
         "dateModified": "2019-01-30",
-        "url": "http://mingguk.github.io/2019/01/29/post-jsWeird1/",
-        "description": " 
-자바스크립트 개념정리를 위해 이러저리 자료를 찾던중 발견한 보석같은 강의 (feat. 연쇄할인마) 
-단순 문법이나 기초 예제 복기가 아닌 이면에 자바스크립트가 어떻게 동작하는지 그 원리를(weird parts) 이해하는 것을 목표로 하고 있다. 굳이 왜 작동원리까지..? 라고 생각 할 수 있겠지만 원리에 대한 이해를 바탕으로 더 나은 코드를 작성할 수 "
-        "wordCount": 195
+        "url": "http://mingguk.github.io/2019/01/31/jsw Object/",
+        "description": "
+Object in javascript
+자바스크립트에서 객체는 a collection of key value pairs  이다.
+객체의 요소로 변수, 함수(메소드), 심지어 다른 객체 까지 가질 수 있고 각각의 요소에 대한 reference(메모리 어디에 저장되어있는지, 주소) 를 가지고 있다
+12345678910111213141516171819202122"
+        "wordCount": 509
     }
 </script>
 
@@ -336,20 +343,20 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
-        <a href="/2019/01/29/jsw context lex/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2019/01/31/jsw Functions/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            (no title)
+            Functions
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2019/01/29/back/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/01/30/jsw type&operator/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">back</p>
+        <p class="article-nav-title">type &amp; operator</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -366,7 +373,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -443,7 +450,7 @@ ga('send', 'pageview');
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://mingguk.github.io/2019/01/29/post-jsWeird1/';
+    var disqus_url = 'http://mingguk.github.io/2019/01/31/jsw Object/';
     
     (function() {
     var dsq = document.createElement('script');

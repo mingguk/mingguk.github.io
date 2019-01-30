@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mingguk.github.io/"/>
-  <updated>2019-01-30T13:44:01.620Z</updated>
+  <updated>2019-01-30T13:47:53.791Z</updated>
   <id>http://mingguk.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Object &amp; Functions [1]</title>
-    <link href="http://mingguk.github.io/2019/01/31/jsw-Object-Functions/"/>
-    <id>http://mingguk.github.io/2019/01/31/jsw-Object-Functions/</id>
+    <title>Functions</title>
+    <link href="http://mingguk.github.io/2019/01/31/jsw%20Functions/"/>
+    <id>http://mingguk.github.io/2019/01/31/jsw Functions/</id>
+    <published>2019-01-30T22:45:11.000Z</published>
+    <updated>2019-01-30T13:47:53.791Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href=""></a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;h3 id=&quot;Related-Posts&quot;&gt;&lt;a href=&quot;#Related-Posts&quot; class=&quot;headerlink&quot; title=&quot;Related Posts&quot;&gt;&lt;/a&gt;Related Posts&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="Front" scheme="http://mingguk.github.io/categories/Front/"/>
+    
+      <category term="Javascript" scheme="http://mingguk.github.io/categories/Front/Javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://mingguk.github.io/tags/javascript/"/>
+    
+      <category term="weirdparts" scheme="http://mingguk.github.io/tags/weirdparts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Object</title>
+    <link href="http://mingguk.github.io/2019/01/31/jsw%20Object/"/>
+    <id>http://mingguk.github.io/2019/01/31/jsw Object/</id>
     <published>2019-01-30T16:34:53.000Z</published>
-    <updated>2019-01-30T13:44:01.620Z</updated>
+    <updated>2019-01-30T13:50:37.121Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/jswOF.png" alt=""></p><h3 id="Object-in-javascript"><a href="#Object-in-javascript" class="headerlink" title="Object in javascript"></a>Object in javascript</h3><p><img src="/images/jswObject.png" alt=""></p><p>자바스크립트에서 객체는 <strong>a collection of key value pairs</strong>  이다.</p><p>객체의 요소로 변수, 함수(메소드), 심지어 다른 객체 까지 가질 수 있고 각각의 요소에 대한 reference(메모리 어디에 저장되어있는지, 주소) 를 가지고 있다</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">var person = new Object();</span><br><span class="line"></span><br><span class="line">// [] 는 연산자, 해당 객체의 name 주소로 가서 value 를 반환하는</span><br><span class="line">person[&apos;firstname&apos;] = &apos;minkuk&apos;;  // name value pair</span><br><span class="line"></span><br><span class="line">// firstname 의 reference를 객체 person에게 부여</span><br><span class="line">person[&apos;lastname&apos;] = &apos;Seo&apos;;</span><br><span class="line"></span><br><span class="line">var firstNameProperty = &apos;firstname&apos;;</span><br><span class="line"></span><br><span class="line">console.log(person); //Object</span><br><span class="line">console.log(person[firstNameProperty]); //Tony</span><br><span class="line"></span><br><span class="line">// . 또한 연산자  a.name --&gt; a 객체의 name 의 value에 접근가능</span><br><span class="line">console.log(person.firstname); //Tony</span><br><span class="line"></span><br><span class="line">//객체 내 요소 추가하기</span><br><span class="line">person.address = new Object();</span><br><span class="line">person.address.street = &apos;111 Main St.&apos;;</span><br><span class="line">person.address.city = &apos;New York&apos;;</span><br><span class="line">person.address.state = &apos;NY&apos;;</span><br><span class="line"></span><br><span class="line">//. 연산자로 객체의 요소들에 접근, 참조가능</span><br><span class="line"></span><br><span class="line">console.log(person.address.street) // 111 Main St.</span><br><span class="line">console.log(person.address.city) // New York</span><br><span class="line">console.log(person[&apos;address&apos;][&apos;state&apos;]) // NY</span><br></pre></td></tr></table></figure><h3 id="Object-literals"><a href="#Object-literals" class="headerlink" title="Object literals"></a>Object literals</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;&#125;; // 객체 생성 </span><br><span class="line">var person = &#123;</span><br><span class="line">firstname: &apos;minkuk&apos;,</span><br><span class="line">    lastname: &apos;Seo&apos;</span><br><span class="line">    </span><br><span class="line">   //다른 객체도 객체의 요소로 생성가능</span><br><span class="line">   address: &#123;</span><br><span class="line">        street: &apos;111 Main St.&apos;,</span><br><span class="line">        city: &apos;New York&apos;,</span><br><span class="line">        state: &apos;NY&apos;</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;;</span><br><span class="line"> </span><br><span class="line">//객체는 함수의 인자로도 전달이 가능하다</span><br><span class="line">function greet(person) &#123;</span><br><span class="line">    console.log(&apos;Hi &apos; + person.firstname);</span><br><span class="line">&#125;</span><br><span class="line">greet(Tony); // Hi Tony</span><br><span class="line"></span><br><span class="line">// 이런식으로 객체생성과 동시에 인자로 넘기기도 가능</span><br><span class="line">greet(&#123;</span><br><span class="line">    firstname: &apos;Mary&apos;,</span><br><span class="line">    lastname: Doe</span><br><span class="line">&#125;); // Hi Mary Doe</span><br></pre></td></tr></table></figure><h3 id="NameSpace"><a href="#NameSpace" class="headerlink" title="NameSpace"></a>NameSpace</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var greet = &apos;Hello!&apos;;</span><br><span class="line">var greet = &apos;Hola!&apos;;</span><br><span class="line"></span><br><span class="line">console.log(greet); </span><br><span class="line">// Hola!</span><br></pre></td></tr></table></figure><p>자바스크립트는 순차적으로 코드를 실행하기 때문에 위의 결과를 예측하기는 쉽다.</p><p>하지만 만약에 각 변수가 다른 자바스크립트에 저장되어 있거나, 외부에서 라이브러리로 가져다 쓰는거라면? 의도치 않게 같은 변수명으로 인해 충돌 가능성이 있다.</p><p><img src="/images/jswNameSpace.png" alt=""></p><p>이러한 충돌을 방지하기 위해 Namespace 개념이 발생했다. 자바스크립트에서는 객체를 이 네임스페이스로 활용 할 수 있다</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var english = &#123;greet: &apos;Hello!&apos;&#125;;</span><br><span class="line">var spanish = &#123;greet: &apos;Hola!&apos;&#125;;</span><br><span class="line"></span><br><span class="line">console.log(english.greet); //Hello!</span><br><span class="line">console.log(spanish.greet); //Hola!</span><br></pre></td></tr></table></figure><p><strong>객체 요소 추가 시 주의사항</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">english.greeting.greet = &apos;Hi!&apos;;  //이런 식은 error 발생</span><br><span class="line">//. 연산자의 우선순위에 따라 (연관 left-to-right)</span><br><span class="line">//english.greeting은 undefined가 이기 때문에</span><br><span class="line"></span><br><span class="line">// 객체 내 새로운 요소를 생성할 때는 [] 연산자를 사용하거나</span><br><span class="line">english[greeting][greet] = &apos;Hi!&apos;;</span><br><span class="line"></span><br><span class="line">// 객체 생성과 동시에 요소를 추가하는 것을 추천</span><br><span class="line">english = &#123;greeting: &#123;greet:&apos;Hi!&apos;&#125;&#125;;</span><br><span class="line"></span><br><span class="line">console.log(english.greeting.greet); // Hi!</span><br></pre></td></tr></table></figure><hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/30/jsw type&amp;operator/">Type &amp; Operator</a></p>]]></content>
     
@@ -81,9 +112,9 @@
     <link href="http://mingguk.github.io/2019/01/29/webDev-plan/"/>
     <id>http://mingguk.github.io/2019/01/29/webDev-plan/</id>
     <published>2019-01-29T13:28:27.000Z</published>
-    <updated>2019-01-29T08:20:29.648Z</updated>
+    <updated>2019-01-30T13:50:51.632Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="웹개발-공부-계획"><a href="#웹개발-공부-계획" class="headerlink" title="웹개발 공부 계획"></a>웹개발 공부 계획</h3><h3 id=""><a href="#" class="headerlink" title=" "></a> </h3><p><img src="/images/nothing.png" alt=""></p><h3 id="References-위주로-큰-틀을-잡고-다른-소스들-참고"><a href="#References-위주로-큰-틀을-잡고-다른-소스들-참고" class="headerlink" title="References (위주로 큰 틀을 잡고 다른 소스들 참고)"></a>References (위주로 큰 틀을 잡고 다른 소스들 참고)</h3><ol><li><a href="https://medium.com/@Jbee_/%EC%8B%A0%EC%9E%85-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EB%90%98%EB%A0%A4%EB%A9%B4-%EB%AC%B4%EC%97%87%EC%9D%84-%ED%95%99%EC%8A%B5%ED%95%B4%EC%95%BC-%ED%95%98%EB%82%98%EC%9A%94-1dd59a14e084?fbclid=IwAR2Qwaifz8Lnn_aOF54zPrwdWxwYcI1qO8Xo4-N1uG-QEEaZRWQBbEcrH8Q" target="_blank" rel="noopener">프론트엔드 뭘 공부해야 하는가?</a><br></li><li><a href="https://medium.com/@codesquad_yoda/%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%A4%80%EB%B9%84%ED%95%B4%EC%95%BC-%ED%95%A0%EA%B9%8C-5ac7bb6ff2a9" target="_blank" rel="noopener">웹프론트엔드 개발자, 어떻게 준비?</a> <br></li><li><a href="https://github.com/kamranahmedse/developer-roadmap" target="_blank" rel="noopener">Developer roadmap</a> </li></ol><hr><p><strong>1. Javascript</strong></p><p>자바스크립트 동작원리</p><p>자바스크립트 문법, 주요개념</p><p>DOM</p><p>ES6</p><p>자바스크립트 생태계 (npm Web pack / bable)</p><p>CommonJS</p><p>OOP in Javascript / 함수형 프로그래밍</p><p>Type script</p><p>AJAX CORS</p><hr><p><strong>2. HTML / CSS</strong></p><p>grid</p><p>Midea query</p><p>CSS Framework (Bootsctrap 4</p><p>웹 접근성</p><hr><p><strong>3. library framework</strong></p><p>react</p><p>상태관리 라이브러리</p><p>react native</p><hr><p><strong>4. CS , Network, algorithm</strong></p><p>자료구조</p><p>알고리즘 (Udemy, daily toy, 면접대비)</p><hr><p><strong>5. Backend</strong></p><p>서버사이드 / 클라이언트 사이드 렌더링</p><p>node js</p><p>graphQL</p><p>MongoDB</p><hr><p><strong>6. Etc</strong></p><p>Github</p><p>Blogging</p><p>Terminal usage</p><p>Design patterns</p><p>English (업무수준 상회)</p><hr><h3 id="Schedule"><a href="#Schedule" class="headerlink" title="Schedule"></a>Schedule</h3><p>1월 &lt;기초&gt;&lt;숲 파악&gt;**</p><ol><li>런코 전과정 마스터(발췌,보충) , 테스트 준비, 통과 </li><li>udemy javascript weird parts 정리 (블로깅)</li><li>udemy web dev bootcamp 일부 (런코 관련)</li></ol><p>==&gt;  javascript 기본개념, 사용법 정리</p><p><strong>2월 &lt;프론트엔드&gt; <cs 기초=""></cs></strong></p><ol><li><p>자바스크립트 작동원리, 개념정리, codestates pre course 복습 (블로깅)</p></li><li><p>udemy web dev bootcamp 완강, udemy javascript build real app 완강  (js 로 웹 실제 조작, 구현 경험)</p></li><li><p>udemy algorithm in javascript (자료구조, 원리 이해, 직접 구현)<br>udemy network 이론강의 수강 , 컴원리 포함</p></li><li><p>생태계, javascript 관련 필수 이슈들</p></li><li><p>HTML / CSS (udemy Html/css 강의 / 미디어쿼리)</p></li></ol><p><strong>3월~4.11 &lt;풀스택 경험 + 백엔드 기초&gt; &lt;갈무리&gt;</strong></p><ol><li><p>라이브러리 (react , react native 기초 공부) - udemy / nomad react 기초강의들</p></li><li><p>nomad coder 풀스택 과정 1개 수료 (유튜브 or 우버 or  클론)</p></li><li><p>그동안 공부한 것 정리 (블로그 - TIL ,특수 주1회 / 깃헙) / 알고리즘 지속 공부</p></li></ol><p><strong>4월~ 수료까지 Codetates immersive course </strong><br>목표 : <strong>실력 있는 프론트엔드 개발자 &amp;&amp; 웹개발 커리어 시작 </strong></p><ul><li><p>지속 학습능력 (스스로 배우는 방법 터득, 체화)</p></li><li><p>커뮤니케이션, 협업 능력 (혼자 보다 함께, 더 크게)</p></li><li><p>기본기 갖추기 (cs, 네트워크 / 알고리즘 / 기반 작동원리 파악)</p></li><li><p>full-stack 설계 및 구현 경험  ( front 기반 + backend 기초 구축, 어플리케이션 전체)</p></li><li><p>Web + android + ios (react native)  / backend 통합 결과물 완성하기 </p></li><li><p>포트폴리오 및 브랜딩 ( 깃헙 / 블로그(개발공부, 포트폴리오 페이지 따로) )</p></li></ul><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
+    <content type="html"><![CDATA[<h3 id="웹개발-공부-계획"><a href="#웹개발-공부-계획" class="headerlink" title="웹개발 공부 계획"></a>웹개발 공부 계획</h3><h3 id=""><a href="#" class="headerlink" title=" "></a> </h3><p><img src="/images/nothing.png" alt=""></p><h3 id="References-위주로-큰-틀을-잡고-다른-소스들-참고"><a href="#References-위주로-큰-틀을-잡고-다른-소스들-참고" class="headerlink" title="References (위주로 큰 틀을 잡고 다른 소스들 참고)"></a>References (위주로 큰 틀을 잡고 다른 소스들 참고)</h3><ol><li><a href="https://medium.com/@Jbee_/%EC%8B%A0%EC%9E%85-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EB%90%98%EB%A0%A4%EB%A9%B4-%EB%AC%B4%EC%97%87%EC%9D%84-%ED%95%99%EC%8A%B5%ED%95%B4%EC%95%BC-%ED%95%98%EB%82%98%EC%9A%94-1dd59a14e084?fbclid=IwAR2Qwaifz8Lnn_aOF54zPrwdWxwYcI1qO8Xo4-N1uG-QEEaZRWQBbEcrH8Q" target="_blank" rel="noopener">프론트엔드 뭘 공부해야 하는가?</a><br></li><li><a href="https://medium.com/@codesquad_yoda/%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%A4%80%EB%B9%84%ED%95%B4%EC%95%BC-%ED%95%A0%EA%B9%8C-5ac7bb6ff2a9" target="_blank" rel="noopener">웹프론트엔드 개발자, 어떻게 준비?</a> <br></li><li><a href="https://github.com/kamranahmedse/developer-roadmap" target="_blank" rel="noopener">Developer roadmap</a> </li></ol><hr><p><strong>1. Javascript</strong></p><p>자바스크립트 동작원리</p><p>자바스크립트 문법, 주요개념</p><p>DOM</p><p>ES6</p><p>자바스크립트 생태계 (npm Web pack / bable)</p><p>CommonJS</p><p>OOP in Javascript / 함수형 프로그래밍</p><p>Type script</p><p>AJAX CORS</p><hr><p><strong>2. HTML / CSS</strong></p><p>grid</p><p>Midea query</p><p>CSS Framework (Bootsctrap 4</p><p>웹 접근성</p><hr><p><strong>3. library framework</strong></p><p>react</p><p>상태관리 라이브러리</p><p>react native</p><hr><p><strong>4. CS , Network, algorithm</strong></p><p>자료구조</p><p>알고리즘 (Udemy, daily toy, 면접대비)</p><hr><p><strong>5. Backend</strong></p><p>서버사이드 / 클라이언트 사이드 렌더링</p><p>node js</p><p>graphQL</p><p>MongoDB</p><hr><p><strong>6. Etc</strong></p><p>Github</p><p>Blogging</p><p>Terminal usage</p><p>Design patterns</p><p>English (업무수준 상회)</p><hr><h3 id="Schedule"><a href="#Schedule" class="headerlink" title="Schedule"></a>Schedule</h3><p>1월 &lt;기초&gt;&lt;숲 파악&gt;**</p><ol><li>런코 전과정 마스터(발췌,보충) , 테스트 준비, 통과 </li><li>udemy javascript weird parts 정리 (블로깅)</li><li>udemy web dev bootcamp 일부 (런코 관련)</li></ol><p>==&gt;  javascript 기본개념, 사용법 정리</p><p><strong>2월 &lt;프론트엔드&gt; <cs 기초=""></cs></strong></p><ol><li><p>자바스크립트 작동원리, 개념정리, codestates pre course 복습 (블로깅)</p></li><li><p>udemy web dev bootcamp 완강, udemy javascript build real app 완강  (js 로 웹 실제 조작, 구현 경험)</p></li><li><p>udemy algorithm in javascript (자료구조, 원리 이해, 직접 구현)<br>udemy network 이론강의 수강 , 컴원리 포함</p></li><li><p>생태계, javascript 관련 필수 이슈들</p></li><li><p>HTML / CSS (udemy Html/css 강의 / 미디어쿼리)</p></li></ol><p><strong>3월~4.11 &lt;풀스택 경험 + 백엔드 기초&gt; &lt;갈무리&gt;</strong></p><ol><li><p>라이브러리 (react , react native 기초 공부) - udemy / nomad react 기초강의들</p></li><li><p>nomad coder 풀스택 과정 1개 수료 (유튜브 or 우버 or  클론)</p></li><li><p>그동안 공부한 것 정리 (블로그 - TIL ,특수 주1회 / 깃헙) / 알고리즘 지속 공부</p></li></ol><p><strong>4월~ 수료까지 Codetates immersive course </strong><br>목표 : <strong>실력 있는 프론트엔드 개발자 &amp;&amp; 웹개발 커리어 시작 </strong></p><ul><li><p>지속 학습능력 (스스로 배우는 방법 터득, 체화)</p></li><li><p>커뮤니케이션, 협업 능력 (혼자 보다 함께, 더 크게)</p></li><li><p>기본기 갖추기 (cs, 네트워크 / 알고리즘 / 기반 작동원리 파악)</p></li><li><p>full-stack 설계 및 구현 경험  ( front 기반 + backend 기초 구축, 어플리케이션 전체)</p></li><li><p>Web + android + ios (react native)  / backend 통합 결과물 완성하기 </p></li><li><p>포트폴리오 및 브랜딩 ( 깃헙 / 블로그(개발공부, 포트폴리오 페이지 따로) )</p></li></ul><hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
     
     <summary type="html">
     
@@ -137,9 +168,9 @@
     <link href="http://mingguk.github.io/2019/01/29/jsw%20main/"/>
     <id>http://mingguk.github.io/2019/01/29/jsw main/</id>
     <published>2019-01-29T02:15:51.000Z</published>
-    <updated>2019-01-30T04:30:09.068Z</updated>
+    <updated>2019-01-30T13:50:14.453Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/images/jswUnderstand.png" alt=""> </p><p>자바스크립트 개념정리를 위해 이러저리 자료를 찾던중 발견한 보석같은 강의 (feat. 연쇄할인마) </p><p>단순 문법이나 기초 예제 복기가 아닌 이면에 자바스크립트가 어떻게 동작하는지 그 원리를(weird parts) 이해하는 것을 목표로 하고 있다. 굳이 왜 작동원리까지..? 라고 생각 할 수 있겠지만 <strong>원리에 대한 이해</strong>를 바탕으로 더 나은 코드를 작성할 수 있다는 주장이다.</p><p><br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(&apos;Hello World&apos;);   //Hello World</span><br></pre></td></tr></table></figure><p>예를들어 Hello world 를 출력하기 위한 이 간단한 코드 이면에, 이를 실행하기 위해 자바스크립트엔진이 어떻게 동작하여 브라우저를 통해 화면에 글자를 출력하게 되는지 같은.. </p><p>사실 codestates pre 과정에서 처음하는 javascript임에도 큰 혼란을 겪지않았던건  먼저 이 강의를 수강하고 간 덕분인것 같다. </p><p><img src="/images/jswLibraries.png" alt=""></p><p>프론트엔드 개발에 흔히 쓰이는 프레임워크, 라이브러리들도 결국 자바스크립트 코드일뿐 이라는 것,                    프론트엔드 개발을 잘하고 싶다, 코드 퀄리티를 높히고 싶다면? 결국 모든것의 기반이 되는 자바스크립트를 깊게 파고 공부하는 것이 최선의 방법</p><p>pre course 공부한 내용이랑 자바스크립트 개념 정리를 위해서 시리즈로 블로그에 정리 포스팅을 연재 할 계획이다 그다음은 오래전 결제하고 조금보다 방치한 <a href="https://www.udemy.com/the-web-developer-bootcamp/" target="_blank" rel="noopener">web bootcamp</a> 랑 <a href="https://www.udemy.com/the-complete-javascript-course/" target="_blank" rel="noopener">javascript real projects</a> 를 완강하고..</p><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/29/ec-and-le/">JSW context &amp; scope</a></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/images/jswUnderstand.png" alt=""> </p><p>자바스크립트 개념정리를 위해 이러저리 자료를 찾던중 발견한 보석같은 강의 (feat. 연쇄할인마) </p><p>단순 문법이나 기초 예제 복기가 아닌 이면에 자바스크립트가 어떻게 동작하는지 그 원리를(weird parts) 이해하는 것을 목표로 하고 있다. 굳이 왜 작동원리까지..? 라고 생각 할 수 있겠지만 <strong>원리에 대한 이해</strong>를 바탕으로 더 나은 코드를 작성할 수 있다는 주장이다.</p><p><br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(&apos;Hello World&apos;);   //Hello World</span><br></pre></td></tr></table></figure><p>예를들어 Hello world 를 출력하기 위한 이 간단한 코드 이면에, 이를 실행하기 위해 자바스크립트엔진이 어떻게 동작하여 브라우저를 통해 화면에 글자를 출력하게 되는지 같은.. </p><p>사실 codestates pre 과정에서 처음하는 javascript임에도 큰 혼란을 겪지않았던건  먼저 이 강의를 수강하고 간 덕분인것 같다. </p><p><img src="/images/jswLibraries.png" alt=""></p><p>프론트엔드 개발에 흔히 쓰이는 프레임워크, 라이브러리들도 결국 자바스크립트 코드일뿐 이라는 것,                    프론트엔드 개발을 잘하고 싶다, 코드 퀄리티를 높히고 싶다면? 결국 모든것의 기반이 되는 자바스크립트를 깊게 파고 공부하는 것이 최선의 방법</p><p>pre course 공부한 내용이랑 자바스크립트 개념 정리를 위해서 시리즈로 블로그에 정리 포스팅을 연재 할 계획이다 그다음은 오래전 결제하고 조금보다 방치한 <a href="https://www.udemy.com/the-web-developer-bootcamp/" target="_blank" rel="noopener">web bootcamp</a> 랑 <a href="https://www.udemy.com/the-complete-javascript-course/" target="_blank" rel="noopener">javascript real projects</a> 를 완강하고..</p><hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/29/ec-and-le/">JSW context &amp; scope</a></p>]]></content>
     
     <summary type="html">
     
@@ -168,15 +199,16 @@
     <link href="http://mingguk.github.io/2019/01/29/back/"/>
     <id>http://mingguk.github.io/2019/01/29/back/</id>
     <published>2019-01-28T16:22:52.000Z</published>
-    <updated>2019-01-28T08:00:41.792Z</updated>
+    <updated>2019-01-30T13:51:14.386Z</updated>
     
-    <content type="html"><![CDATA[<p>백엔드 카테고리</p><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
+    <content type="html"><![CDATA[<p>백엔드 카테고리</p><hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;백엔드 카테고리&lt;/p&gt;
+&lt;hr&gt;
 &lt;h3 id=&quot;Related-Posts&quot;&gt;&lt;a href=&quot;#Related-Posts&quot; class=&quot;headerlink&quot; title=&quot;Related Posts&quot;&gt;&lt;/a&gt;Related Posts&lt;/h3&gt;
       
     
@@ -194,9 +226,9 @@
     <link href="http://mingguk.github.io/2019/01/29/review/"/>
     <id>http://mingguk.github.io/2019/01/29/review/</id>
     <published>2019-01-28T16:11:57.000Z</published>
-    <updated>2019-01-29T08:06:07.014Z</updated>
+    <updated>2019-01-30T13:51:04.047Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="안녕하세요"><a href="#안녕하세요" class="headerlink" title="안녕하세요"></a>안녕하세요</h3><p>주로 온라인 강의 나 부트캠프로 공부를 많이 해왔기 때문에 (영어 자료 위주)</p><p>필요한 인강의나 강의 선택 시 제 경험이 작은 도움이 됏으면 합니다</p><p>주로 강의를 듣는 사이트</p><ol><li>Udemy </li><li>Udacity</li><li>인프런</li><li>칸아카데미, 코드리뷰</li></ol><h3 id="Related-post"><a href="#Related-post" class="headerlink" title="Related post"></a>Related post</h3><p><a href="http://mingguk.github.io/2019/01/28/codestates/">코드스테이츠 pre course 후기</a></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="안녕하세요"><a href="#안녕하세요" class="headerlink" title="안녕하세요"></a>안녕하세요</h3><p>주로 온라인 강의 나 부트캠프로 공부를 많이 해왔기 때문에 (영어 자료 위주)</p><p>필요한 인강의나 강의 선택 시 제 경험이 작은 도움이 됏으면 합니다</p><p>주로 강의를 듣는 사이트</p><ol><li>Udemy </li><li>Udacity</li><li>인프런</li><li>칸아카데미, 코드리뷰</li></ol><hr><h3 id="Related-post"><a href="#Related-post" class="headerlink" title="Related post"></a>Related post</h3><p><a href="http://mingguk.github.io/2019/01/28/codestates/">코드스테이츠 pre course 후기</a></p>]]></content>
     
     <summary type="html">
     
@@ -249,9 +281,9 @@
     <link href="http://mingguk.github.io/2019/01/28/third-post/"/>
     <id>http://mingguk.github.io/2019/01/28/third-post/</id>
     <published>2019-01-27T21:29:17.000Z</published>
-    <updated>2019-01-29T08:04:01.264Z</updated>
+    <updated>2019-01-30T13:49:58.481Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="html-css-도-해야제"><a href="#html-css-도-해야제" class="headerlink" title="html css 도 해야제"></a>html css 도 해야제</h3><h3 id=""><a href="#" class="headerlink" title=" "></a> </h3><p>카테고리 나누는거 왜케 어렵니..</p><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
+    <content type="html"><![CDATA[<h3 id="html-css-도-해야제"><a href="#html-css-도-해야제" class="headerlink" title="html css 도 해야제"></a>html css 도 해야제</h3><h3 id=""><a href="#" class="headerlink" title=" "></a> </h3><p>카테고리 나누는거 왜케 어렵니..</p><hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
     
     <summary type="html">
     
@@ -278,16 +310,17 @@
     <link href="http://mingguk.github.io/2019/01/28/second-post/"/>
     <id>http://mingguk.github.io/2019/01/28/second-post/</id>
     <published>2019-01-27T21:20:23.000Z</published>
-    <updated>2019-01-29T08:04:31.106Z</updated>
+    <updated>2019-01-30T13:49:46.614Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="카테고리-나누는게"><a href="#카테고리-나누는게" class="headerlink" title="카테고리 나누는게"></a>카테고리 나누는게</h3><p>이렇게 힘들다니..</p><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/28/first-post/">Javascript 시리즈 1: 시작하기</a></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="카테고리-나누는게"><a href="#카테고리-나누는게" class="headerlink" title="카테고리 나누는게"></a>카테고리 나누는게</h3><p>이렇게 힘들다니..</p><hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/28/first-post/">Javascript 시리즈 1: 시작하기</a></p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;h3 id=&quot;카테고리-나누는게&quot;&gt;&lt;a href=&quot;#카테고리-나누는게&quot; class=&quot;headerlink&quot; title=&quot;카테고리 나누는게&quot;&gt;&lt;/a&gt;카테고리 나누는게&lt;/h3&gt;&lt;p&gt;이렇게 힘들다니..&lt;/p&gt;
-&lt;h3 id=&quot;Related-Posts&quot;&gt;&lt;a h
+&lt;hr&gt;
+&lt;h3 id=&quot;Related-Posts&quot;
       
     
     </summary>
@@ -306,16 +339,17 @@
     <link href="http://mingguk.github.io/2019/01/28/first-post/"/>
     <id>http://mingguk.github.io/2019/01/28/first-post/</id>
     <published>2019-01-27T21:20:23.000Z</published>
-    <updated>2019-01-28T09:08:10.447Z</updated>
+    <updated>2019-01-30T13:49:35.522Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="처음이라니"><a href="#처음이라니" class="headerlink" title="처음이라니"></a>처음이라니</h3><p>헥소 블로그 세팅 헬..</p><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/28/second-post/">Javascript 시리즈 2: 자바스크립트 엔진</a></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="처음이라니"><a href="#처음이라니" class="headerlink" title="처음이라니"></a>처음이라니</h3><p>헥소 블로그 세팅 헬..</p><hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/28/second-post/">Javascript 시리즈 2: 자바스크립트 엔진</a></p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;h3 id=&quot;처음이라니&quot;&gt;&lt;a href=&quot;#처음이라니&quot; class=&quot;headerlink&quot; title=&quot;처음이라니&quot;&gt;&lt;/a&gt;처음이라니&lt;/h3&gt;&lt;p&gt;헥소 블로그 세팅 헬..&lt;/p&gt;
-&lt;h3 id=&quot;Related-Posts&quot;&gt;&lt;a href=&quot;#Related
+&lt;hr&gt;
+&lt;h3 id=&quot;Related-Posts&quot;&gt;&lt;a href=&quot;#Re
       
     
     </summary>
