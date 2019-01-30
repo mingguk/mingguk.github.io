@@ -10,13 +10,6 @@
     </url>
 
     <url>
-        <loc>http://mingguk.github.io/tags/weirdparts/</loc>
-        <lastmod>2019-01-28T18:26:25.492Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://mingguk.github.io/tags/weird/</loc>
         <lastmod>2019-01-29T07:48:30.791Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -33,13 +26,6 @@
     <url>
         <loc>http://mingguk.github.io/tags/css/</loc>
         <lastmod>2019-01-29T08:04:01.264Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/tags/javascript/</loc>
-        <lastmod>2019-01-29T08:04:31.106Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -68,6 +54,20 @@
     <url>
         <loc>http://mingguk.github.io/tags/plan/</loc>
         <lastmod>2019-01-29T08:20:29.648Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/tags/javascript/</loc>
+        <lastmod>2019-01-30T03:55:01.500Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/tags/weirdparts/</loc>
+        <lastmod>2019-01-30T03:55:01.500Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

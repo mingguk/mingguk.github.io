@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>http://mingguk.github.io/2019/01/29/ec-and-le/</loc>
+        <lastmod>2019-01-30T03:55:01.500Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://mingguk.github.io/2019/01/29/webDev-plan/</loc>
         <lastmod>2019-01-29T08:20:29.648Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -50,14 +58,6 @@
     <url>
         <loc>http://mingguk.github.io/2019/01/29/post-jsWeird1/</loc>
         <lastmod>2019-01-29T07:48:30.791Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/01/29/ec-and-le/</loc>
-        <lastmod>2019-01-28T18:26:25.492Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
