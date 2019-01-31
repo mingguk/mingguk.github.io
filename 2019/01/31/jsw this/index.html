@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="javascript,weirdparts">
     
-    <meta name="description" content="Related Postscall By value &amp;amp; referece">
+    <meta name="description" content="자바스크립트에서 함수가 실행될 때마다 새로운 Execution context를 생성하고 각 Execution context 는  variable Environmnet, Outer Environment 그리고 this 를 생성한다.">
 <meta name="keywords" content="javascript,weirdparts">
 <meta property="og:type" content="article">
 <meta property="og:title" content="this">
 <meta property="og:url" content="http://mingguk.github.io/2019/01/31/jsw this/index.html">
 <meta property="og:site_name" content="Mingguk">
-<meta property="og:description" content="Related Postscall By value &amp;amp; referece">
+<meta property="og:description" content="자바스크립트에서 함수가 실행될 때마다 새로운 Execution context를 생성하고 각 Execution context 는  variable Environmnet, Outer Environment 그리고 this 를 생성한다.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://mingguk.github.io/images/jswThum.png">
-<meta property="og:updated_time" content="2019-01-30T17:11:06.896Z">
+<meta property="og:updated_time" content="2019-01-31T04:28:54.993Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="this">
-<meta name="twitter:description" content="Related Postscall By value &amp;amp; referece">
+<meta name="twitter:description" content="자바스크립트에서 함수가 실행될 때마다 새로운 Execution context를 생성하고 각 Execution context 는  variable Environmnet, Outer Environment 그리고 this 를 생성한다.">
 <meta name="twitter:image" content="http://mingguk.github.io/images/jswThum.png">
     
 
@@ -181,8 +181,17 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <hr>
-<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/31/jsw call-by/">call By value &amp; referece</a></p>
+            <p><img src="/images/jswThis.png" alt=""></p>
+<p>자바스크립트에서 함수가 실행될 때마다 새로운 Execution context를 생성하고 각 Execution context 는  variable Environmnet, Outer Environment 그리고 <strong>this</strong> 를 생성한다.                                                                                         this 는 함수의 위치, 호출되는 방식에 따라 특정 객체를 가르키게 된다.   </p>
+<p><strong>5 cases of this</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">// 1. 전역 호출 시 - 전역객체</span><br><span class="line">console.log(this);  // Window</span><br><span class="line"></span><br><span class="line">//2. 함수 내 일반 호출 시 - 전역객체</span><br><span class="line">function a() &#123;</span><br><span class="line">    console.log(this);</span><br><span class="line">    this.newVariable = &apos;hello&apos;;  //전역객체(Window) 에 새 함수 할당</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//3. 메소드(객체 내 함수) 호출 시 - 전역객체</span><br><span class="line">var c = &#123;</span><br><span class="line">    name: &apos;The c object&apos;,</span><br><span class="line">    log: function() &#123;</span><br><span class="line">    	this.name = &apos;Updated c object&apos;;</span><br><span class="line">        console.log(this);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//4. new keword - 인스턴스(new 키워드로 생성한) 객체</span><br><span class="line">function person(name) &#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">&#125;</span><br><span class="line">var tom  = new Person(&apos;Tom&apos;);</span><br><span class="line"></span><br><span class="line">console.log(tom.name); // Tom</span><br><span class="line">console.log(name); // error!</span><br><span class="line"></span><br><span class="line">//5. .call , .apply - 각 함수 첫번째 인자 객체</span><br><span class="line">function speak() &#123;</span><br><span class="line">    var greeting = &apos;Hello i&apos;m + this.name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var person = &#123;</span><br><span class="line">	name: &apos;tom&apos;,</span><br><span class="line">	age: 18</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">speak.call(person); // tom</span><br><span class="line"></span><br><span class="line">c.log(); // c, Object &#123; name:&apos;Updated c object&apos;, log: function() &#123;console.log(this)&#125;&#125;</span><br><span class="line"></span><br><span class="line">console.log(newVariable); // hello</span><br><span class="line">a();  // Window</span><br></pre></td></tr></table></figure>
+<p><strong>주의할 점 (메소드 내부함수에서 this 호출 시</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var c = &#123;</span><br><span class="line">    name: &apos;The C object&apos;;</span><br><span class="line">    log: function() &#123;</span><br><span class="line">        </span><br><span class="line">        this.name = &apos;Updated c object&apos;;</span><br><span class="line">        console.log(this);</span><br><span class="line">        </span><br><span class="line">        // 메소드의 내부함수의 this는 또 전역을 가르키는 오류 있음</span><br><span class="line">        var setname = function(newName) &#123;</span><br><span class="line">            this.name = newName;</span><br><span class="line">        &#125;</span><br><span class="line">     </span><br><span class="line">        setName(&apos;Updated again! The c object&apos;);</span><br><span class="line">        console.log(this);ß</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">c.log();</span><br><span class="line">//오히려 전역객체 name 바뀜, 왜??</span><br><span class="line">window.name = &apos;Updated again! c object&apos;;</span><br><span class="line"></span><br><span class="line">//메소드의 this는 그 객체인데 변경이 안됐다? </span><br><span class="line">// Object &#123;name:&apos;Updated c object&apos;, log: function&#125;</span><br><span class="line">// Object &#123;name:&apos;Updated c object&apos;, log: function&#125;</span><br></pre></td></tr></table></figure>
+<p>메소드의 this는 속해있는 객체를 가르키지만, 또 <strong>메소드 내부 함수는 전역객체를 가르키는 오류가 있다</strong>. 이를 방지하기 위해서는 this를 변수에 명시적으로 지정해주고 그 변수를 활용하면 된다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">var c = &#123;</span><br><span class="line">    name: &apos;The C object&apos;;</span><br><span class="line">    log: function() &#123;</span><br><span class="line">        var self = this;</span><br><span class="line">        </span><br><span class="line">        self.name = &apos;Updated c object&apos;;</span><br><span class="line">        console.log(this);</span><br><span class="line">        </span><br><span class="line">        // 메소드의 내부함수의 this는 또 전역을 가르키는 오류 있음</span><br><span class="line">        var setname = function(newName) &#123;</span><br><span class="line">            self.name = newName;</span><br><span class="line">        &#125;</span><br><span class="line">     </span><br><span class="line">        setName(&apos;Updated again! The c object&apos;);</span><br><span class="line">        console.log(self);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">c.log(); // Object &#123;name: &apos;Updated again! The c object&apos;&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/31/argument/">arguments &amp; etc</a></p>
+<p><a href="http://mingguk.github.io/2019/01/31/jsw call-by/">call By value &amp; referece</a></p>
 
         </div>
         <footer class="article-footer">
@@ -190,7 +199,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://mingguk.github.io/2019/01/31/jsw this/" data-id="cjrjg8ch9000fxr9n7xp1adt1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://mingguk.github.io/2019/01/31/jsw this/" data-id="cjrk4e77q000fxr9nw8ols6sq" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -266,12 +275,11 @@ ga('send', 'pageview');
         "genre": "Front Javascript",
         "datePublished": "2019-01-31",
         "dateCreated": "2019-01-31",
-        "dateModified": "2019-01-30",
+        "dateModified": "2019-01-31",
         "url": "http://mingguk.github.io/2019/01/31/jsw this/",
         "description": "
-Related Postscall By value &amp; referece
-"
-        "wordCount": 13
+자바스크립트에서 함수가 실행될 때마다 새로운 Execution context를 생성하고 각 Execution context 는  variable Environmnet, Outer Environment 그리고 this 를 생성한다.                                                                       "
+        "wordCount": 807
     }
 </script>
 
@@ -327,6 +335,16 @@ Related Postscall By value &amp; referece
         
 <nav id="article-nav">
     
+        <a href="/2019/01/31/argument/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            arguments &amp; etc
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2019/01/31/jsw call-by/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
@@ -347,7 +365,7 @@ Related Postscall By value &amp; referece
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
