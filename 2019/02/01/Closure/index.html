@@ -21,7 +21,7 @@
 <meta property="og:description" content="12345678910111213141516//결과로 함수를 리턴 하는 함수function greet(whattosay) &amp;#123;    return function(name) &amp;#123;        console.log(whattosay + &amp;apos; &amp;apos; + name);    &amp;#125;&amp;#125;greet(&amp;apos;Hi&amp;apos;)(&amp;a">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://mingguk.github.io/images/jswThum.png">
-<meta property="og:updated_time" content="2019-02-02T09:41:28.040Z">
+<meta property="og:updated_time" content="2019-02-02T09:44:16.548Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Closure part1">
 <meta name="twitter:description" content="12345678910111213141516//결과로 함수를 리턴 하는 함수function greet(whattosay) &amp;#123;    return function(name) &amp;#123;        console.log(whattosay + &amp;apos; &amp;apos; + name);    &amp;#125;&amp;#125;greet(&amp;apos;Hi&amp;apos;)(&amp;a">
@@ -208,7 +208,7 @@ ga('send', 'pageview');
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">function buildFunction3() &#123;</span><br><span class="line">    var arr = [];</span><br><span class="line">    </span><br><span class="line">    for (var i = 0; i &lt;3; i++) &#123;</span><br><span class="line">        arr.push(</span><br><span class="line">        	(function(j) &#123;</span><br><span class="line">        	return function() &#123;</span><br><span class="line">                console.log(j);</span><br><span class="line">        	&#125;</span><br><span class="line">        	&#125;)(i); </span><br><span class="line">      //IIFE로 각각의 ec 생성, i를 변수j에 저장하면 </span><br><span class="line">      //내부함수 실행마다 closure로 각각의 </span><br><span class="line">      //i값 저장한 변수j에 접근가능 =&gt; 0,1,2</span><br><span class="line">        )</span><br><span class="line">     </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var fs = buildFunction();</span><br><span class="line"></span><br><span class="line">fs[0]();</span><br><span class="line">fs[1]();</span><br><span class="line">fs[2]();</span><br></pre></td></tr></table></figure>
 <p>각각의 execution context 를 생성하고 그때마다 i를 따로 저장하면 가능한데 ,execution context를 생성하는 유일한 방법은 <strong>함수를 실행하는 것</strong>이다.. -&gt; <strong>IIFE 활용</strong></p>
 <hr>
-<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="">Next</a></p>
+<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/02/03/Closure2/">Next</a></p>
 <p><a href="http://mingguk.github.io/2019/02/01/IIFE/">IIFE</a></p>
 
         </div>
@@ -217,7 +217,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://mingguk.github.io/2019/02/01/Closure/" data-id="cjrkqzqh40000569njxc0adbz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://mingguk.github.io/2019/02/01/Closure/" data-id="cjrnalbqk0000ht9nx2phsrh9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -353,6 +353,16 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
+        <a href="/2019/02/03/Closure2/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Closure2
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2019/02/01/IIFE/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
@@ -373,7 +383,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 

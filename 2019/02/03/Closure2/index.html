@@ -6,25 +6,25 @@
     
 
     
-    <title>call by Value by Reference | Mingguk</title>
+    <title>Closure2 | Mingguk</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="javascript,weirdparts">
     
-    <meta name="description" content="by Value 말 그대로 같은 ‘Value, 값’만 복사하고 각기 다른 메모리공간에 저장 따라서 a 나 b 의 값을 바꾼다고 해도 서로의 값에 영향을 주지 않는다 by Reference 메모리 상 해당 객체의 주소, reference를 복사하기 때문에 각기 다른 변수에 할당하더라도 모두 메모리상 같은 공간을 가르킨다.(해당 주소의 같은 메모리공간) 따라">
+    <meta name="description" content="dfsfds Related Postsnext Closure part1">
 <meta name="keywords" content="javascript,weirdparts">
 <meta property="og:type" content="article">
-<meta property="og:title" content="call by Value by Reference">
-<meta property="og:url" content="http://mingguk.github.io/2019/01/31/jsw call-by/index.html">
+<meta property="og:title" content="Closure2">
+<meta property="og:url" content="http://mingguk.github.io/2019/02/03/Closure2/index.html">
 <meta property="og:site_name" content="Mingguk">
-<meta property="og:description" content="by Value 말 그대로 같은 ‘Value, 값’만 복사하고 각기 다른 메모리공간에 저장 따라서 a 나 b 의 값을 바꾼다고 해도 서로의 값에 영향을 주지 않는다 by Reference 메모리 상 해당 객체의 주소, reference를 복사하기 때문에 각기 다른 변수에 할당하더라도 모두 메모리상 같은 공간을 가르킨다.(해당 주소의 같은 메모리공간) 따라">
+<meta property="og:description" content="dfsfds Related Postsnext Closure part1">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://mingguk.github.io/images/jswThum.png">
-<meta property="og:updated_time" content="2019-01-30T16:58:20.698Z">
+<meta property="og:updated_time" content="2019-02-02T09:45:25.682Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="call by Value by Reference">
-<meta name="twitter:description" content="by Value 말 그대로 같은 ‘Value, 값’만 복사하고 각기 다른 메모리공간에 저장 따라서 a 나 b 의 값을 바꾼다고 해도 서로의 값에 영향을 주지 않는다 by Reference 메모리 상 해당 객체의 주소, reference를 복사하기 때문에 각기 다른 변수에 할당하더라도 모두 메모리상 같은 공간을 가르킨다.(해당 주소의 같은 메모리공간) 따라">
+<meta name="twitter:title" content="Closure2">
+<meta name="twitter:description" content="dfsfds Related Postsnext Closure part1">
 <meta name="twitter:image" content="http://mingguk.github.io/images/jswThum.png">
     
 
@@ -147,14 +147,14 @@ ga('send', 'pageview');
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-jsw call-by" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-Closure2" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        call by Value by Reference
+        Closure2
         </h1>
     
 
@@ -164,8 +164,8 @@ ga('send', 'pageview');
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/01/31/jsw call-by/" class="article-date">
-            <time datetime="2019-01-31T01:14:47.000Z" itemprop="datePublished">2019-01-31</time>
+        <a href="/2019/02/03/Closure2/" class="article-date">
+            <time datetime="2019-02-02T18:43:06.000Z" itemprop="datePublished">2019-02-02</time>
         </a>
     </div>
 
@@ -181,17 +181,10 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/images/jsw CallBy.png" alt=""></p>
-<h3 id="by-Value"><a href="#by-Value" class="headerlink" title="by Value"></a>by Value</h3><p><img src="/images/jsw byValue.png" alt=""></p>
-<p>말 그대로 같은 <strong>‘Value, 값’</strong>만 복사하고 각기 <strong>다른 메모리공간</strong>에 저장</p>
-<p>따라서 a 나 b 의 값을 바꾼다고 해도 서로의 <strong>값에 영향을 주지 않는다</strong></p>
-<h3 id="by-Reference"><a href="#by-Reference" class="headerlink" title="by Reference"></a>by Reference</h3><p><img src="/images/jsw byRef.png" alt=""></p>
-<p>메모리 상 해당 객체의 주소, reference를 복사하기 때문에 각기 다른 변수에 할당하더라도 모두 <strong>메모리상 같은 공간</strong>을 가르킨다.(해당 주소의 같은 메모리공간) 따라서 해당 객체를 변경하면 그에 연결된 <strong>모든 변수들이 영향을 받음</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">//by Value (primitives)</span><br><span class="line">var a = 3;</span><br><span class="line">var b;</span><br><span class="line"></span><br><span class="line">b = a;</span><br><span class="line">a = 2;</span><br><span class="line"></span><br><span class="line">console.log(a);  // 2</span><br><span class="line">console.log(b); // 3</span><br><span class="line"></span><br><span class="line">//by Reference (Objects including functions)</span><br><span class="line">var c = &#123; greeting: &apos;hi&#125;;</span><br><span class="line">var d;</span><br><span class="line"></span><br><span class="line">// 객체이니 새로운 메모리 공간 할당x</span><br><span class="line">//c 가 가르키는 메모리상 같은 공간을 d도 가르키도록 함</span><br><span class="line">d = c; </span><br><span class="line"></span><br><span class="line">c.greeting = &apos;hello&apos;; // mutate</span><br><span class="line"></span><br><span class="line">// 같은 주소상 같은 객체를 변경했기 때문에 둘다 영향 받음</span><br><span class="line">console.log(c);   // Object &#123; greeting: &apos;hello&apos;&#125;</span><br><span class="line">console.log(d); // Object &#123; greeting: &apos;hello&apos;&#125;</span><br><span class="line"></span><br><span class="line">//by Reference (even as parameters)</span><br><span class="line">function changeGreeting(obj) &#123;</span><br><span class="line">    obj.greeting = &apos;Hola!&apos;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">changeGreeting(d);</span><br><span class="line">console.log(c);    // Object &#123; greeting: &apos;Hola!&apos;&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>주의 할 점</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// = 연산자를 사용하면 새로운 메모리공간을 할당한다</span><br><span class="line">c = &#123;greeting: &apos;howdy&apos;&#125;;</span><br><span class="line"></span><br><span class="line">console.log(c); // Object &#123; greeting: &apos;howdy&apos;&#125;</span><br><span class="line">console.log(d);   Object &#123; greeting: &apos;Hola!&apos;&#125;</span><br></pre></td></tr></table></figure>
+            <p>dfsfds</p>
+<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="">next</a></p>
+<p><a href="http://mingguk.github.io/2019/02/01/Closure/">Closure part1</a></p>
 <hr>
-<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/31/jsw Functions/">Functions</a></p>
 
         </div>
         <footer class="article-footer">
@@ -199,7 +192,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://mingguk.github.io/2019/01/31/jsw call-by/" data-id="cjrnalbrn000pht9nkaha5e3e" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://mingguk.github.io/2019/02/03/Closure2/" data-id="cjrnalbqp0001ht9ny1gypum0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -269,21 +262,20 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "minkuk Seo"
         },
-        "headline": "call by Value by Reference",
+        "headline": "Closure2",
         "image": "http://mingguk.github.io/images/jswThum.png",
         "keywords": "javascript weirdparts",
         "genre": "Front Javascript",
-        "datePublished": "2019-01-31",
-        "dateCreated": "2019-01-31",
-        "dateModified": "2019-01-30",
-        "url": "http://mingguk.github.io/2019/01/31/jsw call-by/",
-        "description": "
-by Value
-말 그대로 같은 ‘Value, 값’만 복사하고 각기 다른 메모리공간에 저장
-따라서 a 나 b 의 값을 바꾼다고 해도 서로의 값에 영향을 주지 않는다
-by Reference
-메모리 상 해당 객체의 주소, reference를 복사하기 때문에 각기 다른 변수에 할당하더라도 모두 메모리상 같은 공간을 가르킨다.(해당 주소의 같은 메모리공간) 따라"
-        "wordCount": 268
+        "datePublished": "2019-02-02",
+        "dateCreated": "2019-02-02",
+        "dateModified": "2019-02-02",
+        "url": "http://mingguk.github.io/2019/02/03/Closure2/",
+        "description": "dfsfds
+Related Postsnext
+Closure part1
+
+"
+        "wordCount": 10
     }
 </script>
 
@@ -339,20 +331,10 @@ by Reference
         
 <nav id="article-nav">
     
-        <a href="/2019/01/31/jsw this/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            this
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/01/31/jsw Functions/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/02/01/Closure/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Functions</p>
+        <p class="article-nav-title">Closure part1</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -446,7 +428,7 @@ by Reference
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://mingguk.github.io/2019/01/31/jsw call-by/';
+    var disqus_url = 'http://mingguk.github.io/2019/02/03/Closure2/';
     
     (function() {
     var dsq = document.createElement('script');
