@@ -21,7 +21,7 @@
 <meta property="og:description" content="공장에서 정해진 포멧에 따라 제품들을 생산하는 것처럼 팩토리패턴은 전체 로직을 담은 팩토리함수를 생성, 클로저를 활용해서 반복되는 인자를 기본값으로 하는 함수를 재정의 하고, 호출하는 방식이다. 123456789101112131415161718192021// factory functionfunction makeGreeting(language) &amp;#123;">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://mingguk.github.io/images/jswThum.png">
-<meta property="og:updated_time" content="2019-02-02T12:21:42.782Z">
+<meta property="og:updated_time" content="2019-02-02T12:22:11.414Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Closure part2">
 <meta name="twitter:description" content="공장에서 정해진 포멧에 따라 제품들을 생산하는 것처럼 팩토리패턴은 전체 로직을 담은 팩토리함수를 생성, 클로저를 활용해서 반복되는 인자를 기본값으로 하는 함수를 재정의 하고, 호출하는 방식이다. 123456789101112131415161718192021// factory functionfunction makeGreeting(language) &amp;#123;">
@@ -194,7 +194,6 @@ ga('send', 'pageview');
 <p><img src="/Users/seomingug/mingguk/mingguk/source/images/jsw closure2 4.png" alt="jsw closure2 4"></p>
 <h3 id="Closure-and-Callback"><a href="#Closure-and-Callback" class="headerlink" title="Closure and Callback"></a>Closure and Callback</h3><p>콜백함수는 다른 함수에 인자로 넘긴 함수로, 다른함수 실행이 끝나면 실행되도록 한 함수이다.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">function sayHiLater() &#123;</span><br><span class="line">   //외부변수 greeting 참조, closure</span><br><span class="line">   var greeting = &apos;Hi&apos;;</span><br><span class="line">    </span><br><span class="line">    setTimeout(function() &#123;</span><br><span class="line">        console.log(greeting);</span><br><span class="line">    &#125;, 3000);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sayHiLater();</span><br><span class="line"></span><br><span class="line">function tellMeWhenDone(callback) &#123;</span><br><span class="line">    var a = 1000;</span><br><span class="line">    var b = 2000;</span><br><span class="line">    </span><br><span class="line">    callback(); // 인자로 넣은 함수</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">tellMeWhenDone(function() &#123;</span><br><span class="line">   console.log(&quot;I&apos;m done!&apos;); </span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">tellMeWhenDone(function() &#123;</span><br><span class="line">   alert(&quot;I&apos;m done!&apos;); </span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">tellMeWhenDone(function() &#123;</span><br><span class="line">   console.log(&quot;All done&apos;); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>###Related Posts</p>
 <h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="">next</a></p>
 <p><a href="http://mingguk.github.io/2019/02/01/Closure/">Closure part1</a></p>
 <hr>
@@ -286,7 +285,7 @@ ga('send', 'pageview');
         "description": "
 공장에서 정해진 포멧에 따라 제품들을 생산하는 것처럼 팩토리패턴은 전체 로직을 담은 팩토리함수를 생성, 클로저를 활용해서 반복되는 인자를 기본값으로 하는 함수를 재정의 하고, 호출하는 방식이다.
 123456789101112131415161718192021// factory functionfunction makeGreeting(language) &#123;"
-        "wordCount": 452
+        "wordCount": 451
     }
 </script>
 
