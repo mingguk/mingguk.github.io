@@ -6,25 +6,25 @@
     
 
     
-    <title>Call&amp;Bind | Mingguk</title>
+    <title>call&amp;apply&amp;bind | Mingguk</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="javascript,weirdparts">
     
-    <meta name="description" content="Related Posts">
+    <meta name="description" content="자바스크립트 함수에는 앞서 언급한 code, name 외에도 call, apply, bind 라는 기본 메소드를 갖고 있다. 이 메소드들은 this 키워드를 조작해주는 역할을 한다.  bind()12345678910111213141516171819202122var person = &amp;#123;    firstname : &amp;apos;John&amp;apos;,">
 <meta name="keywords" content="javascript,weirdparts">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Call&amp;Bind">
+<meta property="og:title" content="call&amp;apply&amp;bind">
 <meta property="og:url" content="http://mingguk.github.io/2019/02/03/Call-Bind/index.html">
 <meta property="og:site_name" content="Mingguk">
-<meta property="og:description" content="Related Posts">
+<meta property="og:description" content="자바스크립트 함수에는 앞서 언급한 code, name 외에도 call, apply, bind 라는 기본 메소드를 갖고 있다. 이 메소드들은 this 키워드를 조작해주는 역할을 한다.  bind()12345678910111213141516171819202122var person = &amp;#123;    firstname : &amp;apos;John&amp;apos;,">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://mingguk.github.io/images/jswThum.png">
-<meta property="og:updated_time" content="2019-02-02T12:25:13.974Z">
+<meta property="og:updated_time" content="2019-02-03T07:32:30.915Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Call&amp;Bind">
-<meta name="twitter:description" content="Related Posts">
+<meta name="twitter:title" content="call&amp;apply&amp;bind">
+<meta name="twitter:description" content="자바스크립트 함수에는 앞서 언급한 code, name 외에도 call, apply, bind 라는 기본 메소드를 갖고 있다. 이 메소드들은 this 키워드를 조작해주는 역할을 한다.  bind()12345678910111213141516171819202122var person = &amp;#123;    firstname : &amp;apos;John&amp;apos;,">
 <meta name="twitter:image" content="http://mingguk.github.io/images/jswThum.png">
     
 
@@ -154,7 +154,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-        Call&amp;Bind
+        call&amp;apply&amp;bind
         </h1>
     
 
@@ -181,14 +181,25 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>
+            <p><img src="/images/jsw cab.png" alt=""></p>
+<p>자바스크립트 함수에는 앞서 언급한 code, name 외에도 call, apply, bind 라는 기본 메소드를 갖고 있다. 이 메소드들은 <strong>this</strong> 키워드를 조작해주는 역할을 한다.</p>
+<p><img src="/images/jsw callbindapply.png" alt=""></p>
+<h3 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;</span><br><span class="line">    firstname : &apos;John&apos;,</span><br><span class="line">    lastname : &apos;Doe&apos;,</span><br><span class="line">    getFullName: function() &#123;</span><br><span class="line">        var fullname = this.firstname + &apos; &apos; + this.lastname;</span><br><span class="line">        return fullname;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var logName = function(lang1, lang2) &#123;</span><br><span class="line">    console.log(&apos;Logged: &apos; + this.getFullName());</span><br><span class="line">    console.log(&apos;Arguments: &apos; + lang1 + &apos; &apos; +. lange2);</span><br><span class="line">    console.log(&apos;----------&apos;);</span><br><span class="line">&#125; </span><br><span class="line">// .bind(person) 해도 아래와 동일한 결과</span><br><span class="line"></span><br><span class="line">logName(); // undefined error, 현재 this는 logName</span><br><span class="line"></span><br><span class="line">//logPersonName 의 this를 person 으로 변경</span><br><span class="line">var logPersonName = logName.bind(person);</span><br><span class="line"></span><br><span class="line">logName(); // this가 person으로 변경, Logged John Doe</span><br></pre></td></tr></table></figure>
+<p>bind() 는 새로운 함수를 반환하는데 인자로 들어가는 객체를 함수의 this로 바꿔주는 역할을 한다.</p>
+<h3 id="call-apply"><a href="#call-apply" class="headerlink" title="call(), apply()"></a>call(), apply()</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;</span><br><span class="line">    firstname : &apos;John&apos;,</span><br><span class="line">    lastname : &apos;Doe&apos;,</span><br><span class="line">    getFullName: function() &#123;</span><br><span class="line">        var fullname = this.firstname + &apos; &apos; + this.lastname;</span><br><span class="line">        return fullname;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var logName = function(lang1, lang2) &#123;</span><br><span class="line">    console.log(&apos;Logged: &apos; + this.getFullName());</span><br><span class="line">    console.log(&apos;Arguments: &apos; + lang1 + &apos; &apos; +. lange2);</span><br><span class="line">    console.log(&apos;----------&apos;);</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">var logPErsonName = logName.bind(person);</span><br><span class="line">logPersonName(&apos;en&apos;);</span><br><span class="line"></span><br><span class="line">logName.call(person, &apos;en&apos;, &apos;es&apos;);</span><br><span class="line">console.log(&apos;mmmmmmmmmmmmmmm&apos;);</span><br><span class="line">logName.apply(person, [&apos;en&apos;, &apos;es&apos;]);</span><br><span class="line"></span><br><span class="line">//Logged: John Doe</span><br><span class="line">//Arguments: en es</span><br><span class="line">//----------------</span><br><span class="line">//mmmmmmmmmmmmmmmm</span><br><span class="line">//Logged: John Doe</span><br><span class="line">//Arguments: en es</span><br><span class="line">//----------------</span><br><span class="line"></span><br><span class="line">//IIFE 로도 가능</span><br><span class="line">(function(lang1, lang2) &#123;</span><br><span class="line">    console.log(&apos;Logged: &apos; + this.getFullName());</span><br><span class="line">    console.log(&apos;Arguments: &apos; + lang1 + &apos; &apos; +. lange2);</span><br><span class="line">    console.log(&apos;----------&apos;);</span><br><span class="line">&#125;).apply(person, [&apos;en&apos;, &apos;es&apos;]);</span><br><span class="line"></span><br><span class="line">//Logged: John Doe</span><br><span class="line">//Arguments: en es</span><br><span class="line">//----------------</span><br></pre></td></tr></table></figure>
+<p>call() 과 apply() 는 bind와 마찬가지로 this를 변경하고, 인자를 넘기고 함수를 <strong>실행</strong>까지 한다. 둘의 차이는 인자를 따로 넘기냐, 묶여서 배열로 넘기냐의 차이밖에 없다.</p>
+<h3 id="Why-When"><a href="#Why-When" class="headerlink" title="Why? When?"></a>Why? When?</h3><p>그럼 언제 이 메소드들을 활용할 수 있을까</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">//1. function borrowing</span><br><span class="line">var person2 = &#123;  // getFullName() 없는 객체 생성</span><br><span class="line">    firstname : &apos;John&apos;,</span><br><span class="line">    lastname : &apos;Doe&apos;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// person 의 getFullName() 빌려 올 수 있다</span><br><span class="line">console.log( person.getFullName.apply(person2) );</span><br><span class="line"></span><br><span class="line">//2. function currying</span><br><span class="line">function multiply(a,b) &#123;</span><br><span class="line">    return a*b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//인자 기본값을 넣은 새로운 함수 생성 효과</span><br><span class="line">var multipleByTwo = multiply.bind(this, 2); </span><br><span class="line">console.log(multipleByTwo(4)); // 8</span><br><span class="line"></span><br><span class="line">var multipleByThree = multiply.bind(this, 3);</span><br><span class="line">console.log(multipleByTwo(4)); // 12</span><br></pre></td></tr></table></figure>
+<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/02/04/Funtional-programming/">Functional programming</a></p>
+<p><a href="http://mingguk.github.io/2019/02/03/Closure2/">Closure part2</a></p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://mingguk.github.io/2019/02/03/Call-Bind/" data-id="cjrngfqot0000zw9nbh0ukh4r" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://mingguk.github.io/2019/02/03/Call-Bind/" data-id="cjrolbkyf00007t9nwm2xqc6j" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -258,16 +269,19 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "minkuk Seo"
         },
-        "headline": "Call&amp;Bind",
+        "headline": "call&amp;apply&amp;bind",
         "image": "http://mingguk.github.io/images/jswThum.png",
         "keywords": "javascript weirdparts",
         "genre": "Front Javascript",
         "datePublished": "2019-02-02",
         "dateCreated": "2019-02-02",
-        "dateModified": "2019-02-02",
+        "dateModified": "2019-02-03",
         "url": "http://mingguk.github.io/2019/02/03/Call-Bind/",
-        "description": "Related Posts"
-        "wordCount": 7
+        "description": "
+자바스크립트 함수에는 앞서 언급한 code, name 외에도 call, apply, bind 라는 기본 메소드를 갖고 있다. 이 메소드들은 this 키워드를 조작해주는 역할을 한다.
+
+bind()12345678910111213141516171819202122var person = &#123;    firstname : &apos;John&apos;,   "
+        "wordCount": 566
     }
 </script>
 
@@ -323,6 +337,16 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
+        <a href="/2019/02/04/Funtional-programming/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Funtional programming
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2019/02/03/Closure2/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
@@ -343,7 +367,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">16</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
