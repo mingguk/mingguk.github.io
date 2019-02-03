@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="javascript,weirdparts">
     
-    <meta name="description" content="Related Posts Next call bind apply">
+    <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152// 비함수형var arr1 = [1,2,3];console.log(arr1);var arr2 = [];for (var i=0; i&amp;lt;arr1.length; i++) &amp;#123;">
 <meta name="keywords" content="javascript,weirdparts">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Funtional programming">
 <meta property="og:url" content="http://mingguk.github.io/2019/02/04/Funtional-programming/index.html">
 <meta property="og:site_name" content="Mingguk">
-<meta property="og:description" content="Related Posts Next call bind apply">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152// 비함수형var arr1 = [1,2,3];console.log(arr1);var arr2 = [];for (var i=0; i&amp;lt;arr1.length; i++) &amp;#123;">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://mingguk.github.io/images/jswThum.png">
-<meta property="og:updated_time" content="2019-02-03T07:33:35.930Z">
+<meta property="og:updated_time" content="2019-02-03T18:10:49.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Funtional programming">
-<meta name="twitter:description" content="Related Posts Next call bind apply">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152// 비함수형var arr1 = [1,2,3];console.log(arr1);var arr2 = [];for (var i=0; i&amp;lt;arr1.length; i++) &amp;#123;">
 <meta name="twitter:image" content="http://mingguk.github.io/images/jswThum.png">
     
 
@@ -182,6 +182,10 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/jsw functional programming.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">// 비함수형</span><br><span class="line">var arr1 = [1,2,3];</span><br><span class="line">console.log(arr1);</span><br><span class="line"></span><br><span class="line">var arr2 = [];</span><br><span class="line">for (var i=0; i&lt;arr1.length; i++) &#123;</span><br><span class="line">    arr2.push(arr[i] * 2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(arr2);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 함수형</span><br><span class="line">//기반 함수 생성</span><br><span class="line">function mapForEach(arr, fn) &#123;</span><br><span class="line">    var newArr = [];</span><br><span class="line">    for (var i=0; i&lt;arr1.length; i++) &#123;</span><br><span class="line">    	newArr.push(</span><br><span class="line">    		fn(arr[i])</span><br><span class="line">    	)</span><br><span class="line">	&#125;;</span><br><span class="line">	</span><br><span class="line">	return newArr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 기반함수에다 다른 함수를 인자로 넣어 다양하게 활용 가능</span><br><span class="line">var arr2 = mapForEach(arr1, function(item) &#123;</span><br><span class="line">   return item * 2; </span><br><span class="line">&#125;);</span><br><span class="line">console.log(arr2);</span><br><span class="line"></span><br><span class="line">var arr3 = mapForEach(arr1, function(item) &#123;</span><br><span class="line">    return item &gt; 2;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 인자 수가 다른 함수는 어떻게 활용할 수 있을까?</span><br><span class="line">var checkPastLimit = function(limiter, item) &#123;</span><br><span class="line">    return item &gt; limiter;</span><br><span class="line">&#125;</span><br><span class="line">// bind()로 limiter 인자 기본값 지정해주면 가능</span><br><span class="line">var arr4 = marForEach(arr1, checkPastLimit.bind(this, 1));</span><br><span class="line"></span><br><span class="line">// 매번 bind() 달지않고 싶다면</span><br><span class="line">//bind() 포함한 새로운 함수를 만들어서</span><br><span class="line">var checkPastLimitSimplified = function(limiter) &#123;</span><br><span class="line">    return function(limiter, item) &#123;</span><br><span class="line">        return item &gt; limiter;</span><br><span class="line">    &#125;.bind(this, limiter);</span><br><span class="line">&#125;;</span><br><span class="line">var arr5 = mapForEach(arr1, checkPastLimitSimplified(1));</span><br><span class="line">console.log(arr5);</span><br></pre></td></tr></table></figure>
+<p>함수형 프로그래밍은 1급함수 성질을 활용해서,  각각의 함수를 인자나 리턴으로 또 함수를 전달하도록 해서 보다 단순화되고 효율적인 코드를 작성할 수 있다.</p>
+<p>함수형 프로그래밍에 대한 이해도를 좀 더 높히고 싶다면 아래의 라이브러리 함수들을 직접 구현해 보는 것을 추천한다. codestates pre course에서도 비슷한 것을 경험한 적이 있는데, 가장 기본적인 함수들을 재사용 해서 다른 라이브러리 함수 로직을 직접 구현해 보는 연습을 할 수 있다.</p>
+<p><a href="https://github.com/indongyoo/functional-javascript/wiki/3.1-Underscore.js-%EC%86%8C%EA%B0%9C" target="_blank" rel="noopener">Underscore.js 도전하기!</a></p>
 <h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><hr>
 <p><a href="">Next</a></p>
 <p><a href="http://mingguk.github.io/2019/02/03/Call-Bind/">call bind apply</a></p>
@@ -271,11 +275,8 @@ ga('send', 'pageview');
         "dateModified": "2019-02-03",
         "url": "http://mingguk.github.io/2019/02/04/Funtional-programming/",
         "description": "
-Related Posts
-Next
-call bind apply
-"
-        "wordCount": 15
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152// 비함수형var arr1 = [1,2,3];console.log(arr1);var arr2 = [];for (var i=0; i&lt;arr1.length; i++) &#123;   "
+        "wordCount": 341
     }
 </script>
 
