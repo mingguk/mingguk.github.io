@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mingguk.github.io/"/>
-  <updated>2019-02-03T18:10:49.516Z</updated>
+  <updated>2019-02-04T09:05:33.421Z</updated>
   <id>http://mingguk.github.io/</id>
   
   <author>
@@ -17,11 +17,71 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Building an object</title>
+    <link href="http://mingguk.github.io/2019/02/05/Building-an-object/"/>
+    <id>http://mingguk.github.io/2019/02/05/Building-an-object/</id>
+    <published>2019-02-04T18:03:18.000Z</published>
+    <updated>2019-02-04T09:05:33.421Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="">next</a></p><p><a href="http://mingguk.github.io/2019/02/05/OOP-in-javascript/">OOP in javascript</a></p><hr>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Related-Posts&quot;&gt;&lt;a href=&quot;#Related-Posts&quot; class=&quot;headerlink&quot; title=&quot;Related Posts&quot;&gt;&lt;/a&gt;Related Posts&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;&quot;&gt;next&lt;/a&gt;&lt;/p&gt;
+&lt;p
+      
+    
+    </summary>
+    
+      <category term="Front" scheme="http://mingguk.github.io/categories/Front/"/>
+    
+      <category term="Javascript" scheme="http://mingguk.github.io/categories/Front/Javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://mingguk.github.io/tags/javascript/"/>
+    
+      <category term="weirdparts" scheme="http://mingguk.github.io/tags/weirdparts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OOP in javascript</title>
+    <link href="http://mingguk.github.io/2019/02/05/OOP-in-javascript/"/>
+    <id>http://mingguk.github.io/2019/02/05/OOP-in-javascript/</id>
+    <published>2019-02-04T16:31:58.000Z</published>
+    <updated>2019-02-04T09:04:57.935Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/jsw OOP.png" alt=""></p><h3 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h3><p>타 언어의 전통적인 상속은 상속을 구현하기 위해 많은 부수적인 것들을 고려해야 됐다. 반면에 자바스크립트의 상속은 <strong>prototypal inheritance</strong>로 좀 더 유연하고 직관적이다.</p><p><img src="/images/jsw inheritance.png" alt=""></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;</span><br><span class="line">    firstname: &apos;Default&apos;,</span><br><span class="line">    lastname: ;Default&apos;,</span><br><span class="line">    getFullName: function() &#123;</span><br><span class="line">        return this.firstname + &apos; &apos; + this.lastname;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var john = &#123;</span><br><span class="line">    fristname: &apos;John&apos;,</span><br><span class="line">    lastname: &apos;Doe&apos;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//don&apos;t do this Ever! demo purposes only!</span><br><span class="line">john.__proto__ = person;</span><br><span class="line">//john 객체에서 속성이나 메소드 탐색 후 없으면 proto&#123;&#125; 탐색</span><br><span class="line">console.log(john.getFullName()); // John Doe</span><br><span class="line"></span><br><span class="line">var jane = &#123;</span><br><span class="line">    firstname: &apos;Jane&apos;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">jane.__proto__ = person;</span><br><span class="line">console.log(jane.getFullName()); // Jane Default;</span><br></pre></td></tr></table></figure><h3 id="Everyting-is-and-object"><a href="#Everyting-is-and-object" class="headerlink" title="Everyting is and object"></a>Everyting is and object</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;&#125;;</span><br><span class="line">var b = function() &#123;&#125;;</span><br><span class="line">var c = [];</span><br><span class="line"></span><br><span class="line">a.__proto__. // Object&#123;&#125; (base object);</span><br><span class="line">b.__proto__. // Empty() &#123;&#125; (base function object);</span><br><span class="line">c.__proto__. //</span><br></pre></td></tr></table></figure><p><img src="/images/jsw prototype1.png" alt=""></p><p>b 는 빈함수임에도 proto 를 살펴보면 기본 함수 객체의 모든 메소드들에 접근이 가능하다. (빈 배열, 객체도 마찬가지) 우리가 어떤 배열, 객체, 함수를 생성했을 때 따로 명시적으로 메소드를 생성하지 않더라도 자바스크립트 엔진이 <strong>프로토타입을 자동으로 기본 객체들에 연결해준다.</strong>  이 때문에 기본 객체들에 있는 메소드들을 새로 생성한 객체에서도 자유롭게 사용할 수 있는 것이다.</p><h3 id="Reflection-and-Extend"><a href="#Reflection-and-Extend" class="headerlink" title="Reflection and Extend"></a>Reflection and Extend</h3><p><img src="/images/jsw reflection.png" alt=""></p><p>함수정의 때와  다른 인자 개수를 받을 때는 arguments 를 통해 처리할 수 있다.</p><p>(추후 수정)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;</span><br><span class="line">    firstname: &apos;Default&apos;,</span><br><span class="line">    lastname: ;Default&apos;,</span><br><span class="line">    getFullName: function() &#123;</span><br><span class="line">        return this.firstname + &apos; &apos; + this.lastname;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var john = &#123;</span><br><span class="line">    fristname: &apos;John&apos;,</span><br><span class="line">    lastname: &apos;Doe&apos;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for (var prop in john) &#123;</span><br><span class="line">if (john.hasOwnProperty(prop)) &#123;</span><br><span class="line">    console.log(prop + &apos;: &apos; + john[prop])        </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">// firstname : &apos;John&apos;, lastname : &apos;Doe&apos;</span><br><span class="line"></span><br><span class="line">var jane = &#123;</span><br><span class="line">    address: &apos;111 Main St.&apos;;</span><br><span class="line">    getFormalFullName: function() &#123;</span><br><span class="line">        return this.lastname + &apos;, &apos; + this.firstname;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var jim = &#123;</span><br><span class="line">    getFirstName: function() &#123;</span><br><span class="line">        return firstname;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 다른 객체들의 속성들을 다른 객체에게 전달하고 싶다면?</span><br><span class="line">_.extend(john, jane, jim ..);</span><br><span class="line">// 다른 객체들의 속성,메소드들을 추가한 john 객체가 리턴 됨.</span><br></pre></td></tr></table></figure><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><hr><p><a href="http://mingguk.github.io/2019/02/05/Building-an-object/">building an object</a></p><p><a href="http://mingguk.github.io/2019/02/04/Funtional-programming/">Functional programming</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/jsw OOP.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;prototype&quot;&gt;&lt;a href=&quot;#prototype&quot; class=&quot;headerlink&quot; title=&quot;prototype&quot;&gt;&lt;/a&gt;prototype&lt;/h3
+      
+    
+    </summary>
+    
+      <category term="Front" scheme="http://mingguk.github.io/categories/Front/"/>
+    
+      <category term="Javascript" scheme="http://mingguk.github.io/categories/Front/Javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://mingguk.github.io/tags/javascript/"/>
+    
+      <category term="weirdparts" scheme="http://mingguk.github.io/tags/weirdparts/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Funtional programming</title>
     <link href="http://mingguk.github.io/2019/02/04/Funtional-programming/"/>
     <id>http://mingguk.github.io/2019/02/04/Funtional-programming/</id>
     <published>2019-02-03T16:29:45.000Z</published>
-    <updated>2019-02-03T18:10:49.516Z</updated>
+    <updated>2019-02-04T07:28:07.386Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/jsw functional programming.png" alt=""></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">// 비함수형</span><br><span class="line">var arr1 = [1,2,3];</span><br><span class="line">console.log(arr1);</span><br><span class="line"></span><br><span class="line">var arr2 = [];</span><br><span class="line">for (var i=0; i&lt;arr1.length; i++) &#123;</span><br><span class="line">    arr2.push(arr[i] * 2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(arr2);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 함수형</span><br><span class="line">//기반 함수 생성</span><br><span class="line">function mapForEach(arr, fn) &#123;</span><br><span class="line">    var newArr = [];</span><br><span class="line">    for (var i=0; i&lt;arr1.length; i++) &#123;</span><br><span class="line">    newArr.push(</span><br><span class="line">    fn(arr[i])</span><br><span class="line">    )</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">return newArr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 기반함수에다 다른 함수를 인자로 넣어 다양하게 활용 가능</span><br><span class="line">var arr2 = mapForEach(arr1, function(item) &#123;</span><br><span class="line">   return item * 2; </span><br><span class="line">&#125;);</span><br><span class="line">console.log(arr2);</span><br><span class="line"></span><br><span class="line">var arr3 = mapForEach(arr1, function(item) &#123;</span><br><span class="line">    return item &gt; 2;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 인자 수가 다른 함수는 어떻게 활용할 수 있을까?</span><br><span class="line">var checkPastLimit = function(limiter, item) &#123;</span><br><span class="line">    return item &gt; limiter;</span><br><span class="line">&#125;</span><br><span class="line">// bind()로 limiter 인자 기본값 지정해주면 가능</span><br><span class="line">var arr4 = marForEach(arr1, checkPastLimit.bind(this, 1));</span><br><span class="line"></span><br><span class="line">// 매번 bind() 달지않고 싶다면</span><br><span class="line">//bind() 포함한 새로운 함수를 만들어서</span><br><span class="line">var checkPastLimitSimplified = function(limiter) &#123;</span><br><span class="line">    return function(limiter, item) &#123;</span><br><span class="line">        return item &gt; limiter;</span><br><span class="line">    &#125;.bind(this, limiter);</span><br><span class="line">&#125;;</span><br><span class="line">var arr5 = mapForEach(arr1, checkPastLimitSimplified(1));</span><br><span class="line">console.log(arr5);</span><br></pre></td></tr></table></figure><p>함수형 프로그래밍은 1급함수 성질을 활용해서,  각각의 함수를 인자나 리턴으로 또 함수를 전달하도록 해서 보다 단순화되고 효율적인 코드를 작성할 수 있다.</p><p>함수형 프로그래밍에 대한 이해도를 좀 더 높히고 싶다면 아래의 라이브러리 함수들을 직접 구현해 보는 것을 추천한다. codestates pre course에서도 비슷한 것을 경험한 적이 있는데, 가장 기본적인 함수들을 재사용 해서 다른 라이브러리 함수 로직을 직접 구현해 보는 연습을 할 수 있다.</p><p><a href="https://github.com/indongyoo/functional-javascript/wiki/3.1-Underscore.js-%EC%86%8C%EA%B0%9C" target="_blank" rel="noopener">Underscore.js 도전하기!</a></p><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><hr><p><a href="">Next</a></p><p><a href="http://mingguk.github.io/2019/02/03/Call-Bind/">call bind apply</a></p>]]></content>
     
@@ -351,9 +411,9 @@
     <link href="http://mingguk.github.io/2019/01/29/webDev-plan/"/>
     <id>http://mingguk.github.io/2019/01/29/webDev-plan/</id>
     <published>2019-01-29T13:28:27.000Z</published>
-    <updated>2019-01-30T17:34:46.906Z</updated>
+    <updated>2019-02-04T07:23:29.240Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="웹개발-공부-계획"><a href="#웹개발-공부-계획" class="headerlink" title="웹개발 공부 계획"></a>웹개발 공부 계획</h3><h3 id=""><a href="#" class="headerlink" title=" "></a> </h3><p><img src="/images/nothing.png" alt=""></p><h3 id="References-위주로-큰-틀을-잡고-다른-소스들-참고"><a href="#References-위주로-큰-틀을-잡고-다른-소스들-참고" class="headerlink" title="References (위주로 큰 틀을 잡고 다른 소스들 참고)"></a>References (위주로 큰 틀을 잡고 다른 소스들 참고)</h3><ol><li><a href="https://medium.com/@Jbee_/%EC%8B%A0%EC%9E%85-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EB%90%98%EB%A0%A4%EB%A9%B4-%EB%AC%B4%EC%97%87%EC%9D%84-%ED%95%99%EC%8A%B5%ED%95%B4%EC%95%BC-%ED%95%98%EB%82%98%EC%9A%94-1dd59a14e084?fbclid=IwAR2Qwaifz8Lnn_aOF54zPrwdWxwYcI1qO8Xo4-N1uG-QEEaZRWQBbEcrH8Q" target="_blank" rel="noopener">프론트엔드 뭘 공부해야 하는가?</a><br></li><li><a href="https://medium.com/@codesquad_yoda/%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%A4%80%EB%B9%84%ED%95%B4%EC%95%BC-%ED%95%A0%EA%B9%8C-5ac7bb6ff2a9" target="_blank" rel="noopener">웹프론트엔드 개발자, 어떻게 준비?</a> <br></li><li><a href="https://github.com/kamranahmedse/developer-roadmap" target="_blank" rel="noopener">Developer roadmap</a> </li></ol><hr><p><strong>1. Javascript</strong></p><p>자바스크립트 동작원리</p><p>자바스크립트 문법, 주요개념</p><p>DOM</p><p>ES6</p><p>자바스크립트 생태계 (npm Web pack / bable)</p><p>CommonJS</p><p>OOP in Javascript / 함수형 프로그래밍</p><p>Type script</p><p>AJAX CORS</p><hr><p><strong>2. HTML / CSS</strong></p><p>grid</p><p>Midea query</p><p>CSS Framework (Bootsctrap 4</p><p>웹 접근성</p><hr><p><strong>3. library framework</strong></p><p>react</p><p>상태관리 라이브러리</p><p>react native</p><hr><p><strong>4. CS , Network, algorithm</strong></p><p>자료구조</p><p>알고리즘 (Udemy, daily toy, 면접대비)</p><hr><p><strong>5. Backend</strong></p><p>서버사이드 / 클라이언트 사이드 렌더링</p><p>node js</p><p>graphQL</p><p>MongoDB</p><hr><p><strong>6. Etc</strong></p><p>Github</p><p>Blogging</p><p>Terminal usage</p><p>Design patterns</p><p>English (업무수준 상회)</p><hr><h3 id="Schedule"><a href="#Schedule" class="headerlink" title="Schedule"></a>Schedule</h3><p>1월 &lt;기초&gt;&lt;숲 파악&gt;**</p><ol><li>런코 전과정 마스터(발췌,보충) , 테스트 준비, 통과 </li><li>udemy javascript weird parts 정리 (블로깅)</li><li>udemy web dev bootcamp 일부 (런코 관련)</li></ol><p>==&gt;  javascript 기본개념, 사용법 정리</p><p><strong>2월 &lt;프론트엔드&gt; <cs 기초=""></cs></strong></p><ol><li><p>자바스크립트 작동원리, 개념정리, codestates pre course 복습 (블로깅)</p></li><li><p>udemy web dev bootcamp 완강, udemy javascript build real app 완강  (js 로 웹 실제 조작, 구현 경험)</p></li><li><p>udemy algorithm in javascript (자료구조, 원리 이해, 직접 구현)<br>udemy network 이론강의 수강 , 컴원리 포함</p></li><li><p>생태계, javascript 관련 필수 이슈들</p></li><li><p>HTML / CSS (udemy Html/css 강의 / 미디어쿼리)</p></li></ol><p><strong>3월~4.11 &lt;풀스택 경험 + 백엔드 기초&gt; &lt;갈무리&gt;</strong></p><ol><li><p>라이브러리 (react , react native 기초 공부) - udemy / nomad react 기초강의들</p></li><li><p>nomad coder 풀스택 과정 1개 수료 (유튜브 or 우버 or  클론)</p></li><li><p>그동안 공부한 것 정리 (블로그 - TIL ,특수 주1회 / 깃헙) / 알고리즘 지속 공부</p></li></ol><p><strong>4월~ 수료까지 Codetates immersive course </strong><br>목표 : <strong>실력 있는 프론트엔드 개발자 &amp;&amp; 웹개발 커리어 시작 </strong></p><ul><li><p>지속 학습능력 (스스로 배우는 방법 터득, 체화)</p></li><li><p>커뮤니케이션, 협업 능력 (혼자 보다 함께, 더 크게)</p></li><li><p>기본기 갖추기 (cs, 네트워크 / 알고리즘 / 기반 작동원리 파악)</p></li><li><p>full-stack 설계 및 구현 경험  ( front 기반 + backend 기초 구축, 어플리케이션 전체)</p></li><li><p>Web + android + ios (react native)  / backend 통합 결과물 완성하기 </p></li><li><p>포트폴리오 및 브랜딩 ( 깃헙 / 블로그(개발공부, 포트폴리오 페이지 따로) )</p></li></ul><hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
+    <content type="html"><![CDATA[<h3 id="웹개발-공부-계획"><a href="#웹개발-공부-계획" class="headerlink" title="웹개발 공부 계획"></a>웹개발 공부 계획</h3><h3 id=""><a href="#" class="headerlink" title=" "></a> </h3><p><img src="/images/nothing.png" alt=""></p><h3 id="References-위주로-큰-틀을-잡고-다른-소스들-참고"><a href="#References-위주로-큰-틀을-잡고-다른-소스들-참고" class="headerlink" title="References (위주로 큰 틀을 잡고 다른 소스들 참고)"></a>References (위주로 큰 틀을 잡고 다른 소스들 참고)</h3><ol><li><a href="https://medium.com/@Jbee_/%EC%8B%A0%EC%9E%85-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EB%90%98%EB%A0%A4%EB%A9%B4-%EB%AC%B4%EC%97%87%EC%9D%84-%ED%95%99%EC%8A%B5%ED%95%B4%EC%95%BC-%ED%95%98%EB%82%98%EC%9A%94-1dd59a14e084?fbclid=IwAR2Qwaifz8Lnn_aOF54zPrwdWxwYcI1qO8Xo4-N1uG-QEEaZRWQBbEcrH8Q" target="_blank" rel="noopener">프론트엔드 뭘 공부해야 하는가?</a><br></li><li><a href="https://medium.com/@codesquad_yoda/%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%A4%80%EB%B9%84%ED%95%B4%EC%95%BC-%ED%95%A0%EA%B9%8C-5ac7bb6ff2a9" target="_blank" rel="noopener">웹프론트엔드 개발자, 어떻게 준비?</a> <br></li><li><a href="https://github.com/kamranahmedse/developer-roadmap" target="_blank" rel="noopener">Developer roadmap</a> </li></ol><hr><p><strong>1. Javascript</strong></p><p>자바스크립트 동작원리</p><p>자바스크립트 문법, 주요개념</p><p>DOM</p><p>ES6</p><p>자바스크립트 생태계 (npm Web pack / bable)</p><p>CommonJS</p><p>OOP in Javascript / 함수형 프로그래밍</p><p>Type script</p><p>AJAX CORS</p><hr><p><strong>2. HTML / CSS</strong></p><p>grid</p><p>Midea query</p><p>CSS Framework (Bootsctrap 4</p><p>웹 접근성</p><hr><p><strong>3. library framework</strong></p><p>react</p><p>상태관리 라이브러리</p><p>react native</p><hr><p><strong>4. CS , Network, algorithm</strong></p><p>자료구조</p><p>알고리즘 (Udemy, daily toy, 면접대비)</p><hr><p><strong>5. Backend</strong></p><p>서버사이드 / 클라이언트 사이드 렌더링</p><p>node js</p><p>graphQL</p><p>MongoDB</p><hr><p><strong>6. Etc</strong></p><p>Github</p><p>Blogging</p><p>Terminal usage</p><p>Design patterns</p><p>English (업무수준 상회)</p><hr><h3 id="Schedule"><a href="#Schedule" class="headerlink" title="Schedule"></a>Schedule</h3><p>1월 &lt;기초&gt;&lt;숲 파악&gt;**</p><ol><li>런코 전과정 마스터(발췌,보충) , 테스트 준비, 통과 </li><li>udemy javascript weird parts 정리 (블로깅)</li><li>udemy web dev bootcamp 일부 (런코 관련)</li></ol><p>==&gt;  javascript 기본개념, 사용법 정리</p><p><strong>2월 &lt;프론트엔드&gt; <cs 기초=""></cs></strong></p><ol><li><p>자바스크립트 작동원리, 개념정리, codestates pre course 복습 (블로깅)</p></li><li><p>udemy javascript build real app 완강  (js 로 웹 실제 조작, 구현 경험)</p></li><li><p>udemy network 이론강의 수강 , 컴원리 포함</p></li><li><p>HTML / CSS (udemy Html css advanced 강의 / 기타)</p></li><li><p>udemy algorithm in javascript (자료구조, 원리 이해, 직접 구현) 시작</p></li></ol><p><strong>3월~4.11 &lt;풀스택 경험 + 백엔드 기초&gt; &lt;총 정리&gt;</strong></p><ol><li>udemy algorithm in javascript (자료구조, 원리 이해, 직접 구현) 완강,정리</li><li>udemy web dev bootcamp 완강 / 서버 기초 공부 (node js 등)</li><li>라이브러리 (react , react native 기초 공부) - udemy / nomad react 기초강의들</li><li>nomad coder 풀스택 과정 1개 수료 (유튜브 or 우버 or  클론)</li><li>그동안 공부한 것 정리 (블로그 - TIL ,특수 주1회 / 깃헙) / 알고리즘 지속 공부</li></ol><p><strong>4월~ 수료까지 Codetates immersive course </strong><br>목표 : <strong>실력 있는 프론트엔드 개발자 &amp;&amp; 웹개발 커리어 시작 </strong></p><ul><li><p>지속 학습능력 (스스로 배우는 방법 터득, 체화)</p></li><li><p>커뮤니케이션, 협업 능력 (혼자 보다 함께, 더 크게)</p></li><li><p>기본기 갖추기 (cs, 네트워크 / 알고리즘 / 기반 작동원리 파악)</p></li><li><p>full-stack 설계 및 구현 경험  ( front 기반 + backend 기초 구축, 어플리케이션 전체)</p></li><li><p>Web + android + ios (react native)  / backend 통합 결과물 완성하기 </p></li><li><p>포트폴리오 및 브랜딩 ( 깃헙 / 블로그(개발공부, 포트폴리오 페이지 따로) )</p></li></ul><hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
     
     <summary type="html">
     
@@ -541,64 +601,6 @@
       <category term="html" scheme="http://mingguk.github.io/tags/html/"/>
     
       <category term="css" scheme="http://mingguk.github.io/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>first post</title>
-    <link href="http://mingguk.github.io/2019/01/28/first-post/"/>
-    <id>http://mingguk.github.io/2019/01/28/first-post/</id>
-    <published>2019-01-27T21:20:23.000Z</published>
-    <updated>2019-01-30T13:49:35.522Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="처음이라니"><a href="#처음이라니" class="headerlink" title="처음이라니"></a>처음이라니</h3><p>헥소 블로그 세팅 헬..</p><hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/28/second-post/">Javascript 시리즈 2: 자바스크립트 엔진</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;처음이라니&quot;&gt;&lt;a href=&quot;#처음이라니&quot; class=&quot;headerlink&quot; title=&quot;처음이라니&quot;&gt;&lt;/a&gt;처음이라니&lt;/h3&gt;&lt;p&gt;헥소 블로그 세팅 헬..&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;Related-Posts&quot;&gt;&lt;a href=&quot;#Re
-      
-    
-    </summary>
-    
-      <category term="Front" scheme="http://mingguk.github.io/categories/Front/"/>
-    
-      <category term="Javascript" scheme="http://mingguk.github.io/categories/Front/Javascript/"/>
-    
-    
-      <category term="javascript" scheme="http://mingguk.github.io/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>second post</title>
-    <link href="http://mingguk.github.io/2019/01/28/second-post/"/>
-    <id>http://mingguk.github.io/2019/01/28/second-post/</id>
-    <published>2019-01-27T21:20:23.000Z</published>
-    <updated>2019-01-30T13:49:46.614Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="카테고리-나누는게"><a href="#카테고리-나누는게" class="headerlink" title="카테고리 나누는게"></a>카테고리 나누는게</h3><p>이렇게 힘들다니..</p><hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/28/first-post/">Javascript 시리즈 1: 시작하기</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;카테고리-나누는게&quot;&gt;&lt;a href=&quot;#카테고리-나누는게&quot; class=&quot;headerlink&quot; title=&quot;카테고리 나누는게&quot;&gt;&lt;/a&gt;카테고리 나누는게&lt;/h3&gt;&lt;p&gt;이렇게 힘들다니..&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;Related-Posts&quot;
-      
-    
-    </summary>
-    
-      <category term="Front" scheme="http://mingguk.github.io/categories/Front/"/>
-    
-      <category term="Javascript" scheme="http://mingguk.github.io/categories/Front/Javascript/"/>
-    
-    
-      <category term="javascript" scheme="http://mingguk.github.io/tags/javascript/"/>
     
   </entry>
   

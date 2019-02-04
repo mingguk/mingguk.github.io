@@ -8,8 +8,32 @@
     </url>
 
     <url>
+        <loc>http://mingguk.github.io/2019/02/05/Building-an-object/</loc>
+        <lastmod>2019-02-04T09:05:33.421Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/02/05/OOP-in-javascript/</loc>
+        <lastmod>2019-02-04T09:04:57.935Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://mingguk.github.io/2019/02/04/Funtional-programming/</loc>
-        <lastmod>2019-02-03T18:10:49.516Z</lastmod>
+        <lastmod>2019-02-04T07:28:07.386Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/01/29/webDev-plan/</loc>
+        <lastmod>2019-02-04T07:23:29.240Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -66,14 +90,6 @@
     <url>
         <loc>http://mingguk.github.io/2019/01/28/codestates/</loc>
         <lastmod>2019-01-30T17:38:15.054Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/01/29/webDev-plan/</loc>
-        <lastmod>2019-01-30T17:34:46.906Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
