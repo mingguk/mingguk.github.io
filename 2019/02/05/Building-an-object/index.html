@@ -6,25 +6,25 @@
     
 
     
-    <title>Building an object | Mingguk</title>
+    <title>Building objects | Mingguk</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="javascript,weirdparts">
     
-    <meta name="description" content="Related Postsnext OOP in javascript">
+    <meta name="description" content="객체를 생성하는 여러가지 방식 중 하나는 new 키워드를 활용한생성자 함수 를 사용하는 방법이 있다. new keyword123456789101112131415// java 같은..function Person() &amp;#123;	console.log(this);    this.firstname = &amp;apos;John&amp;apos;,    this.lastname">
 <meta name="keywords" content="javascript,weirdparts">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Building an object">
+<meta property="og:title" content="Building objects">
 <meta property="og:url" content="http://mingguk.github.io/2019/02/05/Building-an-object/index.html">
 <meta property="og:site_name" content="Mingguk">
-<meta property="og:description" content="Related Postsnext OOP in javascript">
+<meta property="og:description" content="객체를 생성하는 여러가지 방식 중 하나는 new 키워드를 활용한생성자 함수 를 사용하는 방법이 있다. new keyword123456789101112131415// java 같은..function Person() &amp;#123;	console.log(this);    this.firstname = &amp;apos;John&amp;apos;,    this.lastname">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://mingguk.github.io/images/jswThum.png">
-<meta property="og:updated_time" content="2019-02-04T09:05:33.421Z">
+<meta property="og:updated_time" content="2019-02-04T10:05:44.611Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Building an object">
-<meta name="twitter:description" content="Related Postsnext OOP in javascript">
+<meta name="twitter:title" content="Building objects">
+<meta name="twitter:description" content="객체를 생성하는 여러가지 방식 중 하나는 new 키워드를 활용한생성자 함수 를 사용하는 방법이 있다. new keyword123456789101112131415// java 같은..function Person() &amp;#123;	console.log(this);    this.firstname = &amp;apos;John&amp;apos;,    this.lastname">
 <meta name="twitter:image" content="http://mingguk.github.io/images/jswThum.png">
     
 
@@ -154,7 +154,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-        Building an object
+        Building objects
         </h1>
     
 
@@ -181,7 +181,24 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="">next</a></p>
+            <p>객체를 생성하는 여러가지 방식 중 하나는 new 키워드를 활용한<br><strong>생성자 함수</strong> 를 사용하는 방법이 있다.</p>
+<h3 id="new-keyword"><a href="#new-keyword" class="headerlink" title="new keyword"></a>new keyword</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// java 같은..</span><br><span class="line">function Person() &#123;</span><br><span class="line">	console.log(this);</span><br><span class="line">    this.firstname = &apos;John&apos;,</span><br><span class="line">    this.lastname = &apos;Doe&apos;</span><br><span class="line">    console.log(&apos;This function is invoked.&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//new는 특별한 operator 이다</span><br><span class="line">var john = new Person(); //생성자 함수</span><br><span class="line">//console.log(john);</span><br><span class="line"></span><br><span class="line">&#123;&#125;</span><br><span class="line">This function is invoked.</span><br><span class="line">Person &#123;firstname: &apos;John&apos;, lastname: &apos;Doe&apos;&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>생성자 함수 (new + function() )</strong></p>
+<p>생성자 함수가 실행되면 아래와 같은 순서로 진행된다.</p>
+<ol>
+<li>{} 빈 객체 생성</li>
+<li>Person() 실행 - execution 생성, this 생성(this 는 생성된 빈 객체 가르킴)</li>
+<li>Person() 내 로직 따라 빈객체에 firstname, lastname 속성 추가 됨</li>
+<li>생성된 객체 Person{firstname: ‘John’, lastname: ‘Doe’} 리턴</li>
+</ol>
+<p>따라서 new 키워드와 + 정의된 Person() 를 실행 할 때마다 <strong>새로운 객체, </strong><br><strong>Person()의 인스턴스</strong> 를 생성한다고 할 수 있다. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//필요한 요소를 인자로 받으면 서로 다른 속성 가진 인스턴스 생성 가능</span><br><span class="line">function Person(firstname, lastname) &#123;</span><br><span class="line">    this.firstname = firstname;</span><br><span class="line">    this.lastname = lastname;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var john = new person(&apos;John&apos;, &apos;Doe);</span><br><span class="line">var jane = new person(&apos;Jane&apos;, &apos;Doe&apos;);</span><br><span class="line"></span><br><span class="line">console.log(jane);</span><br><span class="line"></span><br><span class="line">// Person &#123;firstname: &apos;Jane&apos;, lastname: &apos;Doe&apos;&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/jsw bo prototype.png" alt=""></p>
+<p>객체가 생성되면 자동으로 prototype 이라는 속성이 빈 객체 {} 로 추가된다. <strong>생성자함수를 사용 할 때만</strong>, prototype 속성이 사용된다. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//아래 코드를 추가하면 </span><br><span class="line">Person.prototype.getFullName = function() &#123;</span><br><span class="line">    return this.firstname + &apos; &apos; + this.lastname;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// new Person() 으로 생성된 객체들은 모두 getFullName() 을 속성으로 갖게된다.</span><br></pre></td></tr></table></figure>
+<p>그냥 Person() 내에 해당 함수를 추가해주면 되지않나?<br>그렇게 되면 생성된 모든객체에 함수가 중복존재하기 때문에 메모리가 낭비된다.</p>
+<h3 id="주의사항"><a href="#주의사항" class="headerlink" title="주의사항"></a>주의사항</h3><p>new를 실수로 빼먹으면 Person() 함수는 리턴값이 없기 때문에 <strong>undefined error 발생</strong>, 이러한 이유로 생성자 함수를 일반 함수와 구분하기 위해 <strong>첫글자를 대문자로</strong> 생성해주는 컨벤션 존재</p>
+<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="">next</a></p>
 <p><a href="http://mingguk.github.io/2019/02/05/OOP-in-javascript/">OOP in javascript</a></p>
 <hr>
 
@@ -261,7 +278,7 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "minkuk Seo"
         },
-        "headline": "Building an object",
+        "headline": "Building objects",
         "image": "http://mingguk.github.io/images/jswThum.png",
         "keywords": "javascript weirdparts",
         "genre": "Front Javascript",
@@ -269,11 +286,9 @@ ga('send', 'pageview');
         "dateCreated": "2019-02-04",
         "dateModified": "2019-02-04",
         "url": "http://mingguk.github.io/2019/02/05/Building-an-object/",
-        "description": "Related Postsnext
-OOP in javascript
-
-"
-        "wordCount": 11
+        "description": "객체를 생성하는 여러가지 방식 중 하나는 new 키워드를 활용한생성자 함수 를 사용하는 방법이 있다.
+new keyword123456789101112131415// java 같은..function Person() &#123;	console.log(this);    this.firstname = &apos;John&apos;,    this.lastname "
+        "wordCount": 335
     }
 </script>
 
