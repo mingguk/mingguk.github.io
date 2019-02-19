@@ -8,8 +8,8 @@
     </url>
 
     <url>
-        <loc>http://mingguk.github.io/2019/02/05/Building-an-object/</loc>
-        <lastmod>2019-02-04T12:12:40.581Z</lastmod>
+        <loc>http://mingguk.github.io/2019/02/20/til190219/</loc>
+        <lastmod>2019-02-19T06:48:16.402Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +17,15 @@
 
     <url>
         <loc>http://mingguk.github.io/2019/02/05/jQuery/</loc>
-        <lastmod>2019-02-04T12:12:17.468Z</lastmod>
+        <lastmod>2019-02-04T12:19:35.866Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/02/05/Building-an-object/</loc>
+        <lastmod>2019-02-04T12:12:40.581Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
