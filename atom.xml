@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mingguk.github.io/"/>
-  <updated>2019-02-19T19:05:31.818Z</updated>
+  <updated>2019-02-20T13:21:51.313Z</updated>
   <id>http://mingguk.github.io/</id>
   
   <author>
@@ -17,11 +17,68 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>backend</title>
+    <link href="http://mingguk.github.io/2019/02/21/backend/"/>
+    <id>http://mingguk.github.io/2019/02/21/backend/</id>
+    <published>2019-02-20T21:55:28.000Z</published>
+    <updated>2019-02-20T13:21:51.313Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/backend.png" alt=""></p><h3 id="Internet-basics"><a href="#Internet-basics" class="headerlink" title="Internet basics"></a>Internet basics</h3><p> ISP에 요청(query) -&gt; DNS 가 IP address 로 변환 -&gt; http 를 통해 가장 빠른 경로로 요청이 해당 IP address 의 서버로 전달 -&gt; 해당 서버가 요청에 해당하는 정보를 DB에서 가져와 응답 -&gt; 요청된 자료 송신 -&gt; 요청자의 브라우저에 의해 데이터가 렌더링 되서 보여짐</p><h3 id="Static-vs-Dynamic"><a href="#Static-vs-Dynamic" class="headerlink" title="Static vs Dynamic"></a>Static vs Dynamic</h3><p>같은 요청에 같은 결과를 출력하는 것을 static , 매 요청 시 조건마다 다른 결과를 출력해주는 건 dynamic</p><h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/backend.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Internet-basics&quot;&gt;&lt;a href=&quot;#Internet-basics&quot; class=&quot;headerlink&quot; title=&quot;Internet basics&quot;
+      
+    
+    </summary>
+    
+      <category term="Back" scheme="http://mingguk.github.io/categories/Back/"/>
+    
+      <category term="basic" scheme="http://mingguk.github.io/categories/Back/basic/"/>
+    
+    
+      <category term="backend" scheme="http://mingguk.github.io/tags/backend/"/>
+    
+  </entry>
+  
+  <entry>
     <title>til</title>
+    <link href="http://mingguk.github.io/2019/02/21/patata/"/>
+    <id>http://mingguk.github.io/2019/02/21/patata/</id>
+    <published>2019-02-20T20:02:34.000Z</published>
+    <updated>2019-02-21T06:46:07.574Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/til.jpg" alt=""></p><h3 id="오늘-한-일"><a href="#오늘-한-일" class="headerlink" title="오늘 한 일"></a>오늘 한 일</h3><ol><li>Todolist (jQuery) 완성</li></ol><iframe width="560" height="315" src="https://www.youtube.com/embed/dgU6eWp1oVY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p><a href="https://github.com/mingguk/todolist.git" target="_blank" rel="noopener">source code</a></p><ol start="2"><li>backend basics, command line 완강</li><li>node js 기초 완강</li><li>server side Frameworks 완강</li><li>c9 개발환경 세팅</li><li>til 포스팅</li></ol><h3 id="comment"><a href="#comment" class="headerlink" title="comment"></a>comment</h3><p>js 의 hello world, Todo list 를 완성 했다, html / css 와 js 간의 연계에 조금 익숙해 진거 같다.</p><p>오늘부터 기초 back end 영역 공부 시작한다, </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/til.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;오늘-한-일&quot;&gt;&lt;a href=&quot;#오늘-한-일&quot; class=&quot;headerlink&quot; title=&quot;오늘 한 일&quot;&gt;&lt;/a&gt;오늘 한 일&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Todoli
+      
+    
+    </summary>
+    
+      <category term="post" scheme="http://mingguk.github.io/categories/post/"/>
+    
+      <category term="til" scheme="http://mingguk.github.io/categories/post/til/"/>
+    
+    
+      <category term="til" scheme="http://mingguk.github.io/tags/til/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>til 첫날</title>
     <link href="http://mingguk.github.io/2019/02/20/til190219/"/>
     <id>http://mingguk.github.io/2019/02/20/til190219/</id>
     <published>2019-02-19T15:44:30.000Z</published>
-    <updated>2019-02-19T19:05:31.818Z</updated>
+    <updated>2019-02-20T11:06:07.454Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/til.jpg" alt=""></p><h3 id="오늘-한-일"><a href="#오늘-한-일" class="headerlink" title="오늘 한 일"></a>오늘 한 일</h3><ol><li>RGB color guessing game 완성 (DOM 연습)</li></ol><div class="video-container"><iframe src="https://www.youtube.com/embed/1cg9IYgi3aY" frameborder="0" allow="accelerometer;" autoplay;="" encrypted-media;="" gyroscope;="" picture-in-picture="" allowfullscreen></iframe></div><p><a href="https://github.com/mingguk/colorGame.git" target="_blank" rel="noopener">source code</a></p><ol><li>JQUERY 입문 완강</li><li>javascript Todo list 완성하기</li><li>hexo 블로그 TIL 포스팅 환경 세팅하기(비디오, 깃헙 연동)</li><li>Todolist (jQuery) 준비하기</li></ol><h3 id="comment"><a href="#comment" class="headerlink" title="comment"></a>comment</h3><p>일부러 라이브러리 없이 바닐라 자바스크립트로만 공부해오다 드디어 라이브러리에 살짝 발을 담궈봤다</p><p>(불편함을 겪어봐야 왜 이게 좋은지, 필요한지 격하게 느낄 수 있다길래..)</p><p>되게 많이 편하다. 근데 한편으로 이 기능이 왜 되는지, 안되는지 알 수 없어서 약간 자존심이 상한다는 느낌?</p><p>앞으로 일주일간 html,css 를 js 로 조작 연습 위해 toy projects 를 몇개 진행하고, udemy colt steel web bootcamp 마무리를 할 예정이다.</p>]]></content>
     
@@ -550,59 +607,6 @@
       <category term="javascript" scheme="http://mingguk.github.io/tags/javascript/"/>
     
       <category term="weirdparts" scheme="http://mingguk.github.io/tags/weirdparts/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>back</title>
-    <link href="http://mingguk.github.io/2019/01/29/back/"/>
-    <id>http://mingguk.github.io/2019/01/29/back/</id>
-    <published>2019-01-28T16:22:52.000Z</published>
-    <updated>2019-01-30T13:51:14.386Z</updated>
-    
-    <content type="html"><![CDATA[<p>백엔드 카테고리</p><hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;백엔드 카테고리&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;Related-Posts&quot;&gt;&lt;a href=&quot;#Related-Posts&quot; class=&quot;headerlink&quot; title=&quot;Related Posts&quot;&gt;&lt;/a&gt;Related Posts&lt;/h3&gt;
-      
-    
-    </summary>
-    
-      <category term="Back" scheme="http://mingguk.github.io/categories/Back/"/>
-    
-    
-      <category term="back" scheme="http://mingguk.github.io/tags/back/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>review</title>
-    <link href="http://mingguk.github.io/2019/01/29/review/"/>
-    <id>http://mingguk.github.io/2019/01/29/review/</id>
-    <published>2019-01-28T16:11:57.000Z</published>
-    <updated>2019-01-30T13:51:04.047Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="안녕하세요"><a href="#안녕하세요" class="headerlink" title="안녕하세요"></a>안녕하세요</h3><p>주로 온라인 강의 나 부트캠프로 공부를 많이 해왔기 때문에 (영어 자료 위주)</p><p>필요한 인강의나 강의 선택 시 제 경험이 작은 도움이 됏으면 합니다</p><p>주로 강의를 듣는 사이트</p><ol><li>Udemy </li><li>Udacity</li><li>인프런</li><li>칸아카데미, 코드리뷰</li></ol><hr><h3 id="Related-post"><a href="#Related-post" class="headerlink" title="Related post"></a>Related post</h3><p><a href="http://mingguk.github.io/2019/01/28/codestates/">코드스테이츠 pre course 후기</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;안녕하세요&quot;&gt;&lt;a href=&quot;#안녕하세요&quot; class=&quot;headerlink&quot; title=&quot;안녕하세요&quot;&gt;&lt;/a&gt;안녕하세요&lt;/h3&gt;&lt;p&gt;주로 온라인 강의 나 부트캠프로 공부를 많이 해왔기 때문에 (영어 자료 위주)&lt;/p&gt;
-&lt;p&gt;필요한 인강의
-      
-    
-    </summary>
-    
-      <category term="Review" scheme="http://mingguk.github.io/categories/Review/"/>
-    
-    
-      <category term="review" scheme="http://mingguk.github.io/tags/review/"/>
     
   </entry>
   
