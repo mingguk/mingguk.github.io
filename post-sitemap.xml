@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>http://mingguk.github.io/2019/01/29/webDev-plan/</loc>
+        <lastmod>2019-02-23T03:21:51.934Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://mingguk.github.io/2019/02/21/patata/</loc>
         <lastmod>2019-02-22T14:22:47.850Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -58,14 +66,6 @@
     <url>
         <loc>http://mingguk.github.io/2019/02/04/Funtional-programming/</loc>
         <lastmod>2019-02-04T07:28:07.386Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/01/29/webDev-plan/</loc>
-        <lastmod>2019-02-04T07:23:29.240Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

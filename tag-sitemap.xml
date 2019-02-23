@@ -52,13 +52,6 @@
     </url>
 
     <url>
-        <loc>http://mingguk.github.io/tags/plan/</loc>
-        <lastmod>2019-02-04T07:23:29.240Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://mingguk.github.io/tags/javascript/</loc>
         <lastmod>2019-02-04T12:19:35.866Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -82,6 +75,13 @@
     <url>
         <loc>http://mingguk.github.io/tags/til/</loc>
         <lastmod>2019-02-22T14:22:47.850Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/tags/plan/</loc>
+        <lastmod>2019-02-23T03:21:51.934Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
