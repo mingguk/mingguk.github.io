@@ -8,6 +8,30 @@
     </url>
 
     <url>
+        <loc>http://mingguk.github.io/2019/02/26/til3/</loc>
+        <lastmod>2019-02-27T15:09:20.074Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/02/21/patata/</loc>
+        <lastmod>2019-02-25T08:25:43.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/02/20/til190219/</loc>
+        <lastmod>2019-02-25T08:25:09.013Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://mingguk.github.io/2019/01/29/webDev-plan/</loc>
         <lastmod>2019-02-23T03:21:51.934Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -16,24 +40,8 @@
     </url>
 
     <url>
-        <loc>http://mingguk.github.io/2019/02/21/patata/</loc>
-        <lastmod>2019-02-22T14:22:47.850Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://mingguk.github.io/2019/02/21/backend/</loc>
         <lastmod>2019-02-20T13:21:51.313Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/02/20/til190219/</loc>
-        <lastmod>2019-02-20T11:06:07.454Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

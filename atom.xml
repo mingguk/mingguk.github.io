@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mingguk.github.io/"/>
-  <updated>2019-02-20T13:21:51.313Z</updated>
+  <updated>2019-02-27T15:09:20.074Z</updated>
   <id>http://mingguk.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>til</title>
+    <link href="http://mingguk.github.io/2019/02/26/til3/"/>
+    <id>http://mingguk.github.io/2019/02/26/til3/</id>
+    <published>2019-02-25T17:10:18.000Z</published>
+    <updated>2019-02-27T15:09:20.074Z</updated>
+    
+    <content type="html"><![CDATA[<p>하하하</p><p><img src="/images/til.jpg" alt=""></p><h3 id="todo"><a href="#todo" class="headerlink" title="todo"></a>todo</h3><ol><li>web dev Restful 까지 수강</li><li>code signal 3 문제 풀이</li><li>Build real js app section 7 1/2 파트 수강</li><li>jobjobjs 수강신청, 준비</li><li>til 포스팅</li></ol><h2 id="comment"><a href="#comment" class="headerlink" title="comment"></a>comment</h2><p>주말을 쿨하게 놀았다. 아직 정신을 못차렸나보다. web dev course 풀스택 체험 하려는데 집중도가 점점 떨어진다. 월말까지 일단 최대한 시도 해보고..</p><p>남은 서버파트는 나중에 완강 고려해봐야겠다, front 쪽과 특히 자바스크립트 심화공부를 먼저 더 집중하는게 맞는거 같아서 커리큘럼을 조금 수정하고 있다. 3원화 시켜 메인 공부 (자바스크립트) / 서브1 ( 알고리즘(문제해결)) /  서브2 (html,css(front , etc)) 식으로 매일 나눠서 진행하는 걸로 할 생각이다. 공부, 수강 끝나고 만족할 만한 결과물이 나온다면 그 때 서버쪽 연동, 풀스택에 도전하는게 맞는거 같다.</p><p>알고리즘 연습사이트 인데, 기록, 결과물 경쟁시스템, 챌린지등 컨텐츠랑 ux 모두 맘에드는 사이트를 발견해서 공유한다</p><p> <strong>[코드시그널</strong>](<a href="https://codesignal.com/" target="_blank" rel="noopener">https://codesignal.com/</a>)</p><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;하하하&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/til.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;todo&quot;&gt;&lt;a href=&quot;#todo&quot; class=&quot;headerlink&quot; title=&quot;todo&quot;&gt;&lt;/a&gt;todo&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;web
+      
+    
+    </summary>
+    
+      <category term="post" scheme="http://mingguk.github.io/categories/post/"/>
+    
+      <category term="til" scheme="http://mingguk.github.io/categories/post/til/"/>
+    
+    
+      <category term="til" scheme="http://mingguk.github.io/tags/til/"/>
+    
+  </entry>
   
   <entry>
     <title>backend</title>
@@ -49,17 +79,17 @@
     <link href="http://mingguk.github.io/2019/02/21/patata/"/>
     <id>http://mingguk.github.io/2019/02/21/patata/</id>
     <published>2019-02-20T20:02:34.000Z</published>
-    <updated>2019-02-22T14:22:47.850Z</updated>
+    <updated>2019-02-25T08:25:43.651Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/images/til.jpg" alt=""></p><h3 id="오늘-한-일"><a href="#오늘-한-일" class="headerlink" title="오늘 한 일"></a>오늘 한 일</h3><ol><li>Todolist (jQuery) 완성</li></ol><iframe width="560" height="315" src="https://www.youtube.com/embed/dgU6eWp1oVY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p><a href="https://github.com/mingguk/todolist.git" target="_blank" rel="noopener">source code</a></p><ol start="2"><li>backend basics, command line 완강</li><li>node js 기초 완강</li><li>server side Frameworks 완강</li><li>express, intermidiate express 반강</li><li>codestates PRE SA1 제출</li><li>c9 개발환경 세팅</li><li>til 포스팅</li></ol><h3 id="주말-23-24-할-일"><a href="#주말-23-24-할-일" class="headerlink" title="주말(23~24) 할 일"></a>주말(23~24) 할 일</h3><ol><li>Web dev Data Associations 까지 수강, 정리</li><li>블로깅 정리</li><li></li></ol><h3 id="comment"><a href="#comment" class="headerlink" title="comment"></a>comment</h3><p>js 의 hello world, Todo list 를 완성 했다, html / css 와 js 간의 연계에 조금 익숙해 진거 같다. 강의 진도에 목메다 보니 강의만 순차적으로 따라가고 금방금방 넘어가니 돌아서니 남는게 없다, 좀 느리게 가더라도 배운것을 그때그때 작은 기능이라도 직접만들어 보고 경험하는식으로 바꿔야겠다</p><p>오늘부터 기초 back end 영역 공부를 시작했다, node js express 를 배웠는데 그동안 몰랐던 웹페이지들 연계, 코딩을 이런식으로 하는구나~ 깨달았다.</p><p>주말부터~다음주까지 이 풀스택 기초과정을 끝내고, 전체 돌아가는 그림을 파악한 뒤 다음 커리큘럼을 고민해봐야겠다.</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/images/til.jpg" alt=""></p><h3 id="todo"><a href="#todo" class="headerlink" title="todo"></a>todo</h3><ol><li><del>Todolist (jQuery) 완성</del></li></ol><iframe width="560" height="315" src="https://www.youtube.com/embed/dgU6eWp1oVY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p><a href="https://github.com/mingguk/todolist.git" target="_blank" rel="noopener">source code</a></p><ol start="2"><li><del>backend basics, command line 완강</del></li><li><del>node js 기초 완강</del></li><li><del>server side Frameworks 완강</del></li><li><del>express, intermidiate express 반강</del></li><li><del>codestates PRE SA1 제출</del></li><li><del>c9 개발환경 세팅</del></li><li><del>til 포스팅</del></li></ol><h3 id="주말-23-24-할-일"><a href="#주말-23-24-할-일" class="headerlink" title="주말(23~24) 할 일"></a>주말(23~24) 할 일</h3><ol><li>Web dev Data Associations 까지 수강, 정리</li><li>블로깅 정리</li></ol><h3 id="comment"><a href="#comment" class="headerlink" title="comment"></a>comment</h3><p>js 의 hello world, Todo list 를 완성 했다, html / css 와 js 간의 연계에 조금 익숙해 진거 같다. 강의 진도에 목메다 보니 강의만 순차적으로 따라가고 금방금방 넘어가니 돌아서니 남는게 없다, 좀 느리게 가더라도 배운것을 그때그때 작은 기능이라도 직접만들어 보고 경험하는식으로 바꿔야겠다</p><p>오늘부터 기초 back end 영역 공부를 시작했다, node js express 를 배웠는데 그동안 몰랐던 웹페이지들 연계, 코딩을 이런식으로 하는구나~ 깨달았다.</p><p>주말부터~다음주까지 이 풀스택 기초과정을 끝내고, 전체 돌아가는 그림을 파악한 뒤 다음 커리큘럼을 고민해봐야겠다.</p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;&lt;img src=&quot;/images/til.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;오늘-한-일&quot;&gt;&lt;a href=&quot;#오늘-한-일&quot; class=&quot;headerlink&quot; title=&quot;오늘 한 일&quot;&gt;&lt;/a&gt;오늘 한 일&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;Todoli
+&lt;h3 id=&quot;todo&quot;&gt;&lt;a href=&quot;#todo&quot; class=&quot;headerlink&quot; title=&quot;todo&quot;&gt;&lt;/a&gt;todo&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;del&gt;Todolist 
       
     
     </summary>
@@ -78,17 +108,17 @@
     <link href="http://mingguk.github.io/2019/02/20/til190219/"/>
     <id>http://mingguk.github.io/2019/02/20/til190219/</id>
     <published>2019-02-19T15:44:30.000Z</published>
-    <updated>2019-02-20T11:06:07.454Z</updated>
+    <updated>2019-02-25T08:25:09.013Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/images/til.jpg" alt=""></p><h3 id="오늘-한-일"><a href="#오늘-한-일" class="headerlink" title="오늘 한 일"></a>오늘 한 일</h3><ol><li>RGB color guessing game 완성 (DOM 연습)</li></ol><div class="video-container"><iframe src="https://www.youtube.com/embed/1cg9IYgi3aY" frameborder="0" allow="accelerometer;" autoplay;="" encrypted-media;="" gyroscope;="" picture-in-picture="" allowfullscreen></iframe></div><p><a href="https://github.com/mingguk/colorGame.git" target="_blank" rel="noopener">source code</a></p><ol><li>JQUERY 입문 완강</li><li>javascript Todo list 완성하기</li><li>hexo 블로그 TIL 포스팅 환경 세팅하기(비디오, 깃헙 연동)</li><li>Todolist (jQuery) 준비하기</li></ol><h3 id="comment"><a href="#comment" class="headerlink" title="comment"></a>comment</h3><p>일부러 라이브러리 없이 바닐라 자바스크립트로만 공부해오다 드디어 라이브러리에 살짝 발을 담궈봤다</p><p>(불편함을 겪어봐야 왜 이게 좋은지, 필요한지 격하게 느낄 수 있다길래..)</p><p>되게 많이 편하다. 근데 한편으로 이 기능이 왜 되는지, 안되는지 알 수 없어서 약간 자존심이 상한다는 느낌?</p><p>앞으로 일주일간 html,css 를 js 로 조작 연습 위해 toy projects 를 몇개 진행하고, udemy colt steel web bootcamp 마무리를 할 예정이다.</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/images/til.jpg" alt=""></p><h3 id="todo"><a href="#todo" class="headerlink" title="todo"></a>todo</h3><ol><li><del>RGB color guessing game 완성 (DOM 연습)</del></li></ol><div class="video-container"><iframe src="https://www.youtube.com/embed/1cg9IYgi3aY" frameborder="0" allow="accelerometer;" autoplay;="" encrypted-media;="" gyroscope;="" picture-in-picture="" allowfullscreen></iframe></div><p><a href="https://github.com/mingguk/colorGame.git" target="_blank" rel="noopener">source code</a></p><ol><li><del>JQUERY 입문 완강</del></li><li><del>javascript Todo list 완성하기</del></li><li><del>hexo 블로그 TIL 포스팅 환경 세팅하기(비디오, 깃헙 연동)</del></li><li><del>Todolist (jQuery) 준비하기</del></li></ol><h3 id="comment"><a href="#comment" class="headerlink" title="comment"></a>comment</h3><p>일부러 라이브러리 없이 바닐라 자바스크립트로만 공부해오다 드디어 라이브러리에 살짝 발을 담궈봤다</p><p>(불편함을 겪어봐야 왜 이게 좋은지, 필요한지 격하게 느낄 수 있다길래..)</p><p>되게 많이 편하다. 근데 한편으로 이 기능이 왜 되는지, 안되는지 알 수 없어서 약간 자존심이 상한다는 느낌?</p><p>앞으로 일주일간 html,css 를 js 로 조작 연습 위해 toy projects 를 몇개 진행하고, udemy colt steel web bootcamp 마무리를 할 예정이다.</p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;&lt;img src=&quot;/images/til.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;오늘-한-일&quot;&gt;&lt;a href=&quot;#오늘-한-일&quot; class=&quot;headerlink&quot; title=&quot;오늘 한 일&quot;&gt;&lt;/a&gt;오늘 한 일&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;RGB co
+&lt;h3 id=&quot;todo&quot;&gt;&lt;a href=&quot;#todo&quot; class=&quot;headerlink&quot; title=&quot;todo&quot;&gt;&lt;/a&gt;todo&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;del&gt;RGB color
       
     
     </summary>
@@ -564,37 +594,6 @@
         &lt;p&gt;&lt;img src=&quot;/images/jswcc.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;자바스크립트를 이해하는데 있어 중요한 기본개념 3가지&lt;/p&gt;
 &lt;h3 id=&quot;Syntax-parsers&quot;&gt;&lt;a href=&quot;#Syntax-parsers&quot; class=&quot;he
-      
-    
-    </summary>
-    
-      <category term="Front" scheme="http://mingguk.github.io/categories/Front/"/>
-    
-      <category term="Javascript" scheme="http://mingguk.github.io/categories/Front/Javascript/"/>
-    
-    
-      <category term="javascript" scheme="http://mingguk.github.io/tags/javascript/"/>
-    
-      <category term="weirdparts" scheme="http://mingguk.github.io/tags/weirdparts/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;Udemy&gt; Javascript weird parts 시작하기</title>
-    <link href="http://mingguk.github.io/2019/01/29/jsw%20main/"/>
-    <id>http://mingguk.github.io/2019/01/29/jsw main/</id>
-    <published>2019-01-29T02:15:51.000Z</published>
-    <updated>2019-01-30T17:29:13.202Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/jswUnderstand.png" alt=""> </p><p>자바스크립트 개념정리를 위해 이러저리 자료를 찾던중 발견한 보석같은 강의 (feat. 연쇄할인마) </p><p>단순 문법이나 기초 예제 복기가 아닌 이면에 자바스크립트가 어떻게 동작하는지 그 원리를(weird parts) 이해하는 것을 목표로 하고 있다. 굳이 왜 작동원리까지..? 라고 생각 할 수 있겠지만 <strong>원리에 대한 이해</strong>를 바탕으로 더 나은 코드를 작성할 수 있다는 주장이다.</p><p><br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(&apos;Hello World&apos;);   //Hello World</span><br></pre></td></tr></table></figure><p>예를들어 Hello world 를 출력하기 위한 이 간단한 코드 이면에, 이를 실행하기 위해 자바스크립트엔진이 어떻게 동작하여 브라우저를 통해 화면에 글자를 출력하게 되는지 같은.. </p><p>사실 codestates pre 과정에서 처음하는 javascript임에도 큰 혼란을 겪지않았던건  먼저 이 강의를 수강하고 간 덕분인것 같다. </p><p><img src="/images/jswLibraries.png" alt=""></p><p>프론트엔드 개발에 흔히 쓰이는 프레임워크, 라이브러리들도 결국 자바스크립트 코드일뿐 이라는 것,                    프론트엔드 개발을 잘하고 싶다, 코드 퀄리티를 높히고 싶다면? 결국 모든것의 기반이 되는 자바스크립트를 깊게 파고 공부하는 것이 최선의 방법</p><p>pre course 공부한 내용이랑 자바스크립트 개념 정리를 위해서 시리즈로 블로그에 정리 포스팅을 연재 할 계획이다 그다음은 오래전 결제하고 조금보다 방치한 <a href="https://www.udemy.com/the-web-developer-bootcamp/" target="_blank" rel="noopener">web bootcamp</a> 랑 <a href="https://www.udemy.com/the-complete-javascript-course/" target="_blank" rel="noopener">javascript real projects</a> 를 완강하고..</p><hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/29/jsw context &amp;ex/">JSW context &amp; scope</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;/images/jswUnderstand.png&quot; alt=&quot;&quot;&gt; &lt;/p&gt;
-&lt;p&gt;자바스크립트 개념정리를 위해 이러저리 자료를 찾던중 발견한 보석같은 강의 (feat. 연쇄할인마) &lt;/p&gt;
-&lt;p&gt;단순 문법이나 기초 예제 복기가 아닌 
       
     
     </summary>
