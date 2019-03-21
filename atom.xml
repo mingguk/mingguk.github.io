@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mingguk.github.io/"/>
-  <updated>2019-03-07T11:46:55.755Z</updated>
+  <updated>2019-03-21T07:28:37.031Z</updated>
   <id>http://mingguk.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How CSS Works</title>
+    <link href="http://mingguk.github.io/2019/03/21/til0319/"/>
+    <id>http://mingguk.github.io/2019/03/21/til0319/</id>
+    <published>2019-03-20T20:17:05.000Z</published>
+    <updated>2019-03-21T07:28:37.031Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><h3 id="How-to-bulid-a-good-website"><a href="#How-to-bulid-a-good-website" class="headerlink" title="How to bulid a good website"></a>How to bulid a good website</h3><p><img src="/images/css.png" alt=""></p><p><strong>반응형 웹</strong></p><p>다양한 기기들의 다른 스크린 사이즈에 각각 최적화 된 화면을 보여주는 것</p><p><strong>유지보수, 확장 가능한 코드</strong></p><p>깔끔하고 누구나 알아보기 쉽게 잘 설계, 조직화 된 코드를 짜야된다. 웹 어플리케이션이 성장함에 따라 자연스럽게 코드 양이 늘어나거나 문제 발생 시 잘 설계된 코드는 시간과 비용을 현저히 줄여준다.</p><p><strong>성능</strong></p><p>웹사이트 성능 저하를 피하기 위해 가능한 적은 요청과, 코드, 이미지를 효율적으로 조정하는게 필요하다.</p><hr><h3 id="What-happens-to-css-when-we-load-up-a-webpage"><a href="#What-happens-to-css-when-we-load-up-a-webpage" class="headerlink" title="What happens to css when we load up a webpage?"></a>What happens to css when we load up a webpage?</h3><p><img src="/images/webpage.png" alt=""></p><ol><li><p>브라우저가 HTML 파일 로드</p></li><li><p>HTML 의 코드를 한줄 한줄 해독</p></li><li><p>해독 과정에서 코드를 DOM 구조로 빌드</p></li><li><p>CSS 파일 또한 로드</p></li><li><p>CSS 파일을 한줄씩 해독 </p><p>5-1. CSS Cascade (충돌하는 css 선언 조정)</p><p>5-2. CSS 최종 속성값 결정</p></li><li><p>CSSOM  빌드 (Like DOM)</p></li><li>DOM + CSSOM -&gt; 최종 tree 구조 빌드</li><li>VIsual Formatting Model </li><li>Website rendering (실제 브라우저 통해 보여지는 단계)</li></ol><hr><p><strong>단계별 정리</strong></p><h3 id="How-CSS-is-parsed"><a href="#How-CSS-is-parsed" class="headerlink" title="How CSS is parsed?"></a>How CSS is parsed?</h3><ol><li><strong>Cascading and Specificity</strong></li></ol><p><img src="/images/cascade.png" alt=""></p><p><strong>CASCADE?</strong></p><p>특정 요소에 한 가지 이상의 속성 값이 지정됐을 때 최종적으로 어떤 속성값을 적용할 것인지 조정하고 결정하는 단계</p><p>(Author 지정 값 / css, style 에 유저 직접 지정 값 / 브라우저 자체 기본속성값 등.. 중에서 <strong>어느 속성을 최종 적용 할 것인가!?</strong> 의 문제)</p><p><strong>Importance —&gt; specificity —&gt; source order  순으로 비교, 요소에 적용 될 속성값  최종 결정</strong></p><p><strong>1) importance</strong></p><p><img src="/images/importance.png" alt=""></p><p>(!important 키워드 포함된 blue 로 최종 결정!)</p><p><strong>2) specificity ( 어느 것이 더 세부적, 구체적인가?)</strong></p><p><img src="/images/specific.png" alt=""></p><p><strong>3) source Order (importance, specificity 가 같다면 가장 나중에 쓰여진 속성 적용)**</strong></p><p><img src="/images/sourceorder.png" alt=""></p><p><strong>참고사항</strong></p><p><img src="/images/cssetc.png" alt=""></p><ol start="2"><li><strong>Value Processing</strong></li></ol><p><img src="/images/cssvalueprocessed.png" alt=""></p><p><strong>CSS 적용 할 최종 속성값을 산출하는 과정</strong></p><ol><li>Declared value (선언된 값) —&gt; </li><li>Cascaded value( 속성 값 두가지 이상 일 때, 어느걸 적용 할까~? —&gt;</li><li>Specified value (속성 값 하나 일 때) —&gt;</li><li>Computed value (상대적인 값들 -&gt; 절대값(px로 변환 됨) —&gt;</li><li>Used value (레이아웃 따라 값 산출 부모, % 라던지..) —&gt;</li><li>Actual value (브라우저 나 디바이스 기본설정 따라 최종 값 산출)</li></ol><p><strong>relative —&gt; absolute value (px)</strong></p><p><img src="/images/reltoabs.png" alt=""></p><p>font-size : 부모의 font-size 기준</p><p>length: 부모의 width 기준</p><p><strong>Font-based</strong> : em(font) : 부모 / em(length)(현재 요소 크기)  / rem (root 기준)</p><p><strong>Viewport-based</strong> : vh(height) / vw(width)</p><p>3.<strong>inheritance</strong></p><p><img src="/images/inheritance.png" alt=""></p><p>요소에 지정된 css value가 없다면 부모에게서 상속 될 수 있는 요소가 있는지 확인 하고 부모의 computed value를 상속받아 적용한다.</p><hr><h3 id="How-CSS-render-a-website-Visual-Formatting-Model"><a href="#How-CSS-render-a-website-Visual-Formatting-Model" class="headerlink" title="How CSS render a website? (Visual Formatting Model)"></a>How CSS render a website? (Visual Formatting Model)</h3><p><img src="/images/vfm.png" alt=""></p><p>웹사이트 레이아웃은 각각의 <strong>컴포넌트(내용)들을 담은 박스들의 합이다.</strong></p><p>이 박스들을 구상한 레이아웃에 따라 조화롭게 배치해야한다.</p><p><strong>1) Box Model</strong></p><p><img src="/images/boxmodel.png" alt=""></p><p><strong>2) Box Types</strong></p><p><img src="/images/boxtypes.png" alt=""></p><p><strong>3) Positioning Schemes</strong></p><p><img src="/images/positioning.png" alt=""></p><p><strong>4) Stacking Contexts</strong></p><p><img src="/images/stacking.png" alt=""></p><p>중첩, 레이어 개념 어느것을 최상위로 보여 줄 것인지</p><hr><h3 id="How-to-build-good-CSS-architecture"><a href="#How-to-build-good-CSS-architecture" class="headerlink" title="How to build good CSS architecture?"></a>How to build good CSS architecture?</h3><p><img src="/images/cssmindset.png" alt=""></p><p>효율적으로 CSS 를 3단계로 나눠서 구현하는 방식</p><p>1) <strong>설계</strong></p><p><img src="/images/think.png" alt=""></p><p>컴포넌트 단위 베이스, 어디서나 재사용 가능하고 독립적으로 작성 할 것</p><p><strong>2) 구현 (의미있는 네이밍, 조직화 된 classes, ids)</strong></p><p><img src="/images/build.png" alt=""></p><p><strong>BEM </strong></p><p>block 홀로 의미를 갖는 컴포넌트 단위</p><p> block—element   특정 블록 내에서만 의미 갖는 컴포넌트 </p><p> modifier (기본형에서 변형된, 한번만 사용되는)</p><p><strong>3) 폴더별 관리 (Sass)</strong></p><p><img src="/images/architecture.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Related-Posts&quot;&gt;&lt;a href=&quot;#Related-Posts&quot; class=&quot;headerlink&quot; title=&quot;Related Posts&quot;&gt;&lt;/a&gt;Related Posts&lt;/h3&gt;&lt;h3 id=&quot;How-to-bulid-a-good-w
+      
+    
+    </summary>
+    
+      <category term="Front" scheme="http://mingguk.github.io/categories/Front/"/>
+    
+      <category term="html css" scheme="http://mingguk.github.io/categories/Front/html-css/"/>
+    
+    
+      <category term="css" scheme="http://mingguk.github.io/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>til0306</title>
+    <link href="http://mingguk.github.io/2019/03/07/til0308/"/>
+    <id>http://mingguk.github.io/2019/03/07/til0308/</id>
+    <published>2019-03-06T19:36:12.000Z</published>
+    <updated>2019-03-14T04:46:59.190Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/til.jpg" alt=""></p><h3 id="todo"><a href="#todo" class="headerlink" title="todo"></a>todo</h3><ol><li>section 7 (flexbox 반응형웹 복기, 직접 만들고 정리)</li><li>udemy modern html&amp;css section 8,9,10 수강</li><li>underbar advanced 전까지 다시 풀기</li><li>til 포스팅</li></ol><p>주말까지</p><ol><li>udemy modern html &amp; css 완강, 정리하기 </li><li>js 알고리즘 선별, 준비 ( 매일 3문제 / 정리 블로깅 / udemy js algorithms)</li></ol><p>담주부터</p><p>udemy brad js 코스 </p><p>brad css 복기 정리 / 2번째 css코스 시작</p><p>js algoritms 하루 한강 수강~!? (혹은 다른 것)</p><h2 id="comment"><a href="#comment" class="headerlink" title="comment"></a>comment</h2><p>udemy web dev full-stack 수강 하고 웹개발 전체 큰 그림 파악 완료</p><p>front-end 쪽에 집중해서 배우고 빠르게 프론트엔드 쪽 포트폴리오 및 블로깅 진행해야겠다</p><p>css media query 첨써봤는데 정말 편리하다. 더 이상 float 에서 고통받지 않아도 되..</p><p>반응형웹 기초들 따라 만들어 보고 있는데 꽤 흥미가 간다. 완성 후 혼자 다시 복기 철저히 해서 체화 필요</p><p>brad trasversy 의 유데미 강의들을 통째 결제 했는데.. 역시 믿고보는 빵형..</p><p>간만에 알고리즘 문제들 풀었더니 역시나 감이 좀 떨어진거같다. 매일 지속적으로 조금씩 병행해야겠다</p><p>javascript reduce, map , filter, forEach 등 매번 쓸 때마다 헷갈리는거 같다. 조만간한 한 번 용례랑 쭉 정리해서 포스팅을 하</p><p>면서 정리해야겠다. underscore.js 를 제대로 다시 해보는 것도 고려</p><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/til.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;todo&quot;&gt;&lt;a href=&quot;#todo&quot; class=&quot;headerlink&quot; title=&quot;todo&quot;&gt;&lt;/a&gt;todo&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;section 7 (fle
+      
+    
+    </summary>
+    
+      <category term="post" scheme="http://mingguk.github.io/categories/post/"/>
+    
+      <category term="til" scheme="http://mingguk.github.io/categories/post/til/"/>
+    
+    
+      <category term="til" scheme="http://mingguk.github.io/tags/til/"/>
+    
+  </entry>
   
   <entry>
     <title>til0306</title>
@@ -549,61 +605,6 @@
       <category term="javascript" scheme="http://mingguk.github.io/tags/javascript/"/>
     
       <category term="weirdparts" scheme="http://mingguk.github.io/tags/weirdparts/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>type &amp; operator</title>
-    <link href="http://mingguk.github.io/2019/01/30/jsw%20type&amp;operator/"/>
-    <id>http://mingguk.github.io/2019/01/30/jsw type&amp;operator/</id>
-    <published>2019-01-30T13:26:41.000Z</published>
-    <updated>2019-01-30T17:05:16.886Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/jswTO.png" alt=""></p><h3 id="Dynamic-typing"><a href="#Dynamic-typing" class="headerlink" title="Dynamic typing"></a>Dynamic typing</h3><p>자바스크립트는 <strong>동적 타이핑</strong> 을 사용한다. 자바스크립트 엔진이 코드가 실행될 때 자동으로 변수들의 type을 확인함.</p><h3 id="Primitive-types"><a href="#Primitive-types" class="headerlink" title="Primitive types"></a>Primitive types</h3><p>a single value 를 의미</p><p><strong>undefined</strong> (아무것도 없음, 변수에 명시적으로 undefined를 할당하지 말 것)</p><p><strong>null</strong>(아무것도 없음, 명시적으로 null 지정해도 괜찮음)</p><p><strong>Boolean</strong></p><p><strong>Number</strong></p><p><strong>String</strong></p><p><strong>Symbol</strong> (ES6)</p><hr><h3 id="Operator"><a href="#Operator" class="headerlink" title="Operator"></a>Operator</h3><p>자바스크립트에서 연산자는 조금 특별한 방식으로 쓰여진 <strong>함수</strong>이다 인자들을 받아 하나의 결과값을 내는.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var num = 3 + 4;</span><br><span class="line"></span><br><span class="line">+ (3,4);</span><br><span class="line"></span><br><span class="line">// 어딘가에 다른 방식으로 + 라는 function이 정의되어있기에 자바스크립트에서 연산자들 사용가능</span><br><span class="line">function + (a, b) &#123;</span><br><span class="line">    return // add the two numbers</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>Operator precedence (우선순위) &amp; Associativity(연관)</strong></p><p><strong>Precedence</strong> - 어떤 연산을 먼저 처리 할 것인가</p><p><strong>Associativity</strong> - 같은 우선순위를 가진 연산자끼리는 어떤걸 먼저 처리 할 것인가?</p><p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/%EC%97%B0%EC%82%B0%EC%9E%90_%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84#%ED%91%9C" target="_blank" rel="noopener">Javascript 우선순위, 연관 확인</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// Precedence example</span><br><span class="line"></span><br><span class="line">var a = 3 + 4 * 5;</span><br><span class="line">console.log(a);</span><br><span class="line"></span><br><span class="line">// var a = (4 * 5) + 3 </span><br><span class="line">// 23</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// Associativity example</span><br><span class="line"></span><br><span class="line">var a = 2, b = 3, c = 4;</span><br><span class="line"></span><br><span class="line">a = b = c;</span><br><span class="line"></span><br><span class="line">console.log(a);</span><br><span class="line">console.log(b);</span><br><span class="line">console.log(c);</span><br><span class="line"></span><br><span class="line">// assignment(=) 의 연관이 rigth-to-left 이기 때문에</span><br><span class="line">// 1)b = c  2) a = b 순으로 연산, 따라서 결과는</span><br><span class="line">//4 4 4</span><br></pre></td></tr></table></figure><hr><p><strong>coercion</strong></p><p>변수의 타입을 <strong>변형</strong>시키는 것</p><p>자바스크립트는 동적 타이핑 이기때문에 coercion이 빈번하게 발생</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = 1 + &apos;2&apos;;</span><br><span class="line">console.log(a);</span><br><span class="line"></span><br><span class="line">// &apos;12&apos; coercion 이 자바스크립트 엔진에 의해 자동으로 수행됨</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Number(false) // 0</span><br><span class="line">Number(true) // 1</span><br><span class="line">Number(undefined) // NaN</span><br><span class="line">Number(null) // 0</span><br><span class="line"></span><br><span class="line">console.log(3 &lt; 2 &lt; 1); //true  왜!?!?</span><br><span class="line">(연관 left-to-right) 3 &lt; 2 = false =&gt;0 , 0 &lt; 1 = true</span><br></pre></td></tr></table></figure><p>coercion 자동변환으로 편의성도 제공하지만  위의 예제처럼 개발자(사람) 관점에서는 <strong>이해할 수 없는 오류를 발생시킬 가능성 내포,</strong> 주의가 필요함</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">false == 0 // true</span><br><span class="line">null == 0 // false</span><br><span class="line">null &lt; 1 // true</span><br><span class="line"></span><br><span class="line">&quot;&quot; == 0 // true</span><br><span class="line">&quot;&quot; == false // true</span><br><span class="line"></span><br><span class="line">//coercion 은 코드결과 예측을 불확실하게 만들 수 있다. (특히 == 연산자)</span><br><span class="line">//대신 &apos;===&apos;, &apos;!==&apos; 연산자를 사용 할 것 추천</span><br><span class="line"></span><br><span class="line">3 === 3 // true</span><br><span class="line">3 === &apos;3&apos; // false</span><br></pre></td></tr></table></figure><p><strong>Existence &amp; Booleans</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var a;</span><br><span class="line"></span><br><span class="line">if (a) // 조건문 () 안에 들어가면 Boolean 으로 coercion 된다</span><br><span class="line">&#123;</span><br><span class="line">   console.log(&apos;Something is there.&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a = 0;</span><br><span class="line"></span><br><span class="line">if (a) // Boolean(0) =&gt; false , 0이라는 값이 있음에도 잘못된 결과를 유발, 이때는</span><br><span class="line"></span><br><span class="line">if (a || a === 0) &#123;   </span><br><span class="line">console.log(&apos;Something is there.&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// === 연산자 우선순위에 따라 a || true 가되고 || 연산자에 따라</span><br><span class="line">// 그 다음 a || true 를 따지면 최종적으로 괄호안 조건은 true 됨</span><br><span class="line"></span><br><span class="line">//Something is there</span><br></pre></td></tr></table></figure><p><strong>Default Values</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function greet(name) &#123;</span><br><span class="line">// default value 지정하는 법</span><br><span class="line">name = name || &apos;&lt;Your name here&gt;&apos;; </span><br><span class="line">    console.log(&apos;Hello &apos; + name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">greet(&apos;Tony&apos;); //Hello Tony</span><br><span class="line">greet(); // Hello &lt;Your name here&gt;</span><br></pre></td></tr></table></figure><hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/31/jsw Object/">Object</a></p><p><a href="http://mingguk.github.io/2019/01/29/jsw context &amp;ex/">Context &amp; Lexical environment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;/images/jswTO.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Dynamic-typing&quot;&gt;&lt;a href=&quot;#Dynamic-typing&quot; class=&quot;headerlink&quot; title=&quot;Dynamic typing&quot;&gt;&lt;/a&gt;
-      
-    
-    </summary>
-    
-      <category term="Front" scheme="http://mingguk.github.io/categories/Front/"/>
-    
-      <category term="Javascript" scheme="http://mingguk.github.io/categories/Front/Javascript/"/>
-    
-    
-      <category term="javascript" scheme="http://mingguk.github.io/tags/javascript/"/>
-    
-      <category term="weirdparts" scheme="http://mingguk.github.io/tags/weirdparts/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>웹개발 공부계획</title>
-    <link href="http://mingguk.github.io/2019/01/29/webDev-plan/"/>
-    <id>http://mingguk.github.io/2019/01/29/webDev-plan/</id>
-    <published>2019-01-29T13:28:27.000Z</published>
-    <updated>2019-02-23T03:21:51.934Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="웹개발-공부-계획"><a href="#웹개발-공부-계획" class="headerlink" title="웹개발 공부 계획"></a>웹개발 공부 계획</h3><p><img src="/images/nothing.png" alt=""></p><h3 id="References-위주로-큰-틀을-잡고-다른-소스들-참고"><a href="#References-위주로-큰-틀을-잡고-다른-소스들-참고" class="headerlink" title="References (위주로 큰 틀을 잡고 다른 소스들 참고)"></a>References (위주로 큰 틀을 잡고 다른 소스들 참고)</h3><ol><li>whatsdev front-end guide (강추)</li></ol><iframe width="560" height="315" src="https://www.youtube.com/embed/g5xmtHa83sY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><ol start="2"><li>whats dev full-stack guide (강추)</li></ol><iframe width="560" height="315" src="https://www.youtube.com/embed/FXcrFtl2FK0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><ol start="3"><li><p><a href="https://medium.com/@Jbee_/%EC%8B%A0%EC%9E%85-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EB%90%98%EB%A0%A4%EB%A9%B4-%EB%AC%B4%EC%97%87%EC%9D%84-%ED%95%99%EC%8A%B5%ED%95%B4%EC%95%BC-%ED%95%98%EB%82%98%EC%9A%94-1dd59a14e084?fbclid=IwAR2Qwaifz8Lnn_aOF54zPrwdWxwYcI1qO8Xo4-N1uG-QEEaZRWQBbEcrH8Q" target="_blank" rel="noopener">프론트엔드 뭘 공부해야 하는가?</a><br></p></li><li><p><a href="https://medium.com/@codesquad_yoda/%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%A4%80%EB%B9%84%ED%95%B4%EC%95%BC-%ED%95%A0%EA%B9%8C-5ac7bb6ff2a9" target="_blank" rel="noopener">웹프론트엔드 개발자, 어떻게 준비?</a> <br></p></li><li><a href="https://github.com/kamranahmedse/developer-roadmap" target="_blank" rel="noopener">Developer roadmap</a> </li></ol><hr><h1 id="목표"><a href="#목표" class="headerlink" title="목표"></a>목표</h1><p>2019 / 7 / 29 까지!</p><p><strong>Fullstack web developer</strong> </p><ul><li><p><strong>실력 있는 웹개발자 (프리,1인개발 / 구직 선택가능 한 수준, 3년차 상회 실력 갖추기)</strong></p></li><li><p>full-stack 설계 및 구현 <strong>완.성</strong> 경험 (메인 TT 프로젝트 / 포폴사이트)</p><p>(Web + android + ios (react native)  / backend 통합 결과물 완성하기)</p></li><li><p>personal branding (포폴 사이트 구축 / 블로그 / 깃헙)</p></li><li><p>포트폴리오 및 브랜딩 ( 깃헙 / 블로그(개발공부, 포트폴리오 페이지 따로) )</p></li></ul><hr><h2 id="What-to-learn"><a href="#What-to-learn" class="headerlink" title="What to learn"></a>What to learn</h2><p><strong>-1. Front-end-</strong></p><h3 id="Javacript"><a href="#Javacript" class="headerlink" title="Javacript"></a>Javacript</h3><p>Basic javascript </p><p>Deep dive into javascript ( OOP in javascript / functional programming / etc)</p><p>Dom manupulation</p><p>Es6 </p><p>Framework (React / React Native)</p><p>Modular js (Design pattern)</p><h3 id="Html-Css"><a href="#Html-Css" class="headerlink" title="Html / Css"></a>Html / Css</h3><p>html /css basic</p><p>responsive web design</p><p>preprocessors (Sass, Gulp)</p><p>CSS framework (Bootstrap / semantic UI / flex / grid / etc)</p><p>Modul loader (Webpack)</p><p><strong>-2. Back-end-</strong></p><h3 id="back-end"><a href="#back-end" class="headerlink" title="back - end"></a>back - end</h3><p>NPM, Node js , Express</p><p>Databases (relational / non-relational)</p><p>Restfull api</p><p>MVC architecture</p><p>Authentication (JWT, oAuth 2.0)</p><p>Authorization</p><p>Testing (Mocha, Chai)</p><p>Security</p><p>SSR vs CSR</p><p>Deployment (Docker, heroku, AWS, etc)</p><p><strong>-3. etc-</strong></p><p><strong>Algorithms</strong></p><p><strong>Git</strong></p><p>ssh, command line</p><p>Prototying toos(Figma) / UX, UI basic design</p><p>Blogging ( 공부내용 정리 / TIL / 프로젝트 정리)</p><p>English (업무 진행, 커뮤니케이션 상회 수준 꼭!)</p><hr><h3 id="Schedule"><a href="#Schedule" class="headerlink" title="Schedule"></a>Schedule</h3><p><strong>1월 &lt;기초&gt;&lt;숲 파악&gt;</strong></p><ol><li>런코 전과정 마스터(발췌,보충) , 테스트 준비, 통과 </li><li>udemy javascript weird parts 정리 (블로깅)</li><li>udemy web dev bootcamp 일부 (런코 관련)</li></ol><p>==&gt;  javascript 기본개념, 사용법 정리</p><p><strong>2월 &lt;프론트엔드&gt; <cs 기초=""></cs></strong></p><ol><li><p>자바스크립트 작동원리, 개념정리, codestates pre course 복습 (블로깅)</p></li><li><p>udemy web dev bootcamp  (풀스택 사이클 경험 / js 연습)</p></li><li><p>udemy algorithm in javascript (자료구조, 원리 이해, 직접 구현) 시작</p></li><li><p>codesates pre course 완강(사실상)</p></li></ol><p><strong>3월~4.11 &lt;풀스택 경험 + 백엔드 기초&gt; &lt;총 정리&gt;</strong></p><ol><li><strong>Whats dev jobjobjavascript course (deep dive - js / full-stack course)</strong></li><li>udemy algorithm in javascript (자료구조, 원리 이해, 직접 구현) 완강,정리 </li><li>라이브러리 (react , react native 기초 공부) - udemy / nomad react 기초강의들</li><li>그동안 공부한 것 정리 (블로그 - TIL ,특수 주1회 / 깃헙) / 알고리즘 지속 공부</li></ol><p><strong>4월이후~ (고민중, 3/10 까지 결정)</strong></p><p><strong>Plan A (Boot camp)</strong> </p><p>Codetates immersive course  수료, 프로젝트, 연계 + @(개인 브랜딩)</p><p><strong>Plan B (Self-tought development) </strong></p><p>WhatsDev online bootcamp </p><p>Nomad Coder full clone courses (uber, instagram)</p><p>Udemy courses</p><p>personal Branding (Portfolio site / Blogging / Github / Projects..)</p><hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;웹개발-공부-계획&quot;&gt;&lt;a href=&quot;#웹개발-공부-계획&quot; class=&quot;headerlink&quot; title=&quot;웹개발 공부 계획&quot;&gt;&lt;/a&gt;웹개발 공부 계획&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;/images/nothing.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-      
-    
-    </summary>
-    
-      <category term="post" scheme="http://mingguk.github.io/categories/post/"/>
-    
-    
-      <category term="plan" scheme="http://mingguk.github.io/tags/plan/"/>
     
   </entry>
   

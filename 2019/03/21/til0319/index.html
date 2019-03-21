@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>How CSS Works | Mingguk</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="css">
+    
+    <meta name="description" content="Related PostsHow to bulid a good website 반응형 웹 다양한 기기들의 다른 스크린 사이즈에 각각 최적화 된 화면을 보여주는 것 유지보수, 확장 가능한 코드 깔끔하고 누구나 알아보기 쉽게 잘 설계, 조직화 된 코드를 짜야된다. 웹 어플리케이션이 성장함에 따라 자연스럽게 코드 양이 늘어나거나 문제 발생 시 잘 설계된 코드는 시간과">
+<meta name="keywords" content="css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How CSS Works">
+<meta property="og:url" content="http://mingguk.github.io/2019/03/21/til0319/index.html">
+<meta property="og:site_name" content="Mingguk">
+<meta property="og:description" content="Related PostsHow to bulid a good website 반응형 웹 다양한 기기들의 다른 스크린 사이즈에 각각 최적화 된 화면을 보여주는 것 유지보수, 확장 가능한 코드 깔끔하고 누구나 알아보기 쉽게 잘 설계, 조직화 된 코드를 짜야된다. 웹 어플리케이션이 성장함에 따라 자연스럽게 코드 양이 늘어나거나 문제 발생 시 잘 설계된 코드는 시간과">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc8awA1xxtZO8vBFCgfVv7TpHMqzUoveN5tZCFwc7ASX71i9bUpA">
+<meta property="og:updated_time" content="2019-03-21T07:28:37.031Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How CSS Works">
+<meta name="twitter:description" content="Related PostsHow to bulid a good website 반응형 웹 다양한 기기들의 다른 스크린 사이즈에 각각 최적화 된 화면을 보여주는 것 유지보수, 확장 가능한 코드 깔끔하고 누구나 알아보기 쉽게 잘 설계, 조직화 된 코드를 짜야된다. 웹 어플리케이션이 성장함에 따라 자연스럽게 코드 양이 늘어나거나 문제 발생 시 잘 설계된 코드는 시간과">
+<meta name="twitter:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc8awA1xxtZO8vBFCgfVv7TpHMqzUoveN5tZCFwc7ASX71i9bUpA">
+    
+
+    
+        <link rel="alternate" href="/" title="Mingguk" type="application/atom+xml">
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-133369968-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Back/">Back</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Back/basic/">basic</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Front/">Front</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Front/Javascript/">Javascript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Front/html-css/">html css</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Review/">Review</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/post/">post</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/post/til/">til</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="https://about.me/mingguk">about</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Front/">Front</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Front/html-css/">html css</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-til0319" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        How CSS Works
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/03/21/til0319/" class="article-date">
+            <time datetime="2019-03-20T20:17:05.000Z" itemprop="datePublished">2019-03-20</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/css/">css</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><h3 id="How-to-bulid-a-good-website"><a href="#How-to-bulid-a-good-website" class="headerlink" title="How to bulid a good website"></a>How to bulid a good website</h3><p><img src="/images/css.png" alt=""></p>
+<p><strong>반응형 웹</strong></p>
+<p>다양한 기기들의 다른 스크린 사이즈에 각각 최적화 된 화면을 보여주는 것</p>
+<p><strong>유지보수, 확장 가능한 코드</strong></p>
+<p>깔끔하고 누구나 알아보기 쉽게 잘 설계, 조직화 된 코드를 짜야된다. 웹 어플리케이션이 성장함에 따라 자연스럽게 코드 양이 늘어나거나 문제 발생 시 잘 설계된 코드는 시간과 비용을 현저히 줄여준다.</p>
+<p><strong>성능</strong></p>
+<p>웹사이트 성능 저하를 피하기 위해 가능한 적은 요청과, 코드, 이미지를 효율적으로 조정하는게 필요하다.</p>
+<hr>
+<h3 id="What-happens-to-css-when-we-load-up-a-webpage"><a href="#What-happens-to-css-when-we-load-up-a-webpage" class="headerlink" title="What happens to css when we load up a webpage?"></a>What happens to css when we load up a webpage?</h3><p><img src="/images/webpage.png" alt=""></p>
+<ol>
+<li><p>브라우저가 HTML 파일 로드</p>
+</li>
+<li><p>HTML 의 코드를 한줄 한줄 해독</p>
+</li>
+<li><p>해독 과정에서 코드를 DOM 구조로 빌드</p>
+</li>
+<li><p>CSS 파일 또한 로드</p>
+</li>
+<li><p>CSS 파일을 한줄씩 해독 </p>
+<p>5-1. CSS Cascade (충돌하는 css 선언 조정)</p>
+<p>5-2. CSS 최종 속성값 결정</p>
+</li>
+<li><p>CSSOM  빌드 (Like DOM)</p>
+</li>
+<li>DOM + CSSOM -&gt; 최종 tree 구조 빌드</li>
+<li>VIsual Formatting Model </li>
+<li>Website rendering (실제 브라우저 통해 보여지는 단계)</li>
+</ol>
+<hr>
+<p><strong>단계별 정리</strong></p>
+<h3 id="How-CSS-is-parsed"><a href="#How-CSS-is-parsed" class="headerlink" title="How CSS is parsed?"></a>How CSS is parsed?</h3><ol>
+<li><strong>Cascading and Specificity</strong></li>
+</ol>
+<p><img src="/images/cascade.png" alt=""></p>
+<p><strong>CASCADE?</strong></p>
+<p>특정 요소에 한 가지 이상의 속성 값이 지정됐을 때 최종적으로 어떤 속성값을 적용할 것인지 조정하고 결정하는 단계</p>
+<p>(Author 지정 값 / css, style 에 유저 직접 지정 값 / 브라우저 자체 기본속성값 등.. 중에서 <strong>어느 속성을 최종 적용 할 것인가!?</strong> 의 문제)</p>
+<p><strong>Importance —&gt; specificity —&gt; source order  순으로 비교, 요소에 적용 될 속성값  최종 결정</strong></p>
+<p><strong>1) importance</strong></p>
+<p><img src="/images/importance.png" alt=""></p>
+<p>(!important 키워드 포함된 blue 로 최종 결정!)</p>
+<p><strong>2) specificity ( 어느 것이 더 세부적, 구체적인가?)</strong></p>
+<p><img src="/images/specific.png" alt=""></p>
+<p><strong>3) source Order (importance, specificity 가 같다면 가장 나중에 쓰여진 속성 적용)**</strong></p>
+<p><img src="/images/sourceorder.png" alt=""></p>
+<p><strong>참고사항</strong></p>
+<p><img src="/images/cssetc.png" alt=""></p>
+<ol start="2">
+<li><strong>Value Processing</strong></li>
+</ol>
+<p><img src="/images/cssvalueprocessed.png" alt=""></p>
+<p><strong>CSS 적용 할 최종 속성값을 산출하는 과정</strong></p>
+<ol>
+<li>Declared value (선언된 값) —&gt; </li>
+<li>Cascaded value( 속성 값 두가지 이상 일 때, 어느걸 적용 할까~? —&gt;</li>
+<li>Specified value (속성 값 하나 일 때) —&gt;</li>
+<li>Computed value (상대적인 값들 -&gt; 절대값(px로 변환 됨) —&gt;</li>
+<li>Used value (레이아웃 따라 값 산출 부모, % 라던지..) —&gt;</li>
+<li>Actual value (브라우저 나 디바이스 기본설정 따라 최종 값 산출)</li>
+</ol>
+<p><strong>relative —&gt; absolute value (px)</strong></p>
+<p><img src="/images/reltoabs.png" alt=""></p>
+<p>font-size : 부모의 font-size 기준</p>
+<p>length: 부모의 width 기준</p>
+<p><strong>Font-based</strong> : em(font) : 부모 / em(length)(현재 요소 크기)  / rem (root 기준)</p>
+<p><strong>Viewport-based</strong> : vh(height) / vw(width)</p>
+<p>3.<strong>inheritance</strong></p>
+<p><img src="/images/inheritance.png" alt=""></p>
+<p>요소에 지정된 css value가 없다면 부모에게서 상속 될 수 있는 요소가 있는지 확인 하고 부모의 computed value를 상속받아 적용한다.</p>
+<hr>
+<h3 id="How-CSS-render-a-website-Visual-Formatting-Model"><a href="#How-CSS-render-a-website-Visual-Formatting-Model" class="headerlink" title="How CSS render a website? (Visual Formatting Model)"></a>How CSS render a website? (Visual Formatting Model)</h3><p><img src="/images/vfm.png" alt=""></p>
+<p>웹사이트 레이아웃은 각각의 <strong>컴포넌트(내용)들을 담은 박스들의 합이다.</strong></p>
+<p>이 박스들을 구상한 레이아웃에 따라 조화롭게 배치해야한다.</p>
+<p><strong>1) Box Model</strong></p>
+<p><img src="/images/boxmodel.png" alt=""></p>
+<p><strong>2) Box Types</strong></p>
+<p><img src="/images/boxtypes.png" alt=""></p>
+<p><strong>3) Positioning Schemes</strong></p>
+<p><img src="/images/positioning.png" alt=""></p>
+<p><strong>4) Stacking Contexts</strong></p>
+<p><img src="/images/stacking.png" alt=""></p>
+<p>중첩, 레이어 개념 어느것을 최상위로 보여 줄 것인지</p>
+<hr>
+<h3 id="How-to-build-good-CSS-architecture"><a href="#How-to-build-good-CSS-architecture" class="headerlink" title="How to build good CSS architecture?"></a>How to build good CSS architecture?</h3><p><img src="/images/cssmindset.png" alt=""></p>
+<p>효율적으로 CSS 를 3단계로 나눠서 구현하는 방식</p>
+<p>1) <strong>설계</strong></p>
+<p><img src="/images/think.png" alt=""></p>
+<p>컴포넌트 단위 베이스, 어디서나 재사용 가능하고 독립적으로 작성 할 것</p>
+<p><strong>2) 구현 (의미있는 네이밍, 조직화 된 classes, ids)</strong></p>
+<p><img src="/images/build.png" alt=""></p>
+<p><strong>BEM </strong></p>
+<p>block 홀로 의미를 갖는 컴포넌트 단위</p>
+<p> block—element   특정 블록 내에서만 의미 갖는 컴포넌트 </p>
+<p> modifier (기본형에서 변형된, 한번만 사용되는)</p>
+<p><strong>3) 폴더별 관리 (Sass)</strong></p>
+<p><img src="/images/architecture.png" alt=""></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://mingguk.github.io/2019/03/21/til0319/" data-id="cjtibjz7c0024ao9nlf9bnd8i" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "minkuk Seo"
+        },
+        "headline": "How CSS Works",
+        "image": "http://mingguk.github.iohttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc8awA1xxtZO8vBFCgfVv7TpHMqzUoveN5tZCFwc7ASX71i9bUpA",
+        "keywords": "css",
+        "genre": "Front html css",
+        "datePublished": "2019-03-20",
+        "dateCreated": "2019-03-20",
+        "dateModified": "2019-03-21",
+        "url": "http://mingguk.github.io/2019/03/21/til0319/",
+        "description": "Related PostsHow to bulid a good website
+반응형 웹
+다양한 기기들의 다른 스크린 사이즈에 각각 최적화 된 화면을 보여주는 것
+유지보수, 확장 가능한 코드
+깔끔하고 누구나 알아보기 쉽게 잘 설계, 조직화 된 코드를 짜야된다. 웹 어플리케이션이 성장함에 따라 자연스럽게 코드 양이 늘어나거나 문제 발생 시 잘 설계된 코드는 시간과"
+        "wordCount": 486
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://www.instagram.com/mingguk12/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/mingguk" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/03/07/til0308/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">til0306</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/basic/">basic</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/post/til/">til</a><span class="category-list-count">5</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/back/" style="font-size: 10px;">back</a> <a href="/tags/backend/" style="font-size: 10px;">backend</a> <a href="/tags/codestates/" style="font-size: 10px;">codestates</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/review/" style="font-size: 10px;">review</a> <a href="/tags/til/" style="font-size: 13.33px;">til</a> <a href="/tags/weirdparts/" style="font-size: 16.67px;">weirdparts</a> <a href="/tags/weridparts/" style="font-size: 10px;">weridparts</a> <a href="/tags/코드스테이츠/" style="font-size: 10px;">코드스테이츠</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://www.codestates.com/#/">Codestates</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2019 minkuk Seo</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+              <span id="busuanzi_container_site_pv">
+                Total <span id="busuanzi_value_site_pv"></span> views
+              </span>
+              <span id="busuanzi_container_site_uv">
+                  You got <span id="busuanzi_value_site_uv"></span> visitors
+              </span>
+            </div>
+        </div>
+    </div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://mingguk.github.io/2019/03/21/til0319/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
