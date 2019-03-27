@@ -43,13 +43,6 @@
     </url>
 
     <url>
-        <loc>http://mingguk.github.io/categories/post/</loc>
-        <lastmod>2019-03-14T04:46:59.190Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://mingguk.github.io/categories/post/til/</loc>
         <lastmod>2019-03-14T04:46:59.190Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -66,6 +59,13 @@
     <url>
         <loc>http://mingguk.github.io/categories/Front/html-css/</loc>
         <lastmod>2019-03-21T07:28:37.031Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/categories/post/</loc>
+        <lastmod>2019-03-27T05:06:24.375Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
