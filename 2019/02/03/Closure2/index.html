@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="javascript,weirdparts">
     
-    <meta name="description" content="공장에서 정해진 포멧에 따라 제품들을 생산하는 것처럼 팩토리패턴은 전체 로직을 담은 팩토리함수를 생성, 클로저를 활용해서 반복되는 인자를 기본값으로 하는 함수를 재정의 하고, 호출하는 방식이다. // factory function function makeGreeting(language) {     return function(firstname, lastn">
+    <meta name="description" content="공장에서 정해진 포멧에 따라 제품들을 생산하는 것처럼 팩토리패턴은 전체 로직을 담은 팩토리함수를 생성, 클로저를 활용해서 반복되는 인자를 기본값으로 하는 함수를 재정의 하고, 호출하는 방식이다. 123456789101112131415161718192021// factory functionfunction makeGreeting(language) &amp;#123;">
 <meta name="keywords" content="javascript,weirdparts">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Closure part2">
 <meta property="og:url" content="http://mingguk.github.io/2019/02/03/Closure2/index.html">
 <meta property="og:site_name" content="Mingguk">
-<meta property="og:description" content="공장에서 정해진 포멧에 따라 제품들을 생산하는 것처럼 팩토리패턴은 전체 로직을 담은 팩토리함수를 생성, 클로저를 활용해서 반복되는 인자를 기본값으로 하는 함수를 재정의 하고, 호출하는 방식이다. // factory function function makeGreeting(language) {     return function(firstname, lastn">
+<meta property="og:description" content="공장에서 정해진 포멧에 따라 제품들을 생산하는 것처럼 팩토리패턴은 전체 로직을 담은 팩토리함수를 생성, 클로저를 활용해서 반복되는 인자를 기본값으로 하는 함수를 재정의 하고, 호출하는 방식이다. 123456789101112131415161718192021// factory functionfunction makeGreeting(language) &amp;#123;">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://mingguk.github.io/images/jswThum.png">
 <meta property="og:updated_time" content="2019-02-02T12:33:29.471Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Closure part2">
-<meta name="twitter:description" content="공장에서 정해진 포멧에 따라 제품들을 생산하는 것처럼 팩토리패턴은 전체 로직을 담은 팩토리함수를 생성, 클로저를 활용해서 반복되는 인자를 기본값으로 하는 함수를 재정의 하고, 호출하는 방식이다. // factory function function makeGreeting(language) {     return function(firstname, lastn">
+<meta name="twitter:description" content="공장에서 정해진 포멧에 따라 제품들을 생산하는 것처럼 팩토리패턴은 전체 로직을 담은 팩토리함수를 생성, 클로저를 활용해서 반복되는 인자를 기본값으로 하는 함수를 재정의 하고, 호출하는 방식이다. 123456789101112131415161718192021// factory functionfunction makeGreeting(language) &amp;#123;">
 <meta name="twitter:image" content="http://mingguk.github.io/images/jswThum.png">
     
 
@@ -69,8 +69,7 @@ ga('send', 'pageview');
     
 
 
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+</head>
 </html>
 <body>
     <div id="wrap">
@@ -189,29 +188,8 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/jsw closure2.png" alt=""></p>
 <p>공장에서 정해진 포멧에 따라 제품들을 생산하는 것처럼 <strong>팩토리패턴</strong>은 전체 로직을 담은 팩토리함수를 생성, 클로저를 활용해서 반복되는 인자를 기본값으로 하는 함수를 재정의 하고, 호출하는 방식이다.</p>
-<pre><code>// factory function
-function makeGreeting(language) {
-    return function(firstname, lastname) {
-
-        //inside function
-        if (language === &#39;en&#39;) {
-            console.log(&#39;Hello &#39; + firstname + &#39; &#39; + lastname);
-        }
-
-        if (language === &#39;es&#39;) {
-            console.log(&#39;Hola &#39; + firstname + &#39; &#39; + lastname);
-        }
-    }
-}
-// 매번 호출마다 새로운 execution context 생성
-var greetEnglish = makeGreeting(&#39;en&#39;);
-var greetSpanish = makeGreeting(&#39;es&#39;);
-
-// 직접 language 접근못하지만, 사용하는 함수
-greetingEnglish(&#39;John&#39;, &#39;Doe&#39;);
-greetingSpanish(&#39;John&#39;, &#39;Doe&#39;);
-
-</code></pre><p>코드 실행 시 makeGreeting(‘en’) 을 만나면 execution context 를 생성하고 en을 할당한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">// factory function</span><br><span class="line">function makeGreeting(language) &#123;</span><br><span class="line">    return function(firstname, lastname) &#123;</span><br><span class="line">        </span><br><span class="line">        //inside function</span><br><span class="line">        if (language === &apos;en&apos;) &#123;</span><br><span class="line">            console.log(&apos;Hello &apos; + firstname + &apos; &apos; + lastname);</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        if (language === &apos;es&apos;) &#123;</span><br><span class="line">            console.log(&apos;Hola &apos; + firstname + &apos; &apos; + lastname);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 매번 호출마다 새로운 execution context 생성</span><br><span class="line">var greetEnglish = makeGreeting(&apos;en&apos;);</span><br><span class="line">var greetSpanish = makeGreeting(&apos;es&apos;);</span><br><span class="line"></span><br><span class="line">// 직접 language 접근못하지만, 사용하는 함수</span><br><span class="line">greetingEnglish(&apos;John&apos;, &apos;Doe&apos;);</span><br><span class="line">greetingSpanish(&apos;John&apos;, &apos;Doe&apos;);</span><br></pre></td></tr></table></figure>
+<p>코드 실행 시 makeGreeting(‘en’) 을 만나면 execution context 를 생성하고 en을 할당한다.</p>
 <p><img src="/images/jsw closure2 1.png" alt=""></p>
 <p>makeGreeting(‘es’) 동일하게 진행되고, 함수실행이 끝나면 language 만 남게된다.</p>
 <p><img src="/images/jsw closure2 2.png" alt=""></p>
@@ -220,36 +198,8 @@ greetingSpanish(&#39;John&#39;, &#39;Doe&#39;);
 <p>즉, <strong>클로저</strong>를 통해 각각의 langauge를 참조하여 각각의 함수를 실행하고 결과를 출력하게 된다.</p>
 <p><img src="/images/jsw closure2 4.png" alt=""></p>
 <h3 id="Closure-and-Callback"><a href="#Closure-and-Callback" class="headerlink" title="Closure and Callback"></a>Closure and Callback</h3><p>콜백함수는 다른 함수에 인자로 넘긴 함수로, 다른함수 실행이 끝나면 실행되도록 한 함수이다.</p>
-<pre><code>function sayHiLater() {
-   //외부변수 greeting 참조, closure
-   var greeting = &#39;Hi&#39;;
-
-    setTimeout(function() {
-        console.log(greeting);
-    }, 3000);
-}
-
-sayHiLater();
-
-function tellMeWhenDone(callback) {
-    var a = 1000;
-    var b = 2000;
-
-    callback(); // 인자로 넣은 함수
-}
-
-tellMeWhenDone(function() {
-   console.log(&quot;I&#39;m done!&#39;); 
-});
-
-tellMeWhenDone(function() {
-   alert(&quot;I&#39;m done!&#39;); 
-});
-
-tellMeWhenDone(function() {
-   console.log(&quot;All done&#39;); 
-});
-</code></pre><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/02/03/Call-Bind/">Call &amp; Apply &amp;Bind</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">function sayHiLater() &#123;</span><br><span class="line">   //외부변수 greeting 참조, closure</span><br><span class="line">   var greeting = &apos;Hi&apos;;</span><br><span class="line">    </span><br><span class="line">    setTimeout(function() &#123;</span><br><span class="line">        console.log(greeting);</span><br><span class="line">    &#125;, 3000);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sayHiLater();</span><br><span class="line"></span><br><span class="line">function tellMeWhenDone(callback) &#123;</span><br><span class="line">    var a = 1000;</span><br><span class="line">    var b = 2000;</span><br><span class="line">    </span><br><span class="line">    callback(); // 인자로 넣은 함수</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">tellMeWhenDone(function() &#123;</span><br><span class="line">   console.log(&quot;I&apos;m done!&apos;); </span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">tellMeWhenDone(function() &#123;</span><br><span class="line">   alert(&quot;I&apos;m done!&apos;); </span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">tellMeWhenDone(function() &#123;</span><br><span class="line">   console.log(&quot;All done&apos;); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/02/03/Call-Bind/">Call &amp; Apply &amp;Bind</a></p>
 <p><a href="http://mingguk.github.io/2019/02/01/Closure/">Closure part1</a></p>
 <hr>
 
@@ -259,7 +209,7 @@ tellMeWhenDone(function() {
 
 
 
-    <a data-url="http://mingguk.github.io/2019/02/03/Closure2/" data-id="cjv66ql2u0006s79ny92b67sa" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://mingguk.github.io/2019/02/03/Closure2/" data-id="cjv67dkkw0006ji9nj8sfsb63" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -339,10 +289,8 @@ tellMeWhenDone(function() {
         "url": "http://mingguk.github.io/2019/02/03/Closure2/",
         "description": "
 공장에서 정해진 포멧에 따라 제품들을 생산하는 것처럼 팩토리패턴은 전체 로직을 담은 팩토리함수를 생성, 클로저를 활용해서 반복되는 인자를 기본값으로 하는 함수를 재정의 하고, 호출하는 방식이다.
-// factory function
-function makeGreeting(language) {
-    return function(firstname, lastn"
-        "wordCount": 312
+123456789101112131415161718192021// factory functionfunction makeGreeting(language) &#123;"
+        "wordCount": 445
     }
 </script>
 

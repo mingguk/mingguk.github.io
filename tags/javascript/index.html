@@ -60,8 +60,7 @@ ga('send', 'pageview');
     
 
 
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+</head>
 </html>
 <body>
     <div id="wrap">
@@ -199,12 +198,7 @@ ga('send', 'pageview');
             
 ES6 정리 Part-11. let &amp; constES5 - var 가 function scope 를 가졌던 것에 반해
 ES6 의 const 와 let 은 Block scope를 가진다
-
-&lt;!-- 비교 --!&gt;
-//ES5
-function fn() = {
-    if(true) {
-    var name = &quot;Kim&quot;; /
+1234567891011121314151617181920212223&lt;!-- 비교 --!&gt;//ES5function fn() = &#123;	if(true) 
         </p>
     </div>
 </article>
@@ -305,12 +299,7 @@ Related Posts
 
         <p class="article-excerpt">
             객체를 생성하는 여러가지 방식 중 하나는 new 키워드를 활용한생성자 함수 를 사용하는 방법이 있다.
-new keyword// java 같은..
-function Person() {
-    console.log(this);
-    this.firstname = &#39;John&#39;,
-    this.lastname = &#39;Doe&#39;
-    c
+new keyword123456789101112131415// java 같은..function Person() &#123;	console.log(this);    this.firstname = &apos;John&apos;,    this.lastname 
         </p>
     </div>
 </article>
@@ -359,10 +348,7 @@ function Person() {
             
 prototype타 언어의 전통적인 상속은 상속을 구현하기 위해 많은 부수적인 것들을 고려해야 됐다. 반면에 자바스크립트의 상속은 prototypal inheritance로 좀 더 유연하고 직관적이다.
 
-var person = {
-    firstname: &#39;Default&#39;,
-    lastname: ;Default&#39;,
-    get
+123456789101112131415161718192021222324var person = &#123;    firstname: &apos;Defaul
         </p>
     </div>
 </article>
@@ -413,21 +399,7 @@ var person = {
 
         <p class="article-excerpt">
             
-// 비함수형
-var arr1 = [1,2,3];
-console.log(arr1);
-
-var arr2 = [];
-for (var i=0; i&lt;arr1.length; i++) {
-    arr2.push(arr[i] * 2);
-}
-
-console.log(arr2);
-
-
-// 함수형
-//기반 함수 생성
-function mapForEach(arr, fn)
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152// 비함수형var arr1 = [1,2,3];console.log(arr1);var arr2 = [];for (var i=0; i&lt;arr1.length; i++) &#123;   
         </p>
     </div>
 </article>
@@ -476,10 +448,7 @@ function mapForEach(arr, fn)
             
 자바스크립트 함수에는 앞서 언급한 code, name 외에도 call, apply, bind 라는 기본 메소드를 갖고 있다. 이 메소드들은 this 키워드를 조작해주는 역할을 한다.
 
-bind()var person = {
-    firstname : &#39;John&#39;,
-    lastname : &#39;Doe&#39;,
-    getFullNa
+bind()12345678910111213141516171819202122var person = &#123;    firstname : &apos;John&apos;,   
         </p>
     </div>
 </article>
@@ -531,9 +500,7 @@ bind()var person = {
         <p class="article-excerpt">
             
 공장에서 정해진 포멧에 따라 제품들을 생산하는 것처럼 팩토리패턴은 전체 로직을 담은 팩토리함수를 생성, 클로저를 활용해서 반복되는 인자를 기본값으로 하는 함수를 재정의 하고, 호출하는 방식이다.
-// factory function
-function makeGreeting(language) {
-    return function(firstname, lastn
+123456789101112131415161718192021// factory functionfunction makeGreeting(language) &#123;
         </p>
     </div>
 </article>
@@ -580,17 +547,7 @@ function makeGreeting(language) {
 
         <p class="article-excerpt">
             
-//결과로 함수를 리턴 하는 함수
-function greet(whattosay) {
-    return function(name) {
-        console.log(whattosay + &#39; &#39; + name);
-    }
-}
-
-greet(&#39;Hi&#39;)(&#39;Tony&#39;);
-//Hi Tony
-
-// greet() 실행이
+12345678910111213141516//결과로 함수를 리턴 하는 함수function greet(whattosay) &#123;    return function(name) &#123;        console.log(whattosay + &apos; &apos; + name);    &#125;&#125;greet(&apos;Hi&apos;)(&a
         </p>
     </div>
 </article>
@@ -641,15 +598,7 @@ greet(&#39;Hi&#39;)(&#39;Tony&#39;);
 
         <p class="article-excerpt">
             
-//function statement
-function greet(name) {
-    console.log(&#39;Hello &#39; + name); 
-}
-greet(&#39;John);  //Hello John
-
-//using a function expression 
-var greetFunc = function(name) {
-    console.l
+12345678910111213141516171819//function statementfunction greet(name) &#123;    console.log(&apos;Hello &apos; + name); &#125;greet(&apos;John);  //Hello John//using a function expression var greetFu
         </p>
     </div>
 </article>
@@ -695,18 +644,7 @@ var greetFunc = function(name) {
     
 
         <p class="article-excerpt">
-            Array as an Object// Dynamic typing 때문에 서로 다른 타입 요소로 가질 수 있음
-var arr = [
-    1, 
-    false, 
-
-    {
-       name: &#39;Tony&#39;,
-       address: &#39;111 Main St.&#39;
-    },
-
-    function(name) {
-   
+            Array as an Object12345678910111213141516171819202122// Dynamic typing 때문에 서로 다른 타입 요소로 가질 수 있음var arr = [	1, 	false, 			&#123;       name: &apos;Tony&apos;,       address: &apos;111 Main St.&apos;	&#
         </p>
     </div>
 </article>

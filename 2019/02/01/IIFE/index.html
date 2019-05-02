@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="javascript,weridparts">
     
-    <meta name="description" content="//function statement function greet(name) {     console.log(&amp;#39;Hello &amp;#39; + name);  } greet(&amp;#39;John);  //Hello John  //using a function expression  var greetFunc = function(name) {     console.l">
+    <meta name="description" content="12345678910111213141516171819//function statementfunction greet(name) &amp;#123;    console.log(&amp;apos;Hello &amp;apos; + name); &amp;#125;greet(&amp;apos;John);  //Hello John//using a function expression var greetFu">
 <meta name="keywords" content="javascript,weridparts">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IIFE">
 <meta property="og:url" content="http://mingguk.github.io/2019/02/01/IIFE/index.html">
 <meta property="og:site_name" content="Mingguk">
-<meta property="og:description" content="//function statement function greet(name) {     console.log(&amp;#39;Hello &amp;#39; + name);  } greet(&amp;#39;John);  //Hello John  //using a function expression  var greetFunc = function(name) {     console.l">
+<meta property="og:description" content="12345678910111213141516171819//function statementfunction greet(name) &amp;#123;    console.log(&amp;apos;Hello &amp;apos; + name); &amp;#125;greet(&amp;apos;John);  //Hello John//using a function expression var greetFu">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://mingguk.github.io/images/jswThum.png">
 <meta property="og:updated_time" content="2019-02-02T09:09:12.441Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IIFE">
-<meta name="twitter:description" content="//function statement function greet(name) {     console.log(&amp;#39;Hello &amp;#39; + name);  } greet(&amp;#39;John);  //Hello John  //using a function expression  var greetFunc = function(name) {     console.l">
+<meta name="twitter:description" content="12345678910111213141516171819//function statementfunction greet(name) &amp;#123;    console.log(&amp;apos;Hello &amp;apos; + name); &amp;#125;greet(&amp;apos;John);  //Hello John//using a function expression var greetFu">
 <meta name="twitter:image" content="http://mingguk.github.io/images/jswThum.png">
     
 
@@ -69,8 +69,7 @@ ga('send', 'pageview');
     
 
 
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+</head>
 </html>
 <body>
     <div id="wrap">
@@ -188,56 +187,9 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/jsw IIFE.png" alt=""></p>
-<pre><code>//function statement
-function greet(name) {
-    console.log(&#39;Hello &#39; + name); 
-}
-greet(&#39;John);  //Hello John
-
-//using a function expression 
-var greetFunc = function(name) {
-    console.log(&#39;Hello &#39; + name);
-};
-greetFunc(); //Hello John
-
-
-//IIFE 함수 생성 후 바로 실행시킴
-var greetFunc = function(name) {
-    return &#39;Hello &#39; + name;
-}(&#39;John&#39;);
-
-console.log(greeting); // Hello John
-
-
-</code></pre><pre><code>3;  //vaild
-&#39;I&#39;m a string&#39; //vaild
-{ name: &#39;John&#39; } //vaild
-
-//그렇다면 함수는?
-
-//function statement 
-
-function(name) {
-    return &#39;Hello &#39; + name;
-}
-// function 키워드를 보면 statement라고 인식
-// 함수명을 요구하기에 error 발생!
-
-// statement를 괄호()로 묶으면 expression으로 인식
-// 함수 생성과 호출을 동시에, IIFE
-
-var tom = &#39;Tom&#39;
-
-(function(name) {
-   var greeting = &#39;Inside IIFE: Hello&#39;;
-   console.log(greeting + &#39; &#39; + name); 
-}(tom)); // Inside IIFE: Hello Tom
-
-//IIFE 구조
-(function {...})();  //괄호 밖
-(function {...}()); // 괄호 안, 둘 다 가능
-
-</code></pre><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//function statement</span><br><span class="line">function greet(name) &#123;</span><br><span class="line">    console.log(&apos;Hello &apos; + name); </span><br><span class="line">&#125;</span><br><span class="line">greet(&apos;John);  //Hello John</span><br><span class="line"></span><br><span class="line">//using a function expression </span><br><span class="line">var greetFunc = function(name) &#123;</span><br><span class="line">    console.log(&apos;Hello &apos; + name);</span><br><span class="line">&#125;;</span><br><span class="line">greetFunc(); //Hello John</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//IIFE 함수 생성 후 바로 실행시킴</span><br><span class="line">var greetFunc = function(name) &#123;</span><br><span class="line">    return &apos;Hello &apos; + name;</span><br><span class="line">&#125;(&apos;John&apos;);</span><br><span class="line"></span><br><span class="line">console.log(greeting); // Hello John</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">3;  //vaild</span><br><span class="line">&apos;I&apos;m a string&apos; //vaild</span><br><span class="line">&#123; name: &apos;John&apos; &#125; //vaild</span><br><span class="line"></span><br><span class="line">//그렇다면 함수는?</span><br><span class="line"></span><br><span class="line">//function statement </span><br><span class="line"></span><br><span class="line">function(name) &#123;</span><br><span class="line">    return &apos;Hello &apos; + name;</span><br><span class="line">&#125;</span><br><span class="line">// function 키워드를 보면 statement라고 인식</span><br><span class="line">// 함수명을 요구하기에 error 발생!</span><br><span class="line"></span><br><span class="line">// statement를 괄호()로 묶으면 expression으로 인식</span><br><span class="line">// 함수 생성과 호출을 동시에, IIFE</span><br><span class="line"></span><br><span class="line">var tom = &apos;Tom&apos;</span><br><span class="line"></span><br><span class="line">(function(name) &#123;</span><br><span class="line">   var greeting = &apos;Inside IIFE: Hello&apos;;</span><br><span class="line">   console.log(greeting + &apos; &apos; + name); </span><br><span class="line">&#125;(tom)); // Inside IIFE: Hello Tom</span><br><span class="line"></span><br><span class="line">//IIFE 구조</span><br><span class="line">(function &#123;...&#125;)();  //괄호 밖</span><br><span class="line">(function &#123;...&#125;()); // 괄호 안, 둘 다 가능</span><br></pre></td></tr></table></figure>
+<hr>
 <h3 id="Why-IIFE"><a href="#Why-IIFE" class="headerlink" title="Why IIFE ?"></a>Why IIFE ?</h3><p><img src="/images/jsw IIFE2.png" alt=""></p>
 <p>IIFE 코드가 실행되면 발생하는 일</p>
 <ol>
@@ -246,40 +198,17 @@ var tom = &#39;Tom&#39;
 <li>코드 끝 호출 () 를 만나면 새로운 Execution context 생성</li>
 <li>IIFE 내 변수들 메모리에 할당 () , <strong>Not to Global Object</strong></li>
 </ol>
-<pre><code>//index.html
-&lt;html&gt;
-    &lt;head&gt;&lt;/head&gt;
-    &lt;body&gt;
-        &lt;script src=&quot;greet.js&quot;&gt;&lt;/script&gt;
-        &lt;script src=&quot;app.js&quot;&gt;&lt;/script&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre><pre><code>//greet.js
-var greeting = &#39;Hola&#39;;
-</code></pre><pre><code>//app.js
-(function(name) {
-    var greeting = &#39;Hello&#39;;
-    console.log(greeting + &#39; &#39; + name);
-})(&#39;John&#39;); //IIFE
-
-console.log(greeting);
-
-// Hello John
-// Hola 
-</code></pre><p><img src="/images/jsw IIFE3.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//index.html</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;script src=&quot;greet.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">		&lt;script src=&quot;app.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//greet.js</span><br><span class="line">var greeting = &apos;Hola&apos;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//app.js</span><br><span class="line">(function(name) &#123;</span><br><span class="line">    var greeting = &apos;Hello&apos;;</span><br><span class="line">    console.log(greeting + &apos; &apos; + name);</span><br><span class="line">&#125;)(&apos;John&apos;); //IIFE</span><br><span class="line"></span><br><span class="line">console.log(greeting);</span><br><span class="line"></span><br><span class="line">// Hello John</span><br><span class="line">// Hola</span><br></pre></td></tr></table></figure>
+<p><img src="/images/jsw IIFE3.png" alt=""></p>
 <p>​          <strong>Global 의 greeting 과 IIFE 의 greeting 이 충돌없이 공존</strong></p>
 <p><br></p>
 <hr>
 <h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p> IIFE 코드 내 변수들은 전부 IIFE 의 Execution context 내의 variable environment 에 속하기 때문에 전역객체에 영향 안줌, <strong>전역 변수나 다른 execution context 들의 변수들과 충돌 가능성 없음! </strong></p>
 <p>이 때문에 대부분의 <strong>라이브러리나 프레임워크는 IIFE 형식으로 설계</strong> 되어있음</p>
-<pre><code>var global = window;
-
-(function(global, name) {
-    var greeting = &#39;Hello&#39;;
-    global.greeting = &#39;Hello global&#39;;
-    console.log(greeting + &#39; &#39; + name);
-})(window, &#39;John&#39;); //IIFE
-</code></pre><p>만약 IIFE 로 <strong>글로벌 객체</strong>에 영향을 주고 싶다면? </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var global = window;</span><br><span class="line"></span><br><span class="line">(function(global, name) &#123;</span><br><span class="line">    var greeting = &apos;Hello&apos;;</span><br><span class="line">    global.greeting = &apos;Hello global&apos;;</span><br><span class="line">    console.log(greeting + &apos; &apos; + name);</span><br><span class="line">&#125;)(window, &apos;John&apos;); //IIFE</span><br></pre></td></tr></table></figure>
+<p>만약 IIFE 로 <strong>글로벌 객체</strong>에 영향을 주고 싶다면? </p>
 <p>IIFE에 글로벌 객체를 <strong>인자</strong>로 전달해서 조작하면 가능</p>
 <hr>
 <h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/02/01/Closure/">Closure</a></p>
@@ -291,7 +220,7 @@ console.log(greeting);
 
 
 
-    <a data-url="http://mingguk.github.io/2019/02/01/IIFE/" data-id="cjv66ql2z000ds79n7fo01fiv" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://mingguk.github.io/2019/02/01/IIFE/" data-id="cjv67dkl3000dji9nkkrciw2d" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -370,16 +299,8 @@ console.log(greeting);
         "dateModified": "2019-02-02",
         "url": "http://mingguk.github.io/2019/02/01/IIFE/",
         "description": "
-//function statement
-function greet(name) {
-    console.log(&#39;Hello &#39; + name); 
-}
-greet(&#39;John);  //Hello John
-
-//using a function expression 
-var greetFunc = function(name) {
-    console.l"
-        "wordCount": 350
+12345678910111213141516171819//function statementfunction greet(name) &#123;    console.log(&apos;Hello &apos; + name); &#125;greet(&apos;John);  //Hello John//using a function expression var greetFu"
+        "wordCount": 491
     }
 </script>
 
