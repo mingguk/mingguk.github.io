@@ -3,64 +3,22 @@
 
 
     <url>
-        <loc>http://mingguk.github.io/tags/review/</loc>
-        <lastmod>2019-01-30T13:51:04.047Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/tags/back/</loc>
-        <lastmod>2019-01-30T13:51:14.386Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/tags/codestates/</loc>
-        <lastmod>2019-01-30T17:38:15.054Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/tags/%EC%BD%94%EB%93%9C%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%B8%A0/</loc>
-        <lastmod>2019-01-30T17:38:15.054Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/tags/weridparts/</loc>
-        <lastmod>2019-02-02T09:09:12.441Z</lastmod>
+        <loc>http://mingguk.github.io/tags/ES6/</loc>
+        <lastmod>2019-05-02T05:02:30.103Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://mingguk.github.io/tags/javascript/</loc>
-        <lastmod>2019-02-04T12:19:35.866Z</lastmod>
+        <lastmod>2019-05-02T05:02:30.103Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://mingguk.github.io/tags/weirdparts/</loc>
-        <lastmod>2019-02-04T12:19:35.866Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/tags/backend/</loc>
-        <lastmod>2019-02-20T13:21:51.313Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/tags/til/</loc>
-        <lastmod>2019-03-14T04:46:59.190Z</lastmod>
+        <loc>http://mingguk.github.io/tags/plan/</loc>
+        <lastmod>2019-03-27T05:10:28.515Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -73,8 +31,57 @@
     </url>
 
     <url>
-        <loc>http://mingguk.github.io/tags/plan/</loc>
-        <lastmod>2019-03-27T05:10:28.515Z</lastmod>
+        <loc>http://mingguk.github.io/tags/til/</loc>
+        <lastmod>2019-03-14T04:46:59.190Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/tags/backend/</loc>
+        <lastmod>2019-02-20T13:21:51.313Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/tags/weirdparts/</loc>
+        <lastmod>2019-02-04T12:19:35.866Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/tags/weridparts/</loc>
+        <lastmod>2019-02-02T09:09:12.441Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/tags/%EC%BD%94%EB%93%9C%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%B8%A0/</loc>
+        <lastmod>2019-01-30T17:38:15.054Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/tags/codestates/</loc>
+        <lastmod>2019-01-30T17:38:15.054Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/tags/back/</loc>
+        <lastmod>2019-01-30T13:51:14.386Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/tags/review/</loc>
+        <lastmod>2019-01-30T13:51:04.047Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

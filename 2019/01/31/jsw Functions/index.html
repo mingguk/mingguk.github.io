@@ -33,7 +33,12 @@
     
 
     
-
+    <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">	
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/jejugothic.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    
+    
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/libs/titillium-web/styles.css">
     <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
@@ -64,7 +69,8 @@ ga('send', 'pageview');
     
 
 
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 </html>
 <body>
     <div id="wrap">
@@ -186,26 +192,80 @@ ga('send', 'pageview');
 <p><strong>name</strong> : Optional, 익명도 가능 작성한 코드의 Reference </p>
 <p><strong>code</strong> : 작성한 코드, invocable() 이라는 작성한 코드를 실행시키는 특성을 가지고 있다.</p>
 <p>이 두가지 property를 통해 자바스크립트에서 함수는 <strong>다른 변수나 객체가 하는 모든 역할들을 수행할 수 있다.</strong> (<strong>First Class Function, 1급 함수</strong>)  뒤에 나올 함수형 프로그래밍도 이 함수를 다른 함수의 인자로 넘길 수 있는 특성을 활용한 프로그래밍 기법의 일환이다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function greet() &#123;</span><br><span class="line">    console.log(&apos;hi&apos;);</span><br><span class="line">&#125;</span><br><span class="line">// 함수는 객체이기 때문에 . 연산자 사용이 가능하다</span><br><span class="line">greet.language = &apos;english&apos;;</span><br><span class="line"></span><br><span class="line">console.log(greet.language); //english</span><br></pre></td></tr></table></figure>
-<p><br></p>
+<pre><code>function greet() {
+    console.log(&#39;hi&#39;);
+}
+// 함수는 객체이기 때문에 . 연산자 사용이 가능하다
+greet.language = &#39;english&#39;;
+
+console.log(greet.language); //english
+</code></pre><p><br></p>
 <p><img src="/images/jsw%20FO.png" alt=""></p>
 <p>위와 같이 함수를 생성하면 다른 객체처럼 메모리에 저장되고 이 함수는 <strong>NAME 과 CODE</strong> 를 가지기 때문에 이 함수를 호출  greet() 하면 작성한 코드를 invocable() 통해 실행 하게 된다.</p>
 <p>아래의 코드를 확인해보자</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function log(a) &#123;</span><br><span class="line">    console.log(a);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">log(&apos;a&apos;); // a</span><br><span class="line">log(3); // 3</span><br><span class="line">log(&#123;greeting:&apos;hi&apos;&#125;) // Object &#123;greeting: &apos;hi&apos;&#125;;</span><br><span class="line"></span><br><span class="line">// 함수가 객체이기에 인자로 넣을 수 있음</span><br><span class="line">log(function() &#123;</span><br><span class="line">    console.log(&apos;Hello&apos;);   // function() &#123;console.log(&apos;hi&apos;)&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>만약 코드 마지막 줄에 인자로 넣은 함수를 실행한 결과값을 얻고 싶다면?</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// log 함수를 인자를 호출하는 식으로 변경</span><br><span class="line">function log(a) &#123;</span><br><span class="line">    a();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">log(function() &#123;</span><br><span class="line">   console.log(&apos;hi&apos;);   // hi </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p><br></p>
+<pre><code>function log(a) {
+    console.log(a);
+}
+
+log(&#39;a&#39;); // a
+log(3); // 3
+log({greeting:&#39;hi&#39;}) // Object {greeting: &#39;hi&#39;};
+
+// 함수가 객체이기에 인자로 넣을 수 있음
+log(function() {
+    console.log(&#39;Hello&#39;);   // function() {console.log(&#39;hi&#39;)}
+}); 
+
+</code></pre><p>만약 코드 마지막 줄에 인자로 넣은 함수를 실행한 결과값을 얻고 싶다면?</p>
+<pre><code>// log 함수를 인자를 호출하는 식으로 변경
+function log(a) {
+    a();
+}
+
+log(function() {
+   console.log(&#39;hi&#39;);   // hi 
+});
+</code></pre><p><br></p>
 <h3 id="Function-statements-amp-Expressions"><a href="#Function-statements-amp-Expressions" class="headerlink" title="Function statements &amp; Expressions"></a>Function statements &amp; Expressions</h3><p>자바스크립트에서 <strong>expression</strong>란 특정 <strong>value</strong>를 리턴하는 코드를 말한다</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//expressions</span><br><span class="line">a = 3 // 3</span><br><span class="line">1 + 2; // 3</span><br><span class="line">a = &#123; greeting: &apos;hi&apos;&#125; // Object &#123;greeting: &apos;hi&apos;&#125;</span><br></pre></td></tr></table></figure>
-<p>반면에 <strong>statement</strong> 란 리턴이 없는 코드를 의미한다</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//statement</span><br><span class="line">function greet() &#123;</span><br><span class="line">    console.log(&apos;hi&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>Anonymous Function</strong></p>
+<pre><code>//expressions
+a = 3 // 3
+1 + 2; // 3
+a = { greeting: &#39;hi&#39;} // Object {greeting: &#39;hi&#39;}
+</code></pre><p>반면에 <strong>statement</strong> 란 리턴이 없는 코드를 의미한다</p>
+<pre><code>//statement
+function greet() {
+    console.log(&#39;hi&#39;);
+}
+</code></pre><p><strong>Anonymous Function</strong></p>
 <p><img src="/images/jsw anonymous.png" alt=""></p>
 <p>익명함수는 이름이 없는 함수를 의미한다</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// anonymous function, 이경우에는 익명함수가 Object를 반환</span><br><span class="line">// 변수에 할당하기에 expression 이라고 볼 수 있음</span><br><span class="line">var anonymousGreet = function() &#123;</span><br><span class="line">    console.log(&apos;hi);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 할당한 변수명 + () 통해 호출 할 수 있다</span><br><span class="line">anonymousGreet();</span><br></pre></td></tr></table></figure>
-<p>아래코드의 실행결과를 살펴보자</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">greet();</span><br><span class="line"></span><br><span class="line">//Hoisting 에 의해 함수는 미리 메모리에 셋업되기 때문에 hi 출력 </span><br><span class="line">function greet() &#123;</span><br><span class="line">    console.log(&apos;hi&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 변수에 할당 되었기에 현재 undefined </span><br><span class="line">anonymousGreet();</span><br><span class="line"></span><br><span class="line">var anonymousGreet = function() &#123;</span><br><span class="line">    console.log(&apos;hi&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// hi</span><br><span class="line">//uncaught type error, undefined is not a function...</span><br></pre></td></tr></table></figure>
-<hr>
+<pre><code>// anonymous function, 이경우에는 익명함수가 Object를 반환
+// 변수에 할당하기에 expression 이라고 볼 수 있음
+var anonymousGreet = function() {
+    console.log(&#39;hi);
+}
+
+// 할당한 변수명 + () 통해 호출 할 수 있다
+anonymousGreet();
+</code></pre><p>아래코드의 실행결과를 살펴보자</p>
+<pre><code>greet();
+
+//Hoisting 에 의해 함수는 미리 메모리에 셋업되기 때문에 hi 출력 
+function greet() {
+    console.log(&#39;hi&#39;);
+}
+
+// 변수에 할당 되었기에 현재 undefined 
+anonymousGreet();
+
+var anonymousGreet = function() {
+    console.log(&#39;hi&#39;);
+}
+
+// hi
+//uncaught type error, undefined is not a function...
+
+</code></pre><hr>
 <h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/31/jsw call-by/">call By value &amp; referece</a></p>
 <p><a href="http://mingguk.github.io/2019/01/31/jsw Object/">Object</a></p>
 
@@ -215,7 +275,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://mingguk.github.io/2019/01/31/jsw Functions/" data-id="cjtibjz6v0010ao9nligw49ei" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://mingguk.github.io/2019/01/31/jsw Functions/" data-id="cjv66ql3e0011s79ndk9tweog" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -298,7 +358,7 @@ ga('send', 'pageview');
 name : Optional, 익명도 가능 작성한 코드의 Reference 
 code : 작성한 코드, invocable() 이라는 작성한 코드를 실행시키는 특성을 가지고 있다.
 이 두가지 property를 통해 자바스크립트에서 함수는 다른 변수나 객체가 하는 모든 역할들"
-        "wordCount": 458
+        "wordCount": 313
     }
 </script>
 
@@ -384,7 +444,7 @@ code : 작성한 코드, invocable() 이라는 작성한 코드를 실행시키�
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/basic/">basic</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/post/til/">til</a><span class="category-list-count">5</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/basic/">basic</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/post/til/">til</a><span class="category-list-count">5</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -394,7 +454,7 @@ code : 작성한 코드, invocable() 이라는 작성한 코드를 실행시키�
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/back/" style="font-size: 10px;">back</a> <a href="/tags/backend/" style="font-size: 10px;">backend</a> <a href="/tags/codestates/" style="font-size: 10px;">codestates</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/review/" style="font-size: 10px;">review</a> <a href="/tags/til/" style="font-size: 13.33px;">til</a> <a href="/tags/weirdparts/" style="font-size: 16.67px;">weirdparts</a> <a href="/tags/weridparts/" style="font-size: 10px;">weridparts</a> <a href="/tags/코드스테이츠/" style="font-size: 10px;">코드스테이츠</a>
+            <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/back/" style="font-size: 10px;">back</a> <a href="/tags/backend/" style="font-size: 10px;">backend</a> <a href="/tags/codestates/" style="font-size: 10px;">codestates</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/review/" style="font-size: 10px;">review</a> <a href="/tags/til/" style="font-size: 13.33px;">til</a> <a href="/tags/weirdparts/" style="font-size: 16.67px;">weirdparts</a> <a href="/tags/weridparts/" style="font-size: 10px;">weridparts</a> <a href="/tags/코드스테이츠/" style="font-size: 10px;">코드스테이츠</a>
         </div>
     </div>
 

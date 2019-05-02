@@ -24,7 +24,12 @@
     
 
     
-
+    <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">	
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/jejugothic.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    
+    
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/libs/titillium-web/styles.css">
     <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
@@ -55,7 +60,8 @@ ga('send', 'pageview');
     
 
 
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 </html>
 <body>
     <div id="wrap">
@@ -157,6 +163,58 @@ ga('send', 'pageview');
         <article class="article article-summary">
     <div class="article-summary-inner">
         
+        <a href="/2019/02/05/OOP-in-javascript/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/jswThum.png)" alt="OOP in javascript" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://mingguk.github.io/2019/02/05/OOP-in-javascript/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/Front/">Front</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Front/Javascript/">Javascript</a>
+            </div>
+            <div class="date"><time datetime="2019-02-04T16:31:58.000Z" itemprop="datePublished">2019-02-04</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2019/02/05/OOP-in-javascript/">OOP in javascript</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+prototype타 언어의 전통적인 상속은 상속을 구현하기 위해 많은 부수적인 것들을 고려해야 됐다. 반면에 자바스크립트의 상속은 prototypal inheritance로 좀 더 유연하고 직관적이다.
+
+var person = {
+    firstname: &#39;Default&#39;,
+    lastname: ;Default&#39;,
+    get
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
         <a href="/2019/02/04/Funtional-programming/" class="thumbnail">
     
     
@@ -191,15 +249,33 @@ ga('send', 'pageview');
 
         <p class="article-excerpt">
             
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152// 비함수형var arr1 = [1,2,3];console.log(arr1);var arr2 = [];for (var i=0; i&lt;arr1.length; i++) &#123;   
+// 비함수형
+var arr1 = [1,2,3];
+console.log(arr1);
+
+var arr2 = [];
+for (var i=0; i&lt;arr1.length; i++) {
+    arr2.push(arr[i] * 2);
+}
+
+console.log(arr2);
+
+
+// 함수형
+//기반 함수 생성
+function mapForEach(arr, fn)
         </p>
     </div>
 </article>
+    
+        </div>
     
 
     
     
     
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -240,19 +316,18 @@ ga('send', 'pageview');
             
 자바스크립트 함수에는 앞서 언급한 code, name 외에도 call, apply, bind 라는 기본 메소드를 갖고 있다. 이 메소드들은 this 키워드를 조작해주는 역할을 한다.
 
-bind()12345678910111213141516171819202122var person = &#123;    firstname : &apos;John&apos;,   
+bind()var person = {
+    firstname : &#39;John&#39;,
+    lastname : &#39;Doe&#39;,
+    getFullNa
         </p>
     </div>
 </article>
-    
-        </div>
     
 
     
     
     
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -292,15 +367,21 @@ bind()12345678910111213141516171819202122var person = &#123;    firstname : &apo
         <p class="article-excerpt">
             
 공장에서 정해진 포멧에 따라 제품들을 생산하는 것처럼 팩토리패턴은 전체 로직을 담은 팩토리함수를 생성, 클로저를 활용해서 반복되는 인자를 기본값으로 하는 함수를 재정의 하고, 호출하는 방식이다.
-123456789101112131415161718192021// factory functionfunction makeGreeting(language) &#123;
+// factory function
+function makeGreeting(language) {
+    return function(firstname, lastn
         </p>
     </div>
 </article>
+    
+        </div>
     
 
     
     
     
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -339,19 +420,25 @@ bind()12345678910111213141516171819202122var person = &#123;    firstname : &apo
 
         <p class="article-excerpt">
             
-12345678910111213141516//결과로 함수를 리턴 하는 함수function greet(whattosay) &#123;    return function(name) &#123;        console.log(whattosay + &apos; &apos; + name);    &#125;&#125;greet(&apos;Hi&apos;)(&a
+//결과로 함수를 리턴 하는 함수
+function greet(whattosay) {
+    return function(name) {
+        console.log(whattosay + &#39; &#39; + name);
+    }
+}
+
+greet(&#39;Hi&#39;)(&#39;Tony&#39;);
+//Hi Tony
+
+// greet() 실행이
         </p>
     </div>
 </article>
-    
-        </div>
     
 
     
     
     
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -390,15 +477,27 @@ bind()12345678910111213141516171819202122var person = &#123;    firstname : &apo
 
         <p class="article-excerpt">
             
-12345678910111213141516171819//function statementfunction greet(name) &#123;    console.log(&apos;Hello &apos; + name); &#125;greet(&apos;John);  //Hello John//using a function expression var greetFu
+//function statement
+function greet(name) {
+    console.log(&#39;Hello &#39; + name); 
+}
+greet(&#39;John);  //Hello John
+
+//using a function expression 
+var greetFunc = function(name) {
+    console.l
         </p>
     </div>
 </article>
+    
+        </div>
     
 
     
     
     
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -436,19 +535,26 @@ bind()12345678910111213141516171819202122var person = &#123;    firstname : &apo
     
 
         <p class="article-excerpt">
-            Array as an Object12345678910111213141516171819202122// Dynamic typing 때문에 서로 다른 타입 요소로 가질 수 있음var arr = [	1, 	false, 			&#123;       name: &apos;Tony&apos;,       address: &apos;111 Main St.&apos;	&#
+            Array as an Object// Dynamic typing 때문에 서로 다른 타입 요소로 가질 수 있음
+var arr = [
+    1, 
+    false, 
+
+    {
+       name: &#39;Tony&#39;,
+       address: &#39;111 Main St.&#39;
+    },
+
+    function(name) {
+   
         </p>
     </div>
 </article>
-    
-        </div>
     
 
     
     
     
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -492,10 +598,14 @@ bind()12345678910111213141516171819202122var person = &#123;    firstname : &apo
     </div>
 </article>
     
+        </div>
+    
 
     
     
     
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -543,14 +653,10 @@ by Reference
     </div>
 </article>
     
-        </div>
-    
 
     
     
     
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -593,56 +699,6 @@ by Reference
 name : Optional, 익명도 가능 작성한 코드의 Reference 
 code : 작성한 코드, invocable() 이라는 작성한 코드를 실행시키는 특성을 가지고 있다.
 이 두가지 property를 통해 자바스크립트에서 함수는 다른 변수나 객체가 하는 모든 역할들
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/01/31/jsw Object/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/jswThum.png)" alt="Object" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://mingguk.github.io/2019/01/31/jsw Object/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Front/">Front</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Front/Javascript/">Javascript</a>
-            </div>
-            <div class="date"><time datetime="2019-01-30T16:34:53.000Z" itemprop="datePublished">2019-01-30</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/01/31/jsw Object/">Object</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Object in javascript
-자바스크립트에서 객체는 a collection of key value pairs  이다.
-객체의 요소로 변수, 함수(메소드), 심지어 다른 객체 까지 가질 수 있고 각각의 요소에 대한 reference(메모리 어디에 저장되어있는지, 주소) 를 가지고 있다
-12345678910111213141516171819202122
         </p>
     </div>
 </article>
@@ -705,7 +761,7 @@ Object in javascript
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/basic/">basic</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/post/til/">til</a><span class="category-list-count">5</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/basic/">basic</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/post/til/">til</a><span class="category-list-count">5</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -715,7 +771,7 @@ Object in javascript
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/back/" style="font-size: 10px;">back</a> <a href="/tags/backend/" style="font-size: 10px;">backend</a> <a href="/tags/codestates/" style="font-size: 10px;">codestates</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/review/" style="font-size: 10px;">review</a> <a href="/tags/til/" style="font-size: 13.33px;">til</a> <a href="/tags/weirdparts/" style="font-size: 16.67px;">weirdparts</a> <a href="/tags/weridparts/" style="font-size: 10px;">weridparts</a> <a href="/tags/코드스테이츠/" style="font-size: 10px;">코드스테이츠</a>
+            <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/back/" style="font-size: 10px;">back</a> <a href="/tags/backend/" style="font-size: 10px;">backend</a> <a href="/tags/codestates/" style="font-size: 10px;">codestates</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/review/" style="font-size: 10px;">review</a> <a href="/tags/til/" style="font-size: 13.33px;">til</a> <a href="/tags/weirdparts/" style="font-size: 16.67px;">weirdparts</a> <a href="/tags/weridparts/" style="font-size: 10px;">weridparts</a> <a href="/tags/코드스테이츠/" style="font-size: 10px;">코드스테이츠</a>
         </div>
     </div>
 

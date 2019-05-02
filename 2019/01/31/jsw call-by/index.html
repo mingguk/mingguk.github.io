@@ -33,7 +33,12 @@
     
 
     
-
+    <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">	
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/jejugothic.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    
+    
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/libs/titillium-web/styles.css">
     <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
@@ -64,7 +69,8 @@ ga('send', 'pageview');
     
 
 
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 </html>
 <body>
     <div id="wrap">
@@ -187,10 +193,46 @@ ga('send', 'pageview');
 <p>따라서 a 나 b 의 값을 바꾼다고 해도 서로의 <strong>값에 영향을 주지 않는다</strong></p>
 <h3 id="by-Reference"><a href="#by-Reference" class="headerlink" title="by Reference"></a>by Reference</h3><p><img src="/images/jsw byRef.png" alt=""></p>
 <p>메모리 상 해당 객체의 주소, reference를 복사하기 때문에 각기 다른 변수에 할당하더라도 모두 <strong>메모리상 같은 공간</strong>을 가르킨다.(해당 주소의 같은 메모리공간) 따라서 해당 객체를 변경하면 그에 연결된 <strong>모든 변수들이 영향을 받음</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">//by Value (primitives)</span><br><span class="line">var a = 3;</span><br><span class="line">var b;</span><br><span class="line"></span><br><span class="line">b = a;</span><br><span class="line">a = 2;</span><br><span class="line"></span><br><span class="line">console.log(a);  // 2</span><br><span class="line">console.log(b); // 3</span><br><span class="line"></span><br><span class="line">//by Reference (Objects including functions)</span><br><span class="line">var c = &#123; greeting: &apos;hi&#125;;</span><br><span class="line">var d;</span><br><span class="line"></span><br><span class="line">// 객체이니 새로운 메모리 공간 할당x</span><br><span class="line">//c 가 가르키는 메모리상 같은 공간을 d도 가르키도록 함</span><br><span class="line">d = c; </span><br><span class="line"></span><br><span class="line">c.greeting = &apos;hello&apos;; // mutate</span><br><span class="line"></span><br><span class="line">// 같은 주소상 같은 객체를 변경했기 때문에 둘다 영향 받음</span><br><span class="line">console.log(c);   // Object &#123; greeting: &apos;hello&apos;&#125;</span><br><span class="line">console.log(d); // Object &#123; greeting: &apos;hello&apos;&#125;</span><br><span class="line"></span><br><span class="line">//by Reference (even as parameters)</span><br><span class="line">function changeGreeting(obj) &#123;</span><br><span class="line">    obj.greeting = &apos;Hola!&apos;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">changeGreeting(d);</span><br><span class="line">console.log(c);    // Object &#123; greeting: &apos;Hola!&apos;&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>주의 할 점</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// = 연산자를 사용하면 새로운 메모리공간을 할당한다</span><br><span class="line">c = &#123;greeting: &apos;howdy&apos;&#125;;</span><br><span class="line"></span><br><span class="line">console.log(c); // Object &#123; greeting: &apos;howdy&apos;&#125;</span><br><span class="line">console.log(d);   Object &#123; greeting: &apos;Hola!&apos;&#125;</span><br></pre></td></tr></table></figure>
-<hr>
+<pre><code>//by Value (primitives)
+var a = 3;
+var b;
+
+b = a;
+a = 2;
+
+console.log(a);  // 2
+console.log(b); // 3
+
+//by Reference (Objects including functions)
+var c = { greeting: &#39;hi};
+var d;
+
+// 객체이니 새로운 메모리 공간 할당x
+//c 가 가르키는 메모리상 같은 공간을 d도 가르키도록 함
+d = c; 
+
+c.greeting = &#39;hello&#39;; // mutate
+
+// 같은 주소상 같은 객체를 변경했기 때문에 둘다 영향 받음
+console.log(c);   // Object { greeting: &#39;hello&#39;}
+console.log(d); // Object { greeting: &#39;hello&#39;}
+
+//by Reference (even as parameters)
+function changeGreeting(obj) {
+    obj.greeting = &#39;Hola!&#39;;
+}
+
+changeGreeting(d);
+console.log(c);    // Object { greeting: &#39;Hola!&#39;}
+
+
+</code></pre><p><strong>주의 할 점</strong></p>
+<pre><code>// = 연산자를 사용하면 새로운 메모리공간을 할당한다
+c = {greeting: &#39;howdy&#39;};
+
+console.log(c); // Object { greeting: &#39;howdy&#39;}
+console.log(d);   Object { greeting: &#39;Hola!&#39;}
+</code></pre><hr>
 <h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/31/jsw Functions/">Functions</a></p>
 
         </div>
@@ -199,7 +241,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://mingguk.github.io/2019/01/31/jsw call-by/" data-id="cjtibjz6x0015ao9nje6kdolv" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://mingguk.github.io/2019/01/31/jsw call-by/" data-id="cjv66ql3i0018s79n8eyzgezi" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -283,7 +325,7 @@ by Value
 따라서 a 나 b 의 값을 바꾼다고 해도 서로의 값에 영향을 주지 않는다
 by Reference
 메모리 상 해당 객체의 주소, reference를 복사하기 때문에 각기 다른 변수에 할당하더라도 모두 메모리상 같은 공간을 가르킨다.(해당 주소의 같은 메모리공간) 따라"
-        "wordCount": 268
+        "wordCount": 188
     }
 </script>
 
@@ -369,7 +411,7 @@ by Reference
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/basic/">basic</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/post/til/">til</a><span class="category-list-count">5</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/basic/">basic</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/post/til/">til</a><span class="category-list-count">5</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -379,7 +421,7 @@ by Reference
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/back/" style="font-size: 10px;">back</a> <a href="/tags/backend/" style="font-size: 10px;">backend</a> <a href="/tags/codestates/" style="font-size: 10px;">codestates</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/review/" style="font-size: 10px;">review</a> <a href="/tags/til/" style="font-size: 13.33px;">til</a> <a href="/tags/weirdparts/" style="font-size: 16.67px;">weirdparts</a> <a href="/tags/weridparts/" style="font-size: 10px;">weridparts</a> <a href="/tags/코드스테이츠/" style="font-size: 10px;">코드스테이츠</a>
+            <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/back/" style="font-size: 10px;">back</a> <a href="/tags/backend/" style="font-size: 10px;">backend</a> <a href="/tags/codestates/" style="font-size: 10px;">codestates</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/review/" style="font-size: 10px;">review</a> <a href="/tags/til/" style="font-size: 13.33px;">til</a> <a href="/tags/weirdparts/" style="font-size: 16.67px;">weirdparts</a> <a href="/tags/weridparts/" style="font-size: 10px;">weridparts</a> <a href="/tags/코드스테이츠/" style="font-size: 10px;">코드스테이츠</a>
         </div>
     </div>
 

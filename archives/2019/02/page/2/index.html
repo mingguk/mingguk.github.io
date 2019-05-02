@@ -24,7 +24,12 @@
     
 
     
-
+    <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">	
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/jejugothic.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    
+    
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/libs/titillium-web/styles.css">
     <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
@@ -55,7 +60,8 @@ ga('send', 'pageview');
     
 
 
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 </html>
 <body>
     <div id="wrap">
@@ -191,7 +197,17 @@ ga('send', 'pageview');
 
         <p class="article-excerpt">
             
-12345678910111213141516//결과로 함수를 리턴 하는 함수function greet(whattosay) &#123;    return function(name) &#123;        console.log(whattosay + &apos; &apos; + name);    &#125;&#125;greet(&apos;Hi&apos;)(&a
+//결과로 함수를 리턴 하는 함수
+function greet(whattosay) {
+    return function(name) {
+        console.log(whattosay + &#39; &#39; + name);
+    }
+}
+
+greet(&#39;Hi&#39;)(&#39;Tony&#39;);
+//Hi Tony
+
+// greet() 실행이
         </p>
     </div>
 </article>
@@ -238,7 +254,15 @@ ga('send', 'pageview');
 
         <p class="article-excerpt">
             
-12345678910111213141516171819//function statementfunction greet(name) &#123;    console.log(&apos;Hello &apos; + name); &#125;greet(&apos;John);  //Hello John//using a function expression var greetFu
+//function statement
+function greet(name) {
+    console.log(&#39;Hello &#39; + name); 
+}
+greet(&#39;John);  //Hello John
+
+//using a function expression 
+var greetFunc = function(name) {
+    console.l
         </p>
     </div>
 </article>
@@ -301,7 +325,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/basic/">basic</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/post/til/">til</a><span class="category-list-count">5</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/basic/">basic</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/post/til/">til</a><span class="category-list-count">5</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -311,7 +335,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/back/" style="font-size: 10px;">back</a> <a href="/tags/backend/" style="font-size: 10px;">backend</a> <a href="/tags/codestates/" style="font-size: 10px;">codestates</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/review/" style="font-size: 10px;">review</a> <a href="/tags/til/" style="font-size: 13.33px;">til</a> <a href="/tags/weirdparts/" style="font-size: 16.67px;">weirdparts</a> <a href="/tags/weridparts/" style="font-size: 10px;">weridparts</a> <a href="/tags/코드스테이츠/" style="font-size: 10px;">코드스테이츠</a>
+            <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/back/" style="font-size: 10px;">back</a> <a href="/tags/backend/" style="font-size: 10px;">backend</a> <a href="/tags/codestates/" style="font-size: 10px;">codestates</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/review/" style="font-size: 10px;">review</a> <a href="/tags/til/" style="font-size: 13.33px;">til</a> <a href="/tags/weirdparts/" style="font-size: 16.67px;">weirdparts</a> <a href="/tags/weridparts/" style="font-size: 10px;">weridparts</a> <a href="/tags/코드스테이츠/" style="font-size: 10px;">코드스테이츠</a>
         </div>
     </div>
 

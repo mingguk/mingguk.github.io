@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="javascript,weirdparts">
     
-    <meta name="description" content="prototype타 언어의 전통적인 상속은 상속을 구현하기 위해 많은 부수적인 것들을 고려해야 됐다. 반면에 자바스크립트의 상속은 prototypal inheritance로 좀 더 유연하고 직관적이다.  123456789101112131415161718192021222324var person = &amp;#123;    firstname: &amp;apos;Defaul">
+    <meta name="description" content="prototype타 언어의 전통적인 상속은 상속을 구현하기 위해 많은 부수적인 것들을 고려해야 됐다. 반면에 자바스크립트의 상속은 prototypal inheritance로 좀 더 유연하고 직관적이다.  var person = {     firstname: &amp;#39;Default&amp;#39;,     lastname: ;Default&amp;#39;,     get">
 <meta name="keywords" content="javascript,weirdparts">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OOP in javascript">
 <meta property="og:url" content="http://mingguk.github.io/2019/02/05/OOP-in-javascript/index.html">
 <meta property="og:site_name" content="Mingguk">
-<meta property="og:description" content="prototype타 언어의 전통적인 상속은 상속을 구현하기 위해 많은 부수적인 것들을 고려해야 됐다. 반면에 자바스크립트의 상속은 prototypal inheritance로 좀 더 유연하고 직관적이다.  123456789101112131415161718192021222324var person = &amp;#123;    firstname: &amp;apos;Defaul">
+<meta property="og:description" content="prototype타 언어의 전통적인 상속은 상속을 구현하기 위해 많은 부수적인 것들을 고려해야 됐다. 반면에 자바스크립트의 상속은 prototypal inheritance로 좀 더 유연하고 직관적이다.  var person = {     firstname: &amp;#39;Default&amp;#39;,     lastname: ;Default&amp;#39;,     get">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://mingguk.github.io/images/jswThum.png">
 <meta property="og:updated_time" content="2019-02-04T09:04:57.935Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OOP in javascript">
-<meta name="twitter:description" content="prototype타 언어의 전통적인 상속은 상속을 구현하기 위해 많은 부수적인 것들을 고려해야 됐다. 반면에 자바스크립트의 상속은 prototypal inheritance로 좀 더 유연하고 직관적이다.  123456789101112131415161718192021222324var person = &amp;#123;    firstname: &amp;apos;Defaul">
+<meta name="twitter:description" content="prototype타 언어의 전통적인 상속은 상속을 구현하기 위해 많은 부수적인 것들을 고려해야 됐다. 반면에 자바스크립트의 상속은 prototypal inheritance로 좀 더 유연하고 직관적이다.  var person = {     firstname: &amp;#39;Default&amp;#39;,     lastname: ;Default&amp;#39;,     get">
 <meta name="twitter:image" content="http://mingguk.github.io/images/jswThum.png">
     
 
@@ -33,7 +33,12 @@
     
 
     
-
+    <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">	
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/jejugothic.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    
+    
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/libs/titillium-web/styles.css">
     <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
@@ -64,7 +69,8 @@ ga('send', 'pageview');
     
 
 
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 </html>
 <body>
     <div id="wrap">
@@ -184,15 +190,82 @@ ga('send', 'pageview');
             <p><img src="/images/jsw OOP.png" alt=""></p>
 <h3 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h3><p>타 언어의 전통적인 상속은 상속을 구현하기 위해 많은 부수적인 것들을 고려해야 됐다. 반면에 자바스크립트의 상속은 <strong>prototypal inheritance</strong>로 좀 더 유연하고 직관적이다.</p>
 <p><img src="/images/jsw inheritance.png" alt=""></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;</span><br><span class="line">    firstname: &apos;Default&apos;,</span><br><span class="line">    lastname: ;Default&apos;,</span><br><span class="line">    getFullName: function() &#123;</span><br><span class="line">        return this.firstname + &apos; &apos; + this.lastname;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var john = &#123;</span><br><span class="line">    fristname: &apos;John&apos;,</span><br><span class="line">    lastname: &apos;Doe&apos;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//don&apos;t do this Ever! demo purposes only!</span><br><span class="line">john.__proto__ = person;</span><br><span class="line">//john 객체에서 속성이나 메소드 탐색 후 없으면 proto&#123;&#125; 탐색</span><br><span class="line">console.log(john.getFullName()); // John Doe</span><br><span class="line"></span><br><span class="line">var jane = &#123;</span><br><span class="line">    firstname: &apos;Jane&apos;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">jane.__proto__ = person;</span><br><span class="line">console.log(jane.getFullName()); // Jane Default;</span><br></pre></td></tr></table></figure>
-<h3 id="Everyting-is-and-object"><a href="#Everyting-is-and-object" class="headerlink" title="Everyting is and object"></a>Everyting is and object</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;&#125;;</span><br><span class="line">var b = function() &#123;&#125;;</span><br><span class="line">var c = [];</span><br><span class="line"></span><br><span class="line">a.__proto__. // Object&#123;&#125; (base object);</span><br><span class="line">b.__proto__. // Empty() &#123;&#125; (base function object);</span><br><span class="line">c.__proto__. //</span><br></pre></td></tr></table></figure>
-<p><img src="/images/jsw prototype1.png" alt=""></p>
+<pre><code>var person = {
+    firstname: &#39;Default&#39;,
+    lastname: ;Default&#39;,
+    getFullName: function() {
+        return this.firstname + &#39; &#39; + this.lastname;
+    }
+}
+
+var john = {
+    fristname: &#39;John&#39;,
+    lastname: &#39;Doe&#39;
+}
+
+//don&#39;t do this Ever! demo purposes only!
+john.__proto__ = person;
+//john 객체에서 속성이나 메소드 탐색 후 없으면 proto{} 탐색
+console.log(john.getFullName()); // John Doe
+
+var jane = {
+    firstname: &#39;Jane&#39;;
+}
+
+jane.__proto__ = person;
+console.log(jane.getFullName()); // Jane Default;
+
+</code></pre><h3 id="Everyting-is-and-object"><a href="#Everyting-is-and-object" class="headerlink" title="Everyting is and object"></a>Everyting is and object</h3><pre><code>var a = {};
+var b = function() {};
+var c = [];
+
+a.__proto__. // Object{} (base object);
+b.__proto__. // Empty() {} (base function object);
+c.__proto__. //
+
+</code></pre><p><img src="/images/jsw prototype1.png" alt=""></p>
 <p>b 는 빈함수임에도 proto 를 살펴보면 기본 함수 객체의 모든 메소드들에 접근이 가능하다. (빈 배열, 객체도 마찬가지) 우리가 어떤 배열, 객체, 함수를 생성했을 때 따로 명시적으로 메소드를 생성하지 않더라도 자바스크립트 엔진이 <strong>프로토타입을 자동으로 기본 객체들에 연결해준다.</strong>  이 때문에 기본 객체들에 있는 메소드들을 새로 생성한 객체에서도 자유롭게 사용할 수 있는 것이다.</p>
 <h3 id="Reflection-and-Extend"><a href="#Reflection-and-Extend" class="headerlink" title="Reflection and Extend"></a>Reflection and Extend</h3><p><img src="/images/jsw reflection.png" alt=""></p>
 <p>함수정의 때와  다른 인자 개수를 받을 때는 arguments 를 통해 처리할 수 있다.</p>
 <p>(추후 수정)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;</span><br><span class="line">    firstname: &apos;Default&apos;,</span><br><span class="line">    lastname: ;Default&apos;,</span><br><span class="line">    getFullName: function() &#123;</span><br><span class="line">        return this.firstname + &apos; &apos; + this.lastname;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var john = &#123;</span><br><span class="line">    fristname: &apos;John&apos;,</span><br><span class="line">    lastname: &apos;Doe&apos;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for (var prop in john) &#123;</span><br><span class="line">	if (john.hasOwnProperty(prop)) &#123;</span><br><span class="line">	    console.log(prop + &apos;: &apos; + john[prop])	        </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">// firstname : &apos;John&apos;, lastname : &apos;Doe&apos;</span><br><span class="line"></span><br><span class="line">var jane = &#123;</span><br><span class="line">    address: &apos;111 Main St.&apos;;</span><br><span class="line">    getFormalFullName: function() &#123;</span><br><span class="line">        return this.lastname + &apos;, &apos; + this.firstname;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var jim = &#123;</span><br><span class="line">    getFirstName: function() &#123;</span><br><span class="line">        return firstname;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 다른 객체들의 속성들을 다른 객체에게 전달하고 싶다면?</span><br><span class="line">_.extend(john, jane, jim ..);</span><br><span class="line">// 다른 객체들의 속성,메소드들을 추가한 john 객체가 리턴 됨.</span><br></pre></td></tr></table></figure>
-<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><hr>
+<pre><code>var person = {
+    firstname: &#39;Default&#39;,
+    lastname: ;Default&#39;,
+    getFullName: function() {
+        return this.firstname + &#39; &#39; + this.lastname;
+    }
+}
+
+var john = {
+    fristname: &#39;John&#39;,
+    lastname: &#39;Doe&#39;
+}
+
+for (var prop in john) {
+    if (john.hasOwnProperty(prop)) {
+        console.log(prop + &#39;: &#39; + john[prop])            
+    }
+}
+// firstname : &#39;John&#39;, lastname : &#39;Doe&#39;
+
+var jane = {
+    address: &#39;111 Main St.&#39;;
+    getFormalFullName: function() {
+        return this.lastname + &#39;, &#39; + this.firstname;
+    }
+}
+
+var jim = {
+    getFirstName: function() {
+        return firstname;
+    }
+}
+// 다른 객체들의 속성들을 다른 객체에게 전달하고 싶다면?
+_.extend(john, jane, jim ..);
+// 다른 객체들의 속성,메소드들을 추가한 john 객체가 리턴 됨.
+
+
+</code></pre><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><hr>
 <p><a href="http://mingguk.github.io/2019/02/05/Building-an-object/">building an object</a></p>
 <p><a href="http://mingguk.github.io/2019/02/04/Funtional-programming/">Functional programming</a></p>
 
@@ -202,7 +275,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://mingguk.github.io/2019/02/05/OOP-in-javascript/" data-id="cjtibjz6k000kao9nkl8pv9c4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://mingguk.github.io/2019/02/05/OOP-in-javascript/" data-id="cjv66ql33000js79nhc9luttg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -283,8 +356,11 @@ ga('send', 'pageview');
         "description": "
 prototype타 언어의 전통적인 상속은 상속을 구현하기 위해 많은 부수적인 것들을 고려해야 됐다. 반면에 자바스크립트의 상속은 prototypal inheritance로 좀 더 유연하고 직관적이다.
 
-123456789101112131415161718192021222324var person = &#123;    firstname: &apos;Defaul"
-        "wordCount": 531
+var person = {
+    firstname: &#39;Default&#39;,
+    lastname: ;Default&#39;,
+    get"
+        "wordCount": 403
     }
 </script>
 
@@ -370,7 +446,7 @@ prototype타 언어의 전통적인 상속은 상속을 구현하기 위해 많�
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/basic/">basic</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/post/til/">til</a><span class="category-list-count">5</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/basic/">basic</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/post/til/">til</a><span class="category-list-count">5</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -380,7 +456,7 @@ prototype타 언어의 전통적인 상속은 상속을 구현하기 위해 많�
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/back/" style="font-size: 10px;">back</a> <a href="/tags/backend/" style="font-size: 10px;">backend</a> <a href="/tags/codestates/" style="font-size: 10px;">codestates</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/review/" style="font-size: 10px;">review</a> <a href="/tags/til/" style="font-size: 13.33px;">til</a> <a href="/tags/weirdparts/" style="font-size: 16.67px;">weirdparts</a> <a href="/tags/weridparts/" style="font-size: 10px;">weridparts</a> <a href="/tags/코드스테이츠/" style="font-size: 10px;">코드스테이츠</a>
+            <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/back/" style="font-size: 10px;">back</a> <a href="/tags/backend/" style="font-size: 10px;">backend</a> <a href="/tags/codestates/" style="font-size: 10px;">codestates</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/review/" style="font-size: 10px;">review</a> <a href="/tags/til/" style="font-size: 13.33px;">til</a> <a href="/tags/weirdparts/" style="font-size: 16.67px;">weirdparts</a> <a href="/tags/weridparts/" style="font-size: 10px;">weridparts</a> <a href="/tags/코드스테이츠/" style="font-size: 10px;">코드스테이츠</a>
         </div>
     </div>
 

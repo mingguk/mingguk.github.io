@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="javascript,weirdparts">
     
-    <meta name="description" content="Object in javascript 자바스크립트에서 객체는 a collection of key value pairs  이다. 객체의 요소로 변수, 함수(메소드), 심지어 다른 객체 까지 가질 수 있고 각각의 요소에 대한 reference(메모리 어디에 저장되어있는지, 주소) 를 가지고 있다 12345678910111213141516171819202122">
+    <meta name="description" content="Object in javascript 자바스크립트에서 객체는 a collection of key value pairs  이다. 객체의 요소로 변수, 함수(메소드), 심지어 다른 객체 까지 가질 수 있고 각각의 요소에 대한 reference(메모리 어디에 저장되어있는지, 주소) 를 가지고 있다 var person = new Object();  // [] 는">
 <meta name="keywords" content="javascript,weirdparts">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Object">
 <meta property="og:url" content="http://mingguk.github.io/2019/01/31/jsw Object/index.html">
 <meta property="og:site_name" content="Mingguk">
-<meta property="og:description" content="Object in javascript 자바스크립트에서 객체는 a collection of key value pairs  이다. 객체의 요소로 변수, 함수(메소드), 심지어 다른 객체 까지 가질 수 있고 각각의 요소에 대한 reference(메모리 어디에 저장되어있는지, 주소) 를 가지고 있다 12345678910111213141516171819202122">
+<meta property="og:description" content="Object in javascript 자바스크립트에서 객체는 a collection of key value pairs  이다. 객체의 요소로 변수, 함수(메소드), 심지어 다른 객체 까지 가질 수 있고 각각의 요소에 대한 reference(메모리 어디에 저장되어있는지, 주소) 를 가지고 있다 var person = new Object();  // [] 는">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://mingguk.github.io/images/jswThum.png">
 <meta property="og:updated_time" content="2019-01-30T17:07:00.029Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Object">
-<meta name="twitter:description" content="Object in javascript 자바스크립트에서 객체는 a collection of key value pairs  이다. 객체의 요소로 변수, 함수(메소드), 심지어 다른 객체 까지 가질 수 있고 각각의 요소에 대한 reference(메모리 어디에 저장되어있는지, 주소) 를 가지고 있다 12345678910111213141516171819202122">
+<meta name="twitter:description" content="Object in javascript 자바스크립트에서 객체는 a collection of key value pairs  이다. 객체의 요소로 변수, 함수(메소드), 심지어 다른 객체 까지 가질 수 있고 각각의 요소에 대한 reference(메모리 어디에 저장되어있는지, 주소) 를 가지고 있다 var person = new Object();  // [] 는">
 <meta name="twitter:image" content="http://mingguk.github.io/images/jswThum.png">
     
 
@@ -33,7 +33,12 @@
     
 
     
-
+    <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">	
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/jejugothic.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    
+    
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/libs/titillium-web/styles.css">
     <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
@@ -64,7 +69,8 @@ ga('send', 'pageview');
     
 
 
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 </html>
 <body>
     <div id="wrap">
@@ -185,17 +191,89 @@ ga('send', 'pageview');
 <h3 id="Object-in-javascript"><a href="#Object-in-javascript" class="headerlink" title="Object in javascript"></a>Object in javascript</h3><p><img src="/images/jswObject.png" alt=""></p>
 <p>자바스크립트에서 객체는 <strong>a collection of key value pairs</strong>  이다.</p>
 <p>객체의 요소로 변수, 함수(메소드), 심지어 다른 객체 까지 가질 수 있고 각각의 요소에 대한 reference(메모리 어디에 저장되어있는지, 주소) 를 가지고 있다</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">var person = new Object();</span><br><span class="line"></span><br><span class="line">// [] 는 연산자, 해당 객체의 name 주소로 가서 value 를 반환하는</span><br><span class="line">person[&apos;firstname&apos;] = &apos;minkuk&apos;;  // name value pair</span><br><span class="line"></span><br><span class="line">// firstname 의 reference를 객체 person에게 부여</span><br><span class="line">person[&apos;lastname&apos;] = &apos;Seo&apos;;</span><br><span class="line"></span><br><span class="line">var firstNameProperty = &apos;firstname&apos;;</span><br><span class="line"></span><br><span class="line">console.log(person); //Object</span><br><span class="line">console.log(person[firstNameProperty]); //Tony</span><br><span class="line"></span><br><span class="line">// . 또한 연산자  a.name --&gt; a 객체의 name 의 value에 접근가능</span><br><span class="line">console.log(person.firstname); //Tony</span><br><span class="line"></span><br><span class="line">//객체 내 요소 추가하기</span><br><span class="line">person.address = new Object();</span><br><span class="line">person.address.street = &apos;111 Main St.&apos;;</span><br><span class="line">person.address.city = &apos;New York&apos;;</span><br><span class="line">person.address.state = &apos;NY&apos;;</span><br><span class="line"></span><br><span class="line">//. 연산자로 객체의 요소들에 접근, 참조가능</span><br><span class="line"></span><br><span class="line">console.log(person.address.street) // 111 Main St.</span><br><span class="line">console.log(person.address.city) // New York</span><br><span class="line">console.log(person[&apos;address&apos;][&apos;state&apos;]) // NY</span><br></pre></td></tr></table></figure>
-<h3 id="Object-literals"><a href="#Object-literals" class="headerlink" title="Object literals"></a>Object literals</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;&#125;; // 객체 생성 </span><br><span class="line">var person = &#123;</span><br><span class="line">	firstname: &apos;minkuk&apos;,</span><br><span class="line">    lastname: &apos;Seo&apos;</span><br><span class="line">    </span><br><span class="line">   	//다른 객체도 객체의 요소로 생성가능</span><br><span class="line">   	address: &#123;</span><br><span class="line">        street: &apos;111 Main St.&apos;,</span><br><span class="line">        city: &apos;New York&apos;,</span><br><span class="line">        state: &apos;NY&apos;</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;;</span><br><span class="line"> </span><br><span class="line">//객체는 함수의 인자로도 전달이 가능하다</span><br><span class="line">function greet(person) &#123;</span><br><span class="line">    console.log(&apos;Hi &apos; + person.firstname);</span><br><span class="line">&#125;</span><br><span class="line">greet(Tony); // Hi Tony</span><br><span class="line"></span><br><span class="line">// 이런식으로 객체생성과 동시에 인자로 넘기기도 가능</span><br><span class="line">greet(&#123;</span><br><span class="line">    firstname: &apos;Mary&apos;,</span><br><span class="line">    lastname: Doe</span><br><span class="line">&#125;); // Hi Mary Doe</span><br></pre></td></tr></table></figure>
-<h3 id="NameSpace"><a href="#NameSpace" class="headerlink" title="NameSpace"></a>NameSpace</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var greet = &apos;Hello!&apos;;</span><br><span class="line">var greet = &apos;Hola!&apos;;</span><br><span class="line"></span><br><span class="line">console.log(greet); </span><br><span class="line">// Hola!</span><br></pre></td></tr></table></figure>
-<p>자바스크립트는 순차적으로 코드를 실행하기 때문에 위의 결과를 예측하기는 쉽다.</p>
+<pre><code>var person = new Object();
+
+// [] 는 연산자, 해당 객체의 name 주소로 가서 value 를 반환하는
+person[&#39;firstname&#39;] = &#39;minkuk&#39;;  // name value pair
+
+// firstname 의 reference를 객체 person에게 부여
+person[&#39;lastname&#39;] = &#39;Seo&#39;;
+
+var firstNameProperty = &#39;firstname&#39;;
+
+console.log(person); //Object
+console.log(person[firstNameProperty]); //Tony
+
+// . 또한 연산자  a.name --&gt; a 객체의 name 의 value에 접근가능
+console.log(person.firstname); //Tony
+
+//객체 내 요소 추가하기
+person.address = new Object();
+person.address.street = &#39;111 Main St.&#39;;
+person.address.city = &#39;New York&#39;;
+person.address.state = &#39;NY&#39;;
+
+//. 연산자로 객체의 요소들에 접근, 참조가능
+
+console.log(person.address.street) // 111 Main St.
+console.log(person.address.city) // New York
+console.log(person[&#39;address&#39;][&#39;state&#39;]) // NY
+
+
+</code></pre><h3 id="Object-literals"><a href="#Object-literals" class="headerlink" title="Object literals"></a>Object literals</h3><pre><code>var person = {}; // 객체 생성 
+var person = {
+    firstname: &#39;minkuk&#39;,
+    lastname: &#39;Seo&#39;
+
+       //다른 객체도 객체의 요소로 생성가능
+       address: {
+        street: &#39;111 Main St.&#39;,
+        city: &#39;New York&#39;,
+        state: &#39;NY&#39;
+    }
+ };
+
+//객체는 함수의 인자로도 전달이 가능하다
+function greet(person) {
+    console.log(&#39;Hi &#39; + person.firstname);
+}
+greet(Tony); // Hi Tony
+
+// 이런식으로 객체생성과 동시에 인자로 넘기기도 가능
+greet({
+    firstname: &#39;Mary&#39;,
+    lastname: Doe
+}); // Hi Mary Doe
+
+</code></pre><h3 id="NameSpace"><a href="#NameSpace" class="headerlink" title="NameSpace"></a>NameSpace</h3><pre><code>var greet = &#39;Hello!&#39;;
+var greet = &#39;Hola!&#39;;
+
+console.log(greet); 
+// Hola!
+</code></pre><p>자바스크립트는 순차적으로 코드를 실행하기 때문에 위의 결과를 예측하기는 쉽다.</p>
 <p>하지만 만약에 각 변수가 다른 자바스크립트에 저장되어 있거나, 외부에서 라이브러리로 가져다 쓰는거라면? 의도치 않게 같은 변수명으로 인해 충돌 가능성이 있다.</p>
 <p><img src="/images/jswNameSpace.png" alt=""></p>
 <p>이러한 충돌을 방지하기 위해 Namespace 개념이 발생했다. 자바스크립트에서는 객체를 이 네임스페이스로 활용 할 수 있다</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var english = &#123;greet: &apos;Hello!&apos;&#125;;</span><br><span class="line">var spanish = &#123;greet: &apos;Hola!&apos;&#125;;</span><br><span class="line"></span><br><span class="line">console.log(english.greet); //Hello!</span><br><span class="line">console.log(spanish.greet); //Hola!</span><br></pre></td></tr></table></figure>
-<p><strong>객체 요소 추가 시 주의사항</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">english.greeting.greet = &apos;Hi!&apos;;  //이런 식은 error 발생</span><br><span class="line">//. 연산자의 우선순위에 따라 (연관 left-to-right)</span><br><span class="line">//english.greeting은 undefined가 이기 때문에</span><br><span class="line"></span><br><span class="line">// 객체 내 새로운 요소를 생성할 때는 [] 연산자를 사용하거나</span><br><span class="line">english[greeting][greet] = &apos;Hi!&apos;;</span><br><span class="line"></span><br><span class="line">// 객체 생성과 동시에 요소를 추가하는 것을 추천</span><br><span class="line">english = &#123;greeting: &#123;greet:&apos;Hi!&apos;&#125;&#125;;</span><br><span class="line"></span><br><span class="line">console.log(english.greeting.greet); // Hi!</span><br></pre></td></tr></table></figure>
-<hr>
+<pre><code>var english = {greet: &#39;Hello!&#39;};
+var spanish = {greet: &#39;Hola!&#39;};
+
+console.log(english.greet); //Hello!
+console.log(spanish.greet); //Hola!
+
+
+</code></pre><p><strong>객체 요소 추가 시 주의사항</strong></p>
+<pre><code>english.greeting.greet = &#39;Hi!&#39;;  //이런 식은 error 발생
+//. 연산자의 우선순위에 따라 (연관 left-to-right)
+//english.greeting은 undefined가 이기 때문에
+
+// 객체 내 새로운 요소를 생성할 때는 [] 연산자를 사용하거나
+english[greeting][greet] = &#39;Hi!&#39;;
+
+// 객체 생성과 동시에 요소를 추가하는 것을 추천
+english = {greeting: {greet:&#39;Hi!&#39;}};
+
+console.log(english.greeting.greet); // Hi!
+</code></pre><hr>
 <h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/31/jsw Functions/">Functions</a></p>
 <p><a href="http://mingguk.github.io/2019/01/30/jsw type&amp;operator/">Type &amp; Operator</a></p>
 
@@ -205,7 +283,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://mingguk.github.io/2019/01/31/jsw Object/" data-id="cjtibjz6y0018ao9nqqtw52rw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://mingguk.github.io/2019/01/31/jsw Object/" data-id="cjv66ql3g0014s79nssvrzsoc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -287,8 +365,10 @@ ga('send', 'pageview');
 Object in javascript
 자바스크립트에서 객체는 a collection of key value pairs  이다.
 객체의 요소로 변수, 함수(메소드), 심지어 다른 객체 까지 가질 수 있고 각각의 요소에 대한 reference(메모리 어디에 저장되어있는지, 주소) 를 가지고 있다
-12345678910111213141516171819202122"
-        "wordCount": 511
+var person = new Object();
+
+// [] 는"
+        "wordCount": 354
     }
 </script>
 
@@ -374,7 +454,7 @@ Object in javascript
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/basic/">basic</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/post/til/">til</a><span class="category-list-count">5</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/basic/">basic</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/post/til/">til</a><span class="category-list-count">5</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -384,7 +464,7 @@ Object in javascript
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/back/" style="font-size: 10px;">back</a> <a href="/tags/backend/" style="font-size: 10px;">backend</a> <a href="/tags/codestates/" style="font-size: 10px;">codestates</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/review/" style="font-size: 10px;">review</a> <a href="/tags/til/" style="font-size: 13.33px;">til</a> <a href="/tags/weirdparts/" style="font-size: 16.67px;">weirdparts</a> <a href="/tags/weridparts/" style="font-size: 10px;">weridparts</a> <a href="/tags/코드스테이츠/" style="font-size: 10px;">코드스테이츠</a>
+            <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/back/" style="font-size: 10px;">back</a> <a href="/tags/backend/" style="font-size: 10px;">backend</a> <a href="/tags/codestates/" style="font-size: 10px;">codestates</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/review/" style="font-size: 10px;">review</a> <a href="/tags/til/" style="font-size: 13.33px;">til</a> <a href="/tags/weirdparts/" style="font-size: 16.67px;">weirdparts</a> <a href="/tags/weridparts/" style="font-size: 10px;">weridparts</a> <a href="/tags/코드스테이츠/" style="font-size: 10px;">코드스테이츠</a>
         </div>
     </div>
 

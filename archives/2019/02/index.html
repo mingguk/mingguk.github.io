@@ -24,7 +24,12 @@
     
 
     
-
+    <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">	
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/jejugothic.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    
+    
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/libs/titillium-web/styles.css">
     <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
@@ -55,7 +60,8 @@ ga('send', 'pageview');
     
 
 
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 </html>
 <body>
     <div id="wrap">
@@ -471,7 +477,12 @@ Related Posts
 
         <p class="article-excerpt">
             객체를 생성하는 여러가지 방식 중 하나는 new 키워드를 활용한생성자 함수 를 사용하는 방법이 있다.
-new keyword123456789101112131415// java 같은..function Person() &#123;	console.log(this);    this.firstname = &apos;John&apos;,    this.lastname 
+new keyword// java 같은..
+function Person() {
+    console.log(this);
+    this.firstname = &#39;John&#39;,
+    this.lastname = &#39;Doe&#39;
+    c
         </p>
     </div>
 </article>
@@ -524,7 +535,10 @@ new keyword123456789101112131415// java 같은..function Person() &#123;	console
             
 prototype타 언어의 전통적인 상속은 상속을 구현하기 위해 많은 부수적인 것들을 고려해야 됐다. 반면에 자바스크립트의 상속은 prototypal inheritance로 좀 더 유연하고 직관적이다.
 
-123456789101112131415161718192021222324var person = &#123;    firstname: &apos;Defaul
+var person = {
+    firstname: &#39;Default&#39;,
+    lastname: ;Default&#39;,
+    get
         </p>
     </div>
 </article>
@@ -571,7 +585,21 @@ prototype타 언어의 전통적인 상속은 상속을 구현하기 위해 많�
 
         <p class="article-excerpt">
             
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152// 비함수형var arr1 = [1,2,3];console.log(arr1);var arr2 = [];for (var i=0; i&lt;arr1.length; i++) &#123;   
+// 비함수형
+var arr1 = [1,2,3];
+console.log(arr1);
+
+var arr2 = [];
+for (var i=0; i&lt;arr1.length; i++) {
+    arr2.push(arr[i] * 2);
+}
+
+console.log(arr2);
+
+
+// 함수형
+//기반 함수 생성
+function mapForEach(arr, fn)
         </p>
     </div>
 </article>
@@ -624,7 +652,10 @@ prototype타 언어의 전통적인 상속은 상속을 구현하기 위해 많�
             
 자바스크립트 함수에는 앞서 언급한 code, name 외에도 call, apply, bind 라는 기본 메소드를 갖고 있다. 이 메소드들은 this 키워드를 조작해주는 역할을 한다.
 
-bind()12345678910111213141516171819202122var person = &#123;    firstname : &apos;John&apos;,   
+bind()var person = {
+    firstname : &#39;John&#39;,
+    lastname : &#39;Doe&#39;,
+    getFullNa
         </p>
     </div>
 </article>
@@ -672,7 +703,9 @@ bind()12345678910111213141516171819202122var person = &#123;    firstname : &apo
         <p class="article-excerpt">
             
 공장에서 정해진 포멧에 따라 제품들을 생산하는 것처럼 팩토리패턴은 전체 로직을 담은 팩토리함수를 생성, 클로저를 활용해서 반복되는 인자를 기본값으로 하는 함수를 재정의 하고, 호출하는 방식이다.
-123456789101112131415161718192021// factory functionfunction makeGreeting(language) &#123;
+// factory function
+function makeGreeting(language) {
+    return function(firstname, lastn
         </p>
     </div>
 </article>
@@ -735,7 +768,7 @@ bind()12345678910111213141516171819202122var person = &#123;    firstname : &apo
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/basic/">basic</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/post/til/">til</a><span class="category-list-count">5</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/">Back</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Back/basic/">basic</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/">Front</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front/Javascript/">Javascript</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front/html-css/">html css</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Review/Bootcamp/">Bootcamp</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/post/">post</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/post/til/">til</a><span class="category-list-count">5</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -745,7 +778,7 @@ bind()12345678910111213141516171819202122var person = &#123;    firstname : &apo
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/back/" style="font-size: 10px;">back</a> <a href="/tags/backend/" style="font-size: 10px;">backend</a> <a href="/tags/codestates/" style="font-size: 10px;">codestates</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/review/" style="font-size: 10px;">review</a> <a href="/tags/til/" style="font-size: 13.33px;">til</a> <a href="/tags/weirdparts/" style="font-size: 16.67px;">weirdparts</a> <a href="/tags/weridparts/" style="font-size: 10px;">weridparts</a> <a href="/tags/코드스테이츠/" style="font-size: 10px;">코드스테이츠</a>
+            <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/back/" style="font-size: 10px;">back</a> <a href="/tags/backend/" style="font-size: 10px;">backend</a> <a href="/tags/codestates/" style="font-size: 10px;">codestates</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/review/" style="font-size: 10px;">review</a> <a href="/tags/til/" style="font-size: 13.33px;">til</a> <a href="/tags/weirdparts/" style="font-size: 16.67px;">weirdparts</a> <a href="/tags/weridparts/" style="font-size: 10px;">weridparts</a> <a href="/tags/코드스테이츠/" style="font-size: 10px;">코드스테이츠</a>
         </div>
     </div>
 
