@@ -9,15 +9,7 @@
 
     <url>
         <loc>http://mingguk.github.io/2019/05/03/ES6-2/</loc>
-        <lastmod>2019-05-03T13:01:57.680Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/05/04/asynchronous/</loc>
-        <lastmod>2019-05-03T11:03:31.812Z</lastmod>
+        <lastmod>2019-05-03T23:56:23.212Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -25,7 +17,15 @@
 
     <url>
         <loc>http://mingguk.github.io/2019/05/02/ES6/</loc>
-        <lastmod>2019-05-03T09:42:56.679Z</lastmod>
+        <lastmod>2019-05-03T23:55:31.915Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/05/04/asynchronous/</loc>
+        <lastmod>2019-05-03T13:14:55.436Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
