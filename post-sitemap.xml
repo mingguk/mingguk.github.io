@@ -8,6 +8,22 @@
     </url>
 
     <url>
+        <loc>http://mingguk.github.io/2019/05/03/ES6-2/</loc>
+        <lastmod>2019-05-03T12:58:39.711Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/05/04/asynchronous/</loc>
+        <lastmod>2019-05-03T11:03:31.812Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://mingguk.github.io/2019/05/02/ES6/</loc>
         <lastmod>2019-05-03T09:42:56.679Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -122,14 +138,6 @@
     <url>
         <loc>http://mingguk.github.io/2019/01/28/codestates/</loc>
         <lastmod>2019-05-03T06:53:25.841Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/05/03/ES6-2/</loc>
-        <lastmod>2019-05-03T06:50:49.086Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
