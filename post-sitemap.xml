@@ -8,16 +8,104 @@
     </url>
 
     <url>
-        <loc>http://mingguk.github.io/2019/02/05/OOP-in-javascript/</loc>
-        <lastmod>2019-05-03T06:56:15.422Z</lastmod>
+        <loc>http://mingguk.github.io/2019/02/05/Building-an-object/</loc>
+        <lastmod>2019-05-03T07:24:42.305Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://mingguk.github.io/2019/02/05/Building-an-object/</loc>
-        <lastmod>2019-05-03T06:55:51.606Z</lastmod>
+        <loc>http://mingguk.github.io/2019/02/04/Funtional-programming/</loc>
+        <lastmod>2019-05-03T07:24:10.782Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/02/03/Call-Bind/</loc>
+        <lastmod>2019-05-03T07:24:04.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/02/03/Closure2/</loc>
+        <lastmod>2019-05-03T07:23:50.343Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/02/01/Closure/</loc>
+        <lastmod>2019-05-03T07:23:33.600Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/02/01/IIFE/</loc>
+        <lastmod>2019-05-03T07:23:14.002Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/01/31/argument/</loc>
+        <lastmod>2019-05-03T07:22:50.736Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/01/31/jsw%20this/</loc>
+        <lastmod>2019-05-03T07:22:29.136Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/01/31/jsw%20call-by/</loc>
+        <lastmod>2019-05-03T07:22:09.649Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/01/31/jsw%20Object/</loc>
+        <lastmod>2019-05-03T07:21:20.261Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/01/31/jsw%20Functions/</loc>
+        <lastmod>2019-05-03T07:11:30.920Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/01/30/jsw%20type%26operator/</loc>
+        <lastmod>2019-05-03T07:10:13.437Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/02/05/OOP-in-javascript/</loc>
+        <lastmod>2019-05-03T07:02:39.955Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -96,62 +184,6 @@
     </url>
 
     <url>
-        <loc>http://mingguk.github.io/2019/02/04/Funtional-programming/</loc>
-        <lastmod>2019-02-04T07:28:07.386Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/02/03/Call-Bind/</loc>
-        <lastmod>2019-02-03T07:32:30.915Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/02/03/Closure2/</loc>
-        <lastmod>2019-02-02T12:33:29.471Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/02/01/Closure/</loc>
-        <lastmod>2019-02-02T09:50:53.467Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/02/01/IIFE/</loc>
-        <lastmod>2019-02-02T09:09:12.441Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/01/31/argument/</loc>
-        <lastmod>2019-01-31T13:31:41.288Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/01/31/jsw%20this/</loc>
-        <lastmod>2019-01-31T12:53:54.498Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://mingguk.github.io/2019/01/29/jsw%20main/</loc>
         <lastmod>2019-01-30T17:29:13.202Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -160,40 +192,8 @@
     </url>
 
     <url>
-        <loc>http://mingguk.github.io/2019/01/31/jsw%20Functions/</loc>
-        <lastmod>2019-01-30T17:14:32.683Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/01/31/jsw%20Object/</loc>
-        <lastmod>2019-01-30T17:07:00.029Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/01/30/jsw%20type%26operator/</loc>
-        <lastmod>2019-01-30T17:05:16.886Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://mingguk.github.io/2019/01/29/jsw%20context%20%26ex/</loc>
         <lastmod>2019-01-30T17:03:40.968Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/01/31/jsw%20call-by/</loc>
-        <lastmod>2019-01-30T16:58:20.698Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
