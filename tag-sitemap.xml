@@ -3,15 +3,36 @@
 
 
     <url>
-        <loc>http://mingguk.github.io/tags/ES6/</loc>
-        <lastmod>2019-05-03T02:56:54.371Z</lastmod>
+        <loc>http://mingguk.github.io/tags/weirdparts/</loc>
+        <lastmod>2019-05-03T06:56:15.422Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://mingguk.github.io/tags/javascript/</loc>
-        <lastmod>2019-05-03T02:56:54.371Z</lastmod>
+        <lastmod>2019-05-03T06:56:15.422Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/tags/%EC%BD%94%EB%93%9C%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%B8%A0/</loc>
+        <lastmod>2019-05-03T06:53:25.841Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/tags/codestates/</loc>
+        <lastmod>2019-05-03T06:53:25.841Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/tags/ES6/</loc>
+        <lastmod>2019-05-03T06:50:49.086Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -45,29 +66,8 @@
     </url>
 
     <url>
-        <loc>http://mingguk.github.io/tags/weirdparts/</loc>
-        <lastmod>2019-02-04T12:12:40.581Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://mingguk.github.io/tags/weridparts/</loc>
         <lastmod>2019-02-02T09:09:12.441Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/tags/%EC%BD%94%EB%93%9C%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%B8%A0/</loc>
-        <lastmod>2019-01-30T17:38:15.054Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/tags/codestates/</loc>
-        <lastmod>2019-01-30T17:38:15.054Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -9,14 +9,28 @@
 
     <url>
         <loc>http://mingguk.github.io/categories/Front/Javascript/</loc>
-        <lastmod>2019-05-03T02:56:54.371Z</lastmod>
+        <lastmod>2019-05-03T06:56:15.422Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://mingguk.github.io/categories/Front/</loc>
-        <lastmod>2019-05-03T02:56:54.371Z</lastmod>
+        <lastmod>2019-05-03T06:56:15.422Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/categories/Review/Bootcamp/</loc>
+        <lastmod>2019-05-03T06:53:25.841Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/categories/Review/</loc>
+        <lastmod>2019-05-03T06:53:25.841Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -52,20 +66,6 @@
     <url>
         <loc>http://mingguk.github.io/categories/Back/</loc>
         <lastmod>2019-02-20T13:21:51.313Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/categories/Review/Bootcamp/</loc>
-        <lastmod>2019-01-30T17:38:15.054Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/categories/Review/</loc>
-        <lastmod>2019-01-30T17:38:15.054Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
