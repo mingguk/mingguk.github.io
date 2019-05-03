@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>http://mingguk.github.io/2019/05/02/ES6/</loc>
+        <lastmod>2019-05-03T09:42:56.679Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://mingguk.github.io/2019/02/05/Building-an-object/</loc>
         <lastmod>2019-05-03T07:24:42.305Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -122,14 +130,6 @@
     <url>
         <loc>http://mingguk.github.io/2019/05/03/ES6-2/</loc>
         <lastmod>2019-05-03T06:50:49.086Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/05/02/ES6/</loc>
-        <lastmod>2019-05-03T06:48:15.389Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
