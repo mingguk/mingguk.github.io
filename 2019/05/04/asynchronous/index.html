@@ -21,7 +21,7 @@
 <meta property="og:description" content="Asynchrounous in javascript동기식? 비동기식?자바스크립트는 싱글쓰레드 환경 내 동기식 처리(synchronous)(하나하나씩 작업 수행, 한 작업이 끝나기 전까지 다른작업 수행 안함) 을 기본으로한다. 콜스택 내에서 함수가 실행중인 경우 해당 함수 실행종료까지 다른 함수를 실행할 수 없는 (Blocking) 상태가 되는 것.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://mingguk.github.io/images/async.png">
-<meta property="og:updated_time" content="2019-05-04T06:55:10.099Z">
+<meta property="og:updated_time" content="2019-05-04T10:16:35.246Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="asynchronous in JS">
 <meta name="twitter:description" content="Asynchrounous in javascript동기식? 비동기식?자바스크립트는 싱글쓰레드 환경 내 동기식 처리(synchronous)(하나하나씩 작업 수행, 한 작업이 끝나기 전까지 다른작업 수행 안함) 을 기본으로한다. 콜스택 내에서 함수가 실행중인 경우 해당 함수 실행종료까지 다른 함수를 실행할 수 없는 (Blocking) 상태가 되는 것.">
@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/jejuhallasan.css">
     
      <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+     <link rel="stylesheet" href="https://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css">
     
     
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
@@ -199,7 +200,7 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/async.png" alt=""></p>
 <h1 id="Asynchrounous-in-javascript"><a href="#Asynchrounous-in-javascript" class="headerlink" title="Asynchrounous in javascript"></a>Asynchrounous in javascript</h1><h3 id="동기식-비동기식"><a href="#동기식-비동기식" class="headerlink" title="동기식? 비동기식?"></a>동기식? 비동기식?</h3><p>자바스크립트는 싱글쓰레드 환경 내 <strong><code>동기식 처리(synchronous)</code></strong>(하나하나씩 작업 수행, 한 작업이 끝나기 전까지 다른작업 수행 안함) 을 기본으로한다. 콜스택 내에서 함수가 실행중인 경우 해당 함수 실행종료까지 다른 함수를 실행할 수 없는 (<strong>Blocking</strong>) 상태가 되는 것.            만약  모든 코드를 동기식으로만 작성 한다면 한 작업이 끝나기 전까지 다른 어떠한 작업도 할 수가 없고 대기해야되기 때문에      <strong>사용자 경험 측면</strong>에서 최악, 1~2초만 버벅거려도 해당 사이트를 꺼버리고 싶은 충동이 드는 요즘이라..</p>
-<p>이러한 문제를 해결하기 위해 <strong><code>비동기식 처리 (Asynchronous)</code></strong>를 한다. 비동기식은 다른 작업이 끝날때까지 무한 대기가 아니라,     지정한 작업은 백그라운드에 처리를 위임하고, 동시에 다른 작업을 수행하게 중단 없이 (<strong>Non-blocking</strong>) 작업을 수행하는 것이다. (javascript 에서는 이런류의 <strong>API</strong>들을 제공하여 비동기식 처리를 지원한다)</p>
+<p>이러한 문제를 해결하기 위해 <strong><code>비동기식 처리 (Asynchronous)</code></strong>를 한다. 비동기식은 다른 작업이 끝날때까지 무한 대기가 아니라,     지정한 작업은 백그라운드에 처리를 위임하고, 동시에 다른 작업을 중단 없이 (<strong>Non-blocking</strong>) 작업을 수행하는 것이다. (javascript 에서는 이런류의 <strong>API</strong>들을 제공하여 비동기식 처리를 지원한다)</p>
 <p><strong>비동기식 처리 Process</strong></p>
 <p><img src="/images/async2.png" alt=""></p>
 <p>  ( 자바스크립트 엔진은 코드를 한줄씩 순차적으로 수행함, 싱글쓰레드 환경 )</p>
@@ -332,7 +333,7 @@ ga('send', 'pageview');
         "url": "http://mingguk.github.io/2019/05/04/asynchronous/",
         "description": "
 Asynchrounous in javascript동기식? 비동기식?자바스크립트는 싱글쓰레드 환경 내 동기식 처리(synchronous)(하나하나씩 작업 수행, 한 작업이 끝나기 전까지 다른작업 수행 안함) 을 기본으로한다. 콜스택 내에서 함수가 실행중인 경우 해당 함수 실행종료까지 다른 함수를 실행할 수 없는 (Blocking) 상태가 되는 것.     "
-        "wordCount": 1523
+        "wordCount": 1522
     }
 </script>
 
