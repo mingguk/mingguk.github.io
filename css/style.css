@@ -239,7 +239,7 @@ code {
   padding: 3px 5px;
   font-size: 0.8em;
   border-radius: 2px;
-  font-family: "JNanum Gothic Coding", "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  font-family: "Nanum Gothic Coding", "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
   background-color: #f8f8f8;
 }
 .container {
@@ -1821,7 +1821,7 @@ i.icon:before {
   overflow-x: auto;
   padding: 15px 20px;
   font-size: 14px;
-  font-family: "JNanum Gothic Coding", "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  font-family: "Nanum Gothic Coding", "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
   line-height: 22.400000000000002px;
 }
 .highlight table {

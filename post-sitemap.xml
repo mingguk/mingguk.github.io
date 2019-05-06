@@ -8,6 +8,22 @@
     </url>
 
     <url>
+        <loc>http://mingguk.github.io/2019/05/03/twil-19-5-1/</loc>
+        <lastmod>2019-05-06T08:40:16.356Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://mingguk.github.io/2019/05/07/twil-19-5-2/</loc>
+        <lastmod>2019-05-06T08:40:00.988Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://mingguk.github.io/2019/05/04/asynchronous/</loc>
         <lastmod>2019-05-04T10:16:35.246Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -138,14 +154,6 @@
     <url>
         <loc>http://mingguk.github.io/2019/01/28/codestates/</loc>
         <lastmod>2019-05-03T06:53:25.841Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://mingguk.github.io/2019/05/03/19-5-1/</loc>
-        <lastmod>2019-05-03T02:51:36.866Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

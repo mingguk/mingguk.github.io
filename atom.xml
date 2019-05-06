@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mingguk.github.io/"/>
-  <updated>2019-05-04T10:16:35.246Z</updated>
+  <updated>2019-05-06T08:40:00.988Z</updated>
   <id>http://mingguk.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>twil 5월 2주차</title>
+    <link href="http://mingguk.github.io/2019/05/07/twil-19-5-2/"/>
+    <id>http://mingguk.github.io/2019/05/07/twil-19-5-2/</id>
+    <published>2019-05-06T17:24:43.000Z</published>
+    <updated>2019-05-06T08:40:00.988Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/twil.png" alt=""></p><h3 id="Todo"><a href="#Todo" class="headerlink" title="Todo"></a>Todo</h3><p>(리액트 , 노트js 수강 시작 / js, css 1일 1플젝 반복숙달 시작 / 블로깅, 정리 병행)</p><ol><li>React udemy section  13까지</li><li>Node js udemy section 15까지</li><li>Brad Bs Udemy 완강, 정리</li><li>Brad JS toy  1일 1개+</li><li>Brad Bs toy 1일 1개+</li><li>twil 블로깅</li><li>(nomad 선행 1 시도, 보류~~ (아마도))</li></ol><hr><h3 id="Daily"><a href="#Daily" class="headerlink" title="Daily"></a>Daily</h3><p><code>19/05/06</code></p><p>react , node js 병행 수강 시작</p><p>부트스트랩 플젝 전까지 완강, 정리</p><p><code>19/05/07</code></p><p><code>19/05/08</code></p><p><code>19/05/09</code></p><p><code>19/05/10</code></p><p><code>19/05/11</code></p><hr><h3 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h3><hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/twil.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Todo&quot;&gt;&lt;a href=&quot;#Todo&quot; class=&quot;headerlink&quot; title=&quot;Todo&quot;&gt;&lt;/a&gt;Todo&lt;/h3&gt;&lt;p&gt;(리액트 , 노트js 수강 시작 /
+      
+    
+    </summary>
+    
+      <category term="post" scheme="http://mingguk.github.io/categories/post/"/>
+    
+      <category term="twil" scheme="http://mingguk.github.io/categories/post/twil/"/>
+    
+    
+      <category term="twil" scheme="http://mingguk.github.io/tags/twil/"/>
+    
+  </entry>
   
   <entry>
     <title>asynchronous in JS</title>
@@ -47,21 +75,21 @@
   </entry>
   
   <entry>
-    <title>til 5월 1주차</title>
-    <link href="http://mingguk.github.io/2019/05/03/19-5-1/"/>
-    <id>http://mingguk.github.io/2019/05/03/19-5-1/</id>
+    <title>twil 5월 1주차</title>
+    <link href="http://mingguk.github.io/2019/05/03/twil-19-5-1/"/>
+    <id>http://mingguk.github.io/2019/05/03/twil-19-5-1/</id>
     <published>2019-05-03T11:38:32.000Z</published>
-    <updated>2019-05-03T02:51:36.866Z</updated>
+    <updated>2019-05-06T08:40:16.356Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/images/twil.png" alt=""></p><h3 id="todo"><a href="#todo" class="headerlink" title="todo"></a>todo</h3><ol><li>ES6 주요내용 정리하기 part 1, part2 / 정리해서 블로깅 </li><li>Udemy bootstrap 완강, 정리</li><li>Learn by doing 시작 (유튭 brad js 1 / css 1 개씩 매일 만들기!)</li><li>블로그 개편, TWIL (This Week I Learned…) 추가 , 코드블록 수정…(왜 안되냐고..진짜!!)</li><li>React, node js 학습플랜, 만들기 연습 플랜 짜기</li></ol><p><code>19/05/03</code></p><p>뭐임마 어쩌라고</p><h2 id="comment"><a href="#comment" class="headerlink" title="comment"></a>comment</h2><p>리액트 노드 넘어가기 전 마지막 주 ES6 정리도 필요하고 블로그도 개편해야되고 바쁜 한주였다..</p><p>집중력 키우기, 뽀모도로 활용!</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/images/twil.png" alt=""></p><h3 id="Todo"><a href="#Todo" class="headerlink" title="Todo"></a>Todo</h3><ol><li><del>ES6 주요내용 정리하기 part 1, part2 / 정리해서 블로깅</del>  </li><li>Udemy bootstrap 완강, 정리  (이론부분까지 수강, 담주 초반 필 마무리!)</li><li><del>Learn by doing 시작 (유튭 brad js 1 / css 1 개씩 매일 만들기!)</del></li><li><del>블로그 개편, TWIL (This Week I Learned…) 추가 , 코드블록 수정…(왜 안되냐고..진짜!!)</del></li><li><del>React, node js 학습플랜, 만들기 연습 플랜 짜기</del></li></ol><h3 id="Daily"><a href="#Daily" class="headerlink" title="Daily"></a>Daily</h3><p><code>19/05/03</code></p><p>ES6 part 1 정리</p><p>Destructuring 심화 정리 필요</p><p><code>19/05/04</code></p><p>class 구현 연습 필요!</p><p><code>19/05/05</code></p><p>부트스트랩 완강 못함</p><p>5월 2째주 까지 udemy 강의 완강 / 매일 1예제로 반복 숙달 체화!</p><h2 id="comment"><a href="#comment" class="headerlink" title="comment"></a>comment</h2><p>리액트 노드 넘어가기 전 마지막 주 ES6 정리도 필요하고 블로그도 개편해야되고 바쁜 한주였다..</p><p>리액트 노드 수강 / 자바스크립트, 웹퍼블 1일 1프로젝트 반복숙달 </p><p>집중력 고도화! 뽀모도로 일 15+ ~20 달성 연습하기</p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;&lt;img src=&quot;/images/twil.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;todo&quot;&gt;&lt;a href=&quot;#todo&quot; class=&quot;headerlink&quot; title=&quot;todo&quot;&gt;&lt;/a&gt;todo&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;ES6 주요내용 정리하기
+&lt;h3 id=&quot;Todo&quot;&gt;&lt;a href=&quot;#Todo&quot; class=&quot;headerlink&quot; title=&quot;Todo&quot;&gt;&lt;/a&gt;Todo&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;del&gt;ES6 주요내용
       
     
     </summary>
@@ -564,36 +592,6 @@
         &lt;p&gt;&lt;img src=&quot;/images/jsw Function.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;자바스크립트에서 function, 함수는 특별한 property를 가진 &lt;strong&gt;객체&lt;/strong&gt;이다. &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;name&lt;/s
-      
-    
-    </summary>
-    
-      <category term="Front" scheme="http://mingguk.github.io/categories/Front/"/>
-    
-      <category term="Javascript" scheme="http://mingguk.github.io/categories/Front/Javascript/"/>
-    
-    
-      <category term="javascript" scheme="http://mingguk.github.io/tags/javascript/"/>
-    
-      <category term="weirdparts" scheme="http://mingguk.github.io/tags/weirdparts/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Object</title>
-    <link href="http://mingguk.github.io/2019/01/31/jsw%20Object/"/>
-    <id>http://mingguk.github.io/2019/01/31/jsw Object/</id>
-    <published>2019-01-30T16:34:53.000Z</published>
-    <updated>2019-05-03T07:21:20.261Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/jswOF.png" alt=""></p><h3 id="Object-in-javascript"><a href="#Object-in-javascript" class="headerlink" title="Object in javascript"></a>Object in javascript</h3><p><img src="/images/jswObject.png" alt=""></p><p>자바스크립트에서 객체는 <strong>a collection of key value pairs</strong>  이다.</p><p>객체의 요소로 변수, 함수(메소드), 심지어 다른 객체 까지 가질 수 있고 각각의 요소에 대한 reference(메모리 어디에 저장되어있는지, 주소) 를 가지고 있다</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// [] 는 연산자, 해당 객체의 name 주소로 가서 value 를 반환하는</span></span><br><span class="line">person[<span class="string">'firstname'</span>] = <span class="string">'minkuk'</span>;  <span class="comment">// name value pair</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// firstname 의 reference를 객체 person에게 부여</span></span><br><span class="line">person[<span class="string">'lastname'</span>] = <span class="string">'Seo'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> firstNameProperty = <span class="string">'firstname'</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person); <span class="comment">//Object</span></span><br><span class="line"><span class="built_in">console</span>.log(person[firstNameProperty]); <span class="comment">//Tony</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// . 또한 연산자  a.name --&gt; a 객체의 name 의 value에 접근가능</span></span><br><span class="line"><span class="built_in">console</span>.log(person.firstname); <span class="comment">//Tony</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//객체 내 요소 추가하기</span></span><br><span class="line">person.address = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">person.address.street = <span class="string">'111 Main St.'</span>;</span><br><span class="line">person.address.city = <span class="string">'New York'</span>;</span><br><span class="line">person.address.state = <span class="string">'NY'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//. 연산자로 객체의 요소들에 접근, 참조가능</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person.address.street) <span class="comment">// 111 Main St.</span></span><br><span class="line"><span class="built_in">console</span>.log(person.address.city) <span class="comment">// New York</span></span><br><span class="line"><span class="built_in">console</span>.log(person[<span class="string">'address'</span>][<span class="string">'state'</span>]) <span class="comment">// NY</span></span><br></pre></td></tr></table></figure><h3 id="Object-literals"><a href="#Object-literals" class="headerlink" title="Object literals"></a>Object literals</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;&#125;; <span class="comment">// 객체 생성 </span></span><br><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">firstname: <span class="string">'minkuk'</span>,</span><br><span class="line">    lastname: <span class="string">'Seo'</span></span><br><span class="line">    </span><br><span class="line">   <span class="comment">//다른 객체도 객체의 요소로 생성가능</span></span><br><span class="line">   address: &#123;</span><br><span class="line">        street: <span class="string">'111 Main St.'</span>,</span><br><span class="line">        city: <span class="string">'New York'</span>,</span><br><span class="line">        state: <span class="string">'NY'</span></span><br><span class="line">    &#125;</span><br><span class="line"> &#125;;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//객체는 함수의 인자로도 전달이 가능하다</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greet</span>(<span class="params">person</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Hi '</span> + person.firstname);</span><br><span class="line">&#125;</span><br><span class="line">greet(Tony); <span class="comment">// Hi Tony</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 이런식으로 객체생성과 동시에 인자로 넘기기도 가능</span></span><br><span class="line">greet(&#123;</span><br><span class="line">    firstname: <span class="string">'Mary'</span>,</span><br><span class="line">    lastname: Doe</span><br><span class="line">&#125;); <span class="comment">// Hi Mary Doe</span></span><br></pre></td></tr></table></figure><h3 id="NameSpace"><a href="#NameSpace" class="headerlink" title="NameSpace"></a>NameSpace</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> greet = <span class="string">'Hello!'</span>;</span><br><span class="line"><span class="keyword">var</span> greet = <span class="string">'Hola!'</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(greet); </span><br><span class="line"><span class="comment">// Hola!</span></span><br></pre></td></tr></table></figure><p>자바스크립트는 순차적으로 코드를 실행하기 때문에 위의 결과를 예측하기는 쉽다.</p><p>하지만 만약에 각 변수가 다른 자바스크립트에 저장되어 있거나, 외부에서 라이브러리로 가져다 쓰는거라면? 의도치 않게 같은 변수명으로 인해 충돌 가능성이 있다.</p><p><img src="/images/jswNameSpace.png" alt=""></p><p>이러한 충돌을 방지하기 위해 Namespace 개념이 발생했다. 자바스크립트에서는 객체를 이 네임스페이스로 활용 할 수 있다</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> english = &#123;<span class="attr">greet</span>: <span class="string">'Hello!'</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> spanish = &#123;<span class="attr">greet</span>: <span class="string">'Hola!'</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(english.greet); <span class="comment">//Hello!</span></span><br><span class="line"><span class="built_in">console</span>.log(spanish.greet); <span class="comment">//Hola!</span></span><br></pre></td></tr></table></figure><p><strong>객체 요소 추가 시 주의사항</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">english.greeting.greet = <span class="string">'Hi!'</span>;  <span class="comment">//이런 식은 error 발생</span></span><br><span class="line"><span class="comment">//. 연산자의 우선순위에 따라 (연관 left-to-right)</span></span><br><span class="line"><span class="comment">//english.greeting은 undefined가 이기 때문에</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 객체 내 새로운 요소를 생성할 때는 [] 연산자를 사용하거나</span></span><br><span class="line">english[greeting][greet] = <span class="string">'Hi!'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 객체 생성과 동시에 요소를 추가하는 것을 추천</span></span><br><span class="line">english = &#123;<span class="attr">greeting</span>: &#123;<span class="attr">greet</span>:<span class="string">'Hi!'</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(english.greeting.greet); <span class="comment">// Hi!</span></span><br></pre></td></tr></table></figure><hr><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><a href="http://mingguk.github.io/2019/01/31/jsw Functions/">Functions</a></p><p><a href="http://mingguk.github.io/2019/01/30/jsw type&amp;operator/">Type &amp; Operator</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;/images/jswOF.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Object-in-javascript&quot;&gt;&lt;a href=&quot;#Object-in-javascript&quot; class=&quot;headerlink&quot; title=&quot;Object i
       
     
     </summary>
